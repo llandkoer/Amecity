@@ -10,8 +10,10 @@
   background-color: $gray;
   border: none;
   padding-left: 20px;
+  padding-right: 20px;
   color: $black;
   font-size: 1.2rem;
+  font-family: $primary-font;
   width: 100%;
   height: 40px;
   outline: none;
@@ -19,14 +21,13 @@
 
   &::placeholder{
     color: $black;
-    // font-size: 1.2rem;
-    font-family: $primary-font;
   }
 }
 %text-area {
   @extend %input;
   height: 148px;
   padding-top: 10px;
+  resize: none;
 }
 
 %btn{
@@ -75,14 +76,6 @@
   width: 100px;
   height: 100px;
   background-color: $gray;
-}
-%checkbox {
-  width: 25px;
-  height: 25px;
-  background-color: $gray;
-  &:checked {
-    background-color: $neon-blue;
-  }
 }
 
 
