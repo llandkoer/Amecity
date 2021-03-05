@@ -88,6 +88,10 @@ body {
   align-items: center;
   margin-top: 10px;
 }
+.header__logo {
+  flex: none;
+}
+
 .main__text--centered {
   text-align: center;
 }

@@ -10,6 +10,7 @@ body {
     }
     &__logo {
         @extend %logo;
+        flex: none;
     }
 }
 .main {
