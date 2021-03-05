@@ -5,59 +5,85 @@
 
 %input{
   display: block;
-  margin: 0 auto;
+  margin: 0px auto;
+  margin-bottom: 10px;
   background-color: $gray;
   border: none;
   padding-left: 20px;
   color: $black;
   font-size: 1.2rem;
-  width: 85%;
+  width: 100%;
   height: 40px;
+  outline: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 
   &::placeholder{
     color: $black;
-    font-size: 1.2rem;
+    // font-size: 1.2rem;
     font-family: $primary-font;
   }
+}
+%text-area {
+  @extend %input;
+  height: 148px;
+  padding-top: 10px;
 }
 
 %btn{
   margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
   display: block;
-  width: 85%;
+  width: 100%;
   max-width: 270px;
   height: 40px;
   border: none;
   border-radius: 40px;
   background-color: $neon-blue;
+  cursor: pointer;
   color: $black;
   font-size: 1.8rem;
+  font-family: $primary-font;
+  outline: none;
 }
 
-  %h1{
+%h1{
   font-size: 4.8rem;
   color: $black;
-  }
+}
 
-  %h2{
-    font-size: 3.6rem;
-    color: $black;
-    text-align: center;
-    text-transform: uppercase;
-  }
+%h2{
+  font-size: 3.6rem;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+}
 
-  %h3{
-    font-size: 2.4rem;
-    color: $black;
-    text-align: center;
-  }
+%h3{
+  font-size: 2.4rem;
+  color: $black;
+  text-align: center;
+}
 
 %p{
   font-size: 2.0rem;
   color: $black;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
-
+%logo {
+  width: 100px;
+  height: 100px;
+  background-color: $gray;
+}
+%checkbox {
+  width: 25px;
+  height: 25px;
+  background-color: $gray;
+  &:checked {
+    background-color: $neon-blue;
+  }
+}
 
 
 

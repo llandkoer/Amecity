@@ -5,25 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicia sesión</title>
+    <link rel="stylesheet" href="./styles/styles.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
-        <h1>Inicia sesión</h1>
-        <div class="logo"></div><!-- Logo -->
-        <blockquote>La única forma, si vamos a mejorar la calidad del medio ambiente, es involucrar a todo el mundo! <br> &mdash;<cite>Richard Rogers</cite> </blockquote>
-        <form action="">
-            <input type="text" name="user" id="user" placeholder="Nombre de usuario">
-            <input type="password" name="pwd" id="pwd" placeholder="Contraseña">
-            <input type="checkbox" name="open-session-checkbox" id="open-session-checkbox">
-            <label for="open-session-checkbox"> Mantener la sesión abierta</label>
+    <header class="header">
+        <h1 class="header__title">Inicia sesión</h1>
+        <div class="header__logo"></div>
+    </header>
+    <main class="main">
+        <blockquote class="main__text">La única forma, si vamos a mejorar la calidad del medio ambiente, es involucrar a todo el mundo! <br> &mdash;
+            <cite>Richard Rogers</cite> 
+        </blockquote>
+        <form action="" class="main__form">
+            <input class="main__form-input" type="text" name="user" id="user" placeholder="Usuario">
+            <input class="main__form-input" type="password" name="pwd" id="pwd" placeholder="Contraseña">
+            <label class="main__form-label">
+                <input class="main__form-checkbox" type="checkbox">
+                <span class="main__form-checkmark"></span>
+                Mantener la sesión abierta
+            </label>
         </form>
-        <button type="submit">Iniciar sesión</button>
-        <p>ó</p>
-        <button type="submit">Accede con Google</button>    
+        <button class="main__button" type="submit">Iniciar sesión</button>
+        <p class="main__text--centered">ó</p>
+        <button class="main__button--white" type="submit">
+            <img class="main__button-google-logo" src="https://img.icons8.com/fluent/48/000000/google-logo.png"/>
+            Accede con Google
+        </button>    
     </main>
-
-    <footer>
-
-    </footer>
 </body>
 </html>

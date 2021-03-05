@@ -1,1 +1,126 @@
-*{box-sizing:border-box;margin:0;padding:0}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Ropa Sans", sans-serif;
+  font-weight: 400;
+  font-size: 62.5%;
+}
+
+body {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.main__form-input, .main__form-text-area {
+  display: block;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  background-color: #C4C4C4;
+  border: none;
+  padding-left: 20px;
+  color: #000;
+  font-size: 1.2rem;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.main__form-input::placeholder, .main__form-text-area::placeholder {
+  color: #000;
+  font-family: "Ropa Sans", sans-serif;
+}
+
+.main__form-text-area {
+  height: 148px;
+  padding-top: 10px;
+}
+
+.main__button--white, .main__button {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  max-width: 270px;
+  height: 40px;
+  border: none;
+  border-radius: 40px;
+  background-color: #49BEC2;
+  cursor: pointer;
+  color: #000;
+  font-size: 1.8rem;
+  font-family: "Ropa Sans", sans-serif;
+  outline: none;
+}
+
+.header__title {
+  font-size: 4.8rem;
+  color: #000;
+}
+
+.main__text--centered, .main__text {
+  font-size: 2rem;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.header__logo {
+  width: 100px;
+  height: 100px;
+  background-color: #C4C4C4;
+}
+
+body {
+  max-width: 320px;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.main__text--centered {
+  text-align: center;
+}
+.main__form-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.2rem;
+}
+.main__form-checkbox {
+  display: none;
+}
+.main__form-checkmark {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-color: #C4C4C4;
+}
+.main__button--white {
+  border: 1px solid black;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 200px;
+}
+.main__button-google-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.main__form-label input:checked ~ .main__form-checkmark {
+  background-color: #49BEC2;
+}
+
+/*# sourceMappingURL=styles.min.css.map */
