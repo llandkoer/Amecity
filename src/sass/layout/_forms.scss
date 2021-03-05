@@ -1,0 +1,59 @@
+body {
+    @extend %margin;
+    max-width: 320px;
+}
+.header {
+    @include flex (row, space-between, center);
+    margin-top: 10px;
+    &__title {
+        @extend %h1;
+    }
+    &__logo {
+        @extend %logo;
+    }
+}
+.main {
+    &__text {
+        @extend %p;
+        &--centered {
+            @extend %p;
+            text-align: center
+        }
+    }
+    &__form-input {
+        @extend %input;
+    }
+    &__form-text-area {
+        @extend %text-area;
+    }
+    &__form-label {
+        @include flex (row, space-around, center);
+        font-size: 1.2rem;
+    }
+    &__form-checkbox {
+        display: none;
+    }
+    &__form-checkmark {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-color: $gray;
+    }
+    &__button {
+        @extend %btn;
+        &--white{
+            @extend %btn;
+            border: 1px solid black;
+            background-color: white;
+            @include flex (row, space-around, center);
+            max-width: 200px;
+        }
+    }
+    &__button-google-logo {
+        width: 30px;
+        height: 30px;
+    }
+}
+.main__form-label input:checked ~ .main__form-checkmark {
+    background-color: $neon-blue;
+}
