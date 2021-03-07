@@ -2,7 +2,7 @@
 ___
 
 Proyecto de grado para **Protalento** 
-#####_Desarrollo Web Full Stack_
+###### _Desarrollo Web Full Stack_
 
 >[Jeferson Gutierrez](https://github.com/Jeferguto)
 
