@@ -12,7 +12,7 @@ Proyecto de grado para **Protalento**
 
 >[Lina Marcela](https://github.com/linamarl)
 
->[Natalia Maldonado](https://github.com/NataliaOrtizMa)
+>[Natalia Ortiz Maldonado](https://github.com/NataliaOrtizMa)
 
 >[Kimberly Rincon](https://github.com/krincon36)
 
