@@ -1,18 +1,19 @@
 # Amecity
+___
 
 Proyecto de grado para **Protalento** 
-__Desarrollo Web Full Stack__
+######_Desarrollo Web Full Stack_
 
-[Jeferson Gutierrez](.blank)
+>[Jeferson Gutierrez](https://github.com/Jeferguto)
 
-[Santiago Hernandez](.blank)
+>[Santiago Hernandez](https://github.com/santiagohernandezluengas)
 
-[Luis Landkoer](https://github.com/llandkoer)
+>[Luis Landkoer](https://github.com/llandkoer)
 
-[Lina Marcela](.blank)
+>[Lina Marcela](https://github.com/linamarl)
 
-[Natalia Maldonado](.blank)
+>[Natalia Maldonado](https://github.com/NataliaOrtizMa)
 
-[Kimberly Rincon](.blank)
+>[Kimberly Rincon](https://github.com/krincon36)
 
-[Duvan Villadiego](https://github.com/DuvanVilladiego)
+>[Duvan Villadiego](https://github.com/DuvanVilladiego)
