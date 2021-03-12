@@ -14,7 +14,6 @@ var AbrirPopUp = document.getElementById("Abrir-PopUp"), //boton que habre el po
                 <a href="u" class="" id="Cerrar-PopUp"> x </a>
 
                     CONTENIDO AQUI
-
             </div>
         </div>
     */
