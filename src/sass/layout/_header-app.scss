@@ -1,0 +1,407 @@
+.header-app {
+  width: 100%;
+  height: auto;
+
+  padding: 15px 35px;
+
+  @include flex(row, space-between, center);
+
+  background: $white;
+
+  .header-app__logo-container {
+    display: none;
+  }
+
+  .header-app__focus {
+    display: block;
+
+    width: 25px;
+    height: 31px;
+  }
+
+  .header-app__container {
+    width: 135px;
+
+    @include flex(row, space-between, center);
+
+    .header-app__points {
+      width: 95px;
+      height: auto;
+
+      @include flex(row, space-between, center);
+
+      .header-app__points-icon {
+        width: 25px;
+        height: 22.5px;
+
+        display: block;
+
+        background-image: url("https://i.imgur.com/MxknFta.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .header-app__points-text {
+        font-weight: 400;
+        font-size: 2.4rem;
+        line-height: 2.6rem;
+        color: $black;
+      }
+
+      .header-app-secondary-menu {
+        display: none;
+      }
+    }
+
+    .header-app__nav {
+      .header-app__menu {
+        .header-app__input {
+          display: block;
+
+          width: 20px;
+          height: 20px;
+
+          position: absolute;
+
+          opacity: 0;
+          z-index: 2;
+          cursor: pointer;
+        }
+
+        .header-app__menu-img {
+          display: block;
+
+          width: 20px;
+          height: 20px;
+
+          position: relative;
+
+          background-image: url("https://i.imgur.com/ox62SBV.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+
+          z-index: 1;
+        }
+
+        .header-app__input:checked ~ .header-app__menu-img {
+          width: 20px;
+          height: 20px;
+
+          background-image: url("https://i.imgur.com/rgzZkYa.png");
+
+          cursor: pointer;
+        }
+
+        .header-app__list {
+          width: 100%;
+          height: 0px;
+
+          position: absolute;
+          top: 60px;
+          right: 0;
+
+          overflow: hidden;
+          list-style: none;
+          background: $main-green;
+          z-index: -999;
+        }
+
+        .header-app__input:checked ~ .header-app__list {
+          height: auto;
+
+          transition: height 0.5s ease-in-out;
+        }
+
+        .header-app__item {
+          list-style: none;
+
+          &:first-child {
+            margin-top: 18px;
+          }
+
+          .header-app__link {
+            display: block;
+
+            margin-right: 25px;
+
+            font-size: 2.4rem;
+            text-align: right;
+            color: $black;
+            text-decoration: none;
+
+            &:last-child {
+              margin-bottom: 10px;
+            }
+          }
+
+          .header-app__divider,
+          .header-app__divider--last {
+            width: 95%;
+            height: 0.1px;
+
+            margin: 16px auto 19px;
+
+            background-color: $black;
+            opacity: 0.5;
+          }
+
+          .header-app__divider--last {
+            display: none;
+          }
+        }
+
+        .header-app__item--blue {
+          height: 62px;
+
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+
+          background-color: $black-blue;
+          .header-app__link--blue {
+            display: block;
+
+            margin-right: 25px;
+
+            font-size: 2.4rem;
+            text-align: right;
+            color: $neon-blue;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header-app {
+    margin-top: 70px;
+
+    justify-content: flex-end;
+
+    background-color: $main-green;
+
+    .header-app__logo-container {
+      width: 100%;
+      height: 75px;
+
+      padding-left: 35px;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @include flex(row, flex-start, center);
+
+      background-color: $white;
+
+      .header-app__logo {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .header-app__focus {
+      display: none;
+    }
+
+    .header-app__container {
+      width: 100%;
+
+      .header-app__points {
+        width: 160px;
+
+        .header-app-secondary-menu {
+          position: relative;
+
+          display: block;
+
+          .header-app__sort {
+            width: 18px;
+            height: 23px;
+
+            margin-bottom: 10px;
+
+            display: block;
+
+            background-image: url("https://svgur.com/i/Uqq.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+
+          .header-app__secondary-input {
+            width: 20px;
+            height: 30px;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            opacity: 0;
+            z-index: 999;
+            cursor: pointer;
+          }
+
+          .header-app__secondary-list {
+            width: 360px;
+            height: 0;
+
+            padding-right: 15px;
+
+            position: absolute;
+            top: 74px;
+            left: 8px;
+
+            @include flex(column, space-evenly, flex-end);
+
+            overflow: hidden;
+            list-style: none;
+            background: $white;
+            z-index: -999;
+
+            .header-app__secondary-item {
+              .header-app__secondary-link {
+                font-size: 2rem;
+                text-decoration: none;
+
+                margin-right: 15px;
+              }
+              .header-app__secondary-icon--user {
+                background-image: url("https://i.imgur.com/Unag6be.png");
+
+                width: 21px;
+                height: 23.5px;
+              }
+
+              .header-app__secondary-icon--challenges {
+                background-image: url("https://i.imgur.com/tlbghE7.png");
+
+                width: 21px;
+                height: 21px;
+              }
+
+              .header-app__secondary-icon--ranking {
+                background-image: url("https://i.imgur.com/uwduYEq.png");
+
+                width: 21px;
+                height: 18px;
+              }
+
+              .header-app__secondary-icon--friends {
+                background-image: url("https://i.imgur.com/Kd641iO.png");
+
+                width: 21px;
+                height: 17px;
+              }
+
+              .header-app__secondary-icon--user,
+              .header-app__secondary-icon--challenges,
+              .header-app__secondary-icon--ranking,
+              .header-app__secondary-icon--friends {
+                display: inline-block;
+
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+              }
+            }
+          }
+
+          .header-app__secondary-input:checked ~ .header-app__sort {
+            width: 18px;
+            height: 23px;
+
+            margin-top: 25px;
+
+            background-image: url("https://svgur.com/i/Ur5.svg");
+          }
+
+          .header-app__secondary-input:checked ~ .header-app__secondary-list {
+            height: 210px;
+
+            border: 0.5px solid $black;
+            border-top: none;
+          }
+        }
+      }
+
+      .header-app__nav {
+        .header-app__menu {
+          .header-app__input {
+            display: none;
+          }
+
+          .header-app__menu-img {
+            display: none;
+          }
+
+          .header-app__list {
+            height: 60px;
+
+            @include flex(row, center, center);
+
+            position: static;
+
+            background-color: $main-green;
+
+            overflow: hidden;
+
+            .header-app__item,
+            .header-app__item--blue {
+              @include flex(row, center, center);
+
+              background-color: $main-green;
+
+              .header-app__link,
+              .header-app__link--blue {
+                font-size: 1.4rem;
+                letter-spacing: 0;
+                text-align: center;
+                color: $black;
+              }
+
+              .header-app__link--blue {
+                padding: 15px 25px;
+
+                color: $neon-blue;
+
+                background-color: $black-blue;
+
+                border-radius: 20px;
+              }
+            }
+
+            .header-app__link:last-child {
+              margin-bottom: unset;
+            }
+
+            .header-app__item--blue {
+              height: auto;
+            }
+
+            .header-app__item:first-child {
+              margin-top: unset;
+            }
+
+            .header-app__divider,
+            .header-app__divider--last {
+              width: 0.1px;
+              height: 50px;
+
+              margin: unset;
+              margin-right: 25px;
+            }
+
+            .header-app__divider--last {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
