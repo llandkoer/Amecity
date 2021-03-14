@@ -1,9 +1,4 @@
+@import "./lib/variables";
+@import "./lib/extends";
 @import "./baserules/reset";
-@import "";
-@import "";
-@import "";
-@import "";
-@import "";
-@import "";
-@import "";
-@import "";
+@import "./layout/page-Home";

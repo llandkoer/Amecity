@@ -1,0 +1,364 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: none;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-decoration: none;
+  color: none;
+  margin: 0;
+}
+
+nav {
+  text-decoration: none;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.headerPantallaInicio {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+.headerPantallaInicio .logo .im-Arbol {
+  width: 75px;
+  height: 74px;
+}
+.headerPantallaInicio .titulo {
+  font-family: "Ropa Sans", sans-serif;
+}
+.headerPantallaInicio .menu .itemsDesplegables .menuDesplegable {
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+}
+.headerPantallaInicio .menu .itemsDesplegables .menuLabel .bars {
+  font-size: 37px;
+  color: #49BEC2;
+  margin-top: 20px;
+}
+.headerPantallaInicio .menu .itemsDesplegables .menuLabel .reciclaje {
+  font-size: 50px;
+  color: #7abf7f;
+  display: none;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.headerPantallaInicio .items {
+  background-color: #7abf7f;
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 44px;
+  right: 0;
+  padding: 10px 0px 0px;
+  margin-top: 50px;
+  z-index: 2;
+}
+.headerPantallaInicio .items .links {
+  color: #000;
+  font-family: "Ropa Sans", sans-serif;
+  display: block;
+  padding: 10px;
+  text-align: right;
+  border-bottom: solid #000;
+  border-bottom-width: 1px;
+}
+.headerPantallaInicio .items .links:last-child {
+  color: #fff;
+  background: #03363E;
+}
+.headerPantallaInicio .menuDesplegable:checked ~ .menuLabel .bars {
+  display: none;
+}
+.headerPantallaInicio .menuDesplegable:checked ~ .menuLabel .reciclaje {
+  display: block;
+}
+.headerPantallaInicio .menuDesplegable:checked ~ .items {
+  display: block;
+}
+.headerPantallaInicio .links:hover {
+  color: #fff;
+}
+.headerPantallaInicio .links:active {
+  text-decoration: line-through;
+}
+
+.contenedorSlider .slider {
+  position: relative;
+}
+.contenedorSlider .slider .quienesSomos, .contenedorSlider .slider .verProveedores, .contenedorSlider .slider .verAliados, .contenedorSlider .slider .verBlog {
+  width: 100%;
+  height: 267px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.contenedorSlider .slider .quienesSomos .descripcion, .contenedorSlider .slider .verProveedores .descripcion, .contenedorSlider .slider .verAliados .descripcion, .contenedorSlider .slider .verBlog .descripcion {
+  text-align: left;
+  padding: 70px 20px;
+}
+.contenedorSlider .slider .quienesSomos .descripcionB, .contenedorSlider .slider .verProveedores .descripcionB, .contenedorSlider .slider .verAliados .descripcionB, .contenedorSlider .slider .verBlog .descripcionB {
+  text-align: right;
+  padding: 0px 20px;
+  font-family: "Ropa Sans", sans-serif;
+}
+.contenedorSlider .slider .quienesSomos {
+  background: #ADD8A7;
+  opacity: 1;
+}
+.contenedorSlider .slider .verProveedores {
+  background: #DBF5C6;
+}
+.contenedorSlider .slider .verAliados {
+  background: #5D97A6;
+}
+.contenedorSlider .slider .verBlog {
+  background: #AEDAE4;
+}
+.contenedorSlider ul.slider li:target {
+  opacity: 1;
+}
+.contenedorSlider .menu {
+  position: absolute;
+  margin-left: 40%;
+}
+.contenedorSlider .menu .contenedor {
+  display: inline-block;
+}
+.contenedorSlider .menu .contenedor .contenedorQ, .contenedorSlider .menu .contenedor .contenedorP, .contenedorSlider .menu .contenedor .contenedorA, .contenedorSlider .menu .contenedor .contenedorB {
+  display: inline-block;
+  background: white;
+  padding: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-top: 240px;
+}
+
+.hazParte {
+  margin-top: 300px;
+  font-family: "Ropa Sans", sans-serif;
+}
+.hazParte .titulo {
+  text-align: center;
+  padding: 20px;
+}
+.hazParte .contenedor {
+  display: flex;
+  justify-content: center;
+}
+.hazParte .contenedor .carta {
+  width: 284px;
+  height: 287px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+.hazParte .contenedor .carta .frente {
+  position: absolute;
+  background: #AEDAE4;
+  border-radius: 10%;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.hazParte .contenedor .carta .frente .subTitulo {
+  text-align: center;
+  padding: 30px;
+}
+.hazParte .contenedor .carta .frente .mano {
+  color: #070761;
+  font-size: 100px;
+  padding-left: 80px;
+}
+.hazParte .contenedor .carta .frente .botonCrear {
+  background: #070761;
+  color: #49BEC2;
+  padding: 15px 25px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+.hazParte .contenedor .carta .atras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+  background: #AEDAE4;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+.hazParte .contenedor .carta .atras .descripcion {
+  padding: 20px;
+}
+.hazParte .contenedor .carta:hover {
+  transform: rotateY(180deg);
+}
+.hazParte .aliadoCarta {
+  margin-top: 150px;
+}
+.hazParte .aliadoCarta .carta .frente {
+  background: #C4C4C4;
+}
+.hazParte .aliadoCarta .carta .frente .mano {
+  color: green;
+}
+.hazParte .aliadoCarta .carta .frente .botonCrear {
+  background: #053505;
+  color: #7abf7f;
+}
+.hazParte .aliadoCarta .carta .atras {
+  background: #C4C4C4;
+}
+.hazParte .proveedorCarta {
+  margin-top: 150px;
+}
+.hazParte .proveedorCarta .carta .frente {
+  background: #a4cbdd;
+}
+.hazParte .proveedorCarta .carta .frente .subTitulo {
+  padding: 30px 10px;
+}
+.hazParte .proveedorCarta .carta .frente .botonCrear {
+  background: #106a70;
+  color: #86c3ce;
+}
+.hazParte .proveedorCarta .carta .atras {
+  background: #a4cbdd;
+}
+
+.pHacerParte {
+  margin-top: 100px;
+}
+.pHacerParte .titulo {
+  text-align: center;
+  padding: 20px;
+}
+.pHacerParte .slider {
+  margin-top: 40px;
+  position: relative;
+}
+.pHacerParte .slider .impactoAm, .pHacerParte .slider .impactoSo, .pHacerParte .slider .impactoMe, .pHacerParte .slider .impactoGlo {
+  width: 100%;
+  height: 267px;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.pHacerParte .slider .impactoAm .descripcion, .pHacerParte .slider .impactoSo .descripcion, .pHacerParte .slider .impactoMe .descripcion, .pHacerParte .slider .impactoGlo .descripcion {
+  margin-top: 20px;
+  text-align: left;
+  font-family: "Ropa Sans", sans-serif;
+  padding-left: 20px;
+}
+.pHacerParte .slider .impactoAm .descripcionB, .pHacerParte .slider .impactoSo .descripcionB, .pHacerParte .slider .impactoMe .descripcionB, .pHacerParte .slider .impactoGlo .descripcionB {
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Ropa Sans", sans-serif;
+}
+.pHacerParte .slider .impactoAm {
+  background: #49BEC2;
+  opacity: 1;
+}
+.pHacerParte .slider .impactoSo {
+  background: #5D97A6;
+}
+.pHacerParte .slider .impactoMe {
+  background: #AEDAE4;
+}
+.pHacerParte .slider .impactoGlo {
+  background: #ADD8A7;
+}
+.pHacerParte ul.slider li:target {
+  opacity: 1;
+}
+.pHacerParte .menu {
+  position: absolute;
+  margin-left: 40%;
+}
+.pHacerParte .menu .contenedor {
+  display: inline-block;
+}
+.pHacerParte .menu .contenedor .contenedorAm, .pHacerParte .menu .contenedor .contenedorSo, .pHacerParte .menu .contenedor .contenedorMe, .pHacerParte .menu .contenedor .contenedorGlo {
+  display: inline-block;
+  background: white;
+  padding: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  margin-top: 240px;
+}
+
+@media (min-width: 1400px) {
+  .headerPantallaInicio {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .headerPantallaInicio .titulo {
+    padding-left: 60px;
+  }
+  .headerPantallaInicio .menu .itemsDesplegables .menuLabel .bars {
+    display: none;
+  }
+  .headerPantallaInicio .menu .itemsDesplegables .menuLabel .reciclaje {
+    display: none;
+  }
+  .headerPantallaInicio .items {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    margin-top: 70px;
+    z-index: 2;
+  }
+  .headerPantallaInicio .items .links {
+    display: block;
+    padding: 0px 20px;
+    font-weight: 400;
+    border-bottom: none;
+    border-right: solid black;
+    border-right-width: 1px;
+    justify-items: right;
+  }
+  .headerPantallaInicio .items .links:last-child {
+    color: white;
+    background: #065537;
+    border-radius: 30px;
+    padding: 10px 30px;
+  }
+
+  .contenedorSlider {
+    margin-top: 150px;
+  }
+
+  .hazParte {
+    margin-top: 450px;
+  }
+  .hazParte .cartasHazP {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 100px;
+  }
+  .hazParte .cartasHazP .cartaJugador {
+    margin-top: 150px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

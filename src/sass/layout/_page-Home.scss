@@ -1,0 +1,373 @@
+//inicio Header
+.headerPantallaInicio{
+    display: flex;
+    justify-content: space-between;
+    padding:16px;
+    .logo{
+        .im-Arbol{
+         width: 75px;
+         height: 74px;
+        }
+     }
+     .titulo{
+         //font-size: 48px;
+         font-family: $primary-font;
+     }
+    .menu{
+         .itemsDesplegables{
+             .menuDesplegable{
+                 opacity: 0;
+                 position: absolute;
+                 visibility: hidden;
+                }
+              .menuLabel{
+                 .bars{
+                     font-size: 37px;
+                     color: $neon-blue;
+                     margin-top: 20px;
+                 }
+                 .reciclaje{
+                     font-size: 50px;
+                     color: $main-green;
+                     display: none;
+                     margin-top: 10px;
+                     margin-left: 10px;
+                 }
+             }
+         }
+    }
+    .items{
+         background-color: $main-green;
+         display: none;
+         position: absolute;
+         width: 100%;
+         top: 44px;
+         right: 0;
+         padding: 10px 0px 0px;
+         margin-top: 50px;
+         z-index: 2;
+        .links{
+            color: $black;
+            font-family: $primary-font;
+            display: block;
+            padding: 10px;
+            //font-size: 24px;
+            //font-weight: 400;
+            text-align: right;
+            border-bottom:solid $black;
+            border-bottom-width: 1px;
+        }
+        .links:last-child{
+            color: $white;
+            background: $black-blue;
+        }
+    }    
+     .menuDesplegable:checked {  
+          &~.menuLabel{ 
+                .bars{
+                    display: none;
+                }  
+                .reciclaje{
+                    display: block;
+                }   
+          }  
+          &~.items{
+              display: block;
+          }
+    } 
+    .links:hover{
+        color: $white;
+    } 
+    .links:active{
+        text-decoration: line-through;
+    }  
+}
+//Fin Header
+//Contenedor Slider
+.contenedorSlider{
+    .slider{  
+        position: relative;
+        .quienesSomos,.verProveedores,.verAliados,.verBlog{
+            width: 100%;
+            height: 267px;
+            position: absolute;
+            opacity: 0;
+            transition: opacity .5s;
+            .descripcion{
+                text-align: left;
+                padding: 70px 20px;
+                //font-size: 18px;
+            }
+            .descripcionB{
+                text-align: right;
+                padding: 0px 20px;
+                font-family: $primary-font;
+                //font-size: 24px;
+            }
+        }
+        .quienesSomos{
+            background: $secondary-green;
+            opacity: 1;
+        }
+        .verProveedores{
+            background: $light-green;
+        }
+        .verAliados{
+            background: $dark-blue;
+        }
+        .verBlog{
+            background: $light-blue;
+        }
+    }
+    ul.slider li:target{
+        opacity: 1;
+    }
+    .menu{
+        position:absolute;
+        margin-left: 40%;;
+        .contenedor{
+            display: inline-block;
+            .contenedorQ,.contenedorP,.contenedorA,.contenedorB{
+                display: inline-block;
+                background: white;
+                padding: 10px;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                margin-top: 240px;
+            }
+        }
+    }
+}
+// Fin Contenedor Slider 
+// Haz Parte
+.hazParte{
+    margin-top: 300px;
+    font-family: $primary-font;
+    .titulo{
+        text-align: center;
+        padding: 20px;
+        //font-size: 36px;
+    }
+    .contenedor{
+        display: flex;        
+        justify-content: center;
+        .carta{
+             width: 284px;
+             height: 287px;
+             position: relative;
+             transform-style: preserve-3d;
+            .frente{
+                position: absolute;
+                background: $light-blue;
+                border-radius: 10%;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                .subTitulo{
+                    text-align: center;
+                    padding: 30px;
+                    //font-size: 24px;
+                }
+                .mano{
+                    color: rgb(7, 7, 97);
+                    font-size: 100px;
+                    padding-left: 80px;
+                }
+                .botonCrear{
+                    background: rgb(7, 7, 97);
+                    color: $neon-blue;
+                    //font-size: 24px;
+                    //font-weight: 400;
+                    padding: 15px 25px;
+                    display: block;
+                    width: 100%;
+                    border: none;
+                    border-radius: 20px;
+                    margin-top: 40px;
+                }
+            }
+            .atras{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                border-radius: 10%;
+                background: $light-blue;
+                backface-visibility: hidden;
+                transform: rotateY(180deg);
+                .descripcion{
+                    padding: 20px;
+                    //font-size: 24px;
+                }
+            }
+        }
+        .carta:hover{
+            transform: rotateY(180deg);
+        }
+    }
+    .aliadoCarta{
+        margin-top: 150px;
+        .carta{
+            .frente{
+                background: $gray;
+                .mano{
+                    color: green;
+                }
+                .botonCrear{
+                    background: rgb(5, 53, 5);
+                    color: $main-green;
+                    //font-size: 22px;
+                }
+            }
+            .atras{
+                background: $gray; 
+            }
+        }
+    }
+    .proveedorCarta{
+        margin-top: 150px;
+        .carta{
+            .frente{
+                background: rgb(164, 203, 221);
+                .subTitulo{
+                    padding: 30px 10px;
+                }
+                
+                .botonCrear{
+                    background: rgb(16, 106, 112);
+                    color: rgb(134, 195, 206);
+                    //font-size: 22px;
+                }
+            }
+            .atras{
+                background: rgb(164, 203, 221); 
+            }
+        }
+    }
+}
+//Fin Haz Parte 
+// ¿por que hacer parte?
+.pHacerParte{
+    margin-top: 100px;
+    .titulo{
+        //font-size: 36px;
+        text-align: center;
+        padding: 20px;
+    }
+    .slider{  
+        margin-top: 40px;
+        position: relative;
+        .impactoAm,.impactoSo,.impactoMe,.impactoGlo{
+            width: 100%;
+            height: 267px;
+            position: absolute;
+            opacity: 0;
+            transition: opacity .5s;
+            .descripcion{
+                margin-top: 20px;
+                text-align: left;
+                font-family: $primary-font;
+                //font-size: 24px;
+                // font-weight: 400;
+                padding-left: 20px;
+            }
+            .descripcionB{
+                margin-top: 20px;
+                text-align: center;
+                font-family: $primary-font;
+                //font-size: 36px;
+            }
+        }
+        .impactoAm{
+            background: $neon-blue;
+            opacity: 1;
+        }
+        .impactoSo{
+            background: $dark-blue;
+        }
+        .impactoMe{
+            background: $light-blue;
+        }
+        .impactoGlo{
+            background: $secondary-green;
+        }
+    }
+    ul.slider li:target{
+        opacity: 1;
+    }
+    .menu{
+        position:absolute;
+        margin-left: 40%;;
+        .contenedor{
+            display: inline-block;
+            .contenedorAm,.contenedorSo,.contenedorMe,.contenedorGlo{
+                display: inline-block;
+                background: white;
+                padding: 10px;
+                width: 10px;
+                height: 10px;
+                border-radius: 100%;
+                margin-top: 240px;
+            }
+        }
+    }
+}
+//Fin ¿por que hacer parte?
+@media(min-width:1400px){
+    .headerPantallaInicio{
+        display: flex;
+        justify-content: flex-start;
+         .titulo{
+             padding-left: 60px;           
+         }
+        .menu{
+             .itemsDesplegables{
+                  .menuLabel{
+                     .bars{
+                         display: none;
+                     }
+                     .reciclaje{
+                         display: none;
+                     }
+                 }
+             }
+        }
+        .items{
+             display: flex;
+             justify-content: flex-end;
+             padding: 20px;
+             margin-top: 70px;
+             z-index: 2;
+            .links{
+                display: block;
+                padding: 0px 20px;
+                font-weight: 400;
+                border-bottom:none;
+                border-right: solid black;
+                border-right-width: 1px;
+                justify-items: right;
+            }
+            .links:last-child{
+                color: white;
+                background: rgb(6, 85, 55);
+                border-radius: 30px;
+                padding: 10px 30px;
+            }
+        }    
+    }
+    .contenedorSlider{
+        margin-top: 150px;
+    }
+    .hazParte{
+        margin-top: 450px;
+        .cartasHazP{
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 100px;
+            .cartaJugador{
+                margin-top: 150px;
+            }
+        }
+    }
+
+}
