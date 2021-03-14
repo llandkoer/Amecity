@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -355,6 +356,151 @@ ul, li {
   }
   .hazParte .cartasHazP .cartaJugador {
     margin-top: 150px;
+  }
+}
+.headerPantallaQuienes {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+.headerPantallaQuienes .logo .im-Arbol {
+  width: 98px;
+  height: 94px;
+}
+.headerPantallaQuienes .titulo {
+  font-family: "Ropa Sans", sans-serif;
+}
+.headerPantallaQuienes .menu {
+  padding-left: 16px;
+}
+.headerPantallaQuienes .menu .itemsDesplegables .menuDesplegable {
+  opacity: 0;
+  position: absolute;
+  visibility: hidden;
+}
+.headerPantallaQuienes .menu .itemsDesplegables .menuLabel .bars {
+  font-size: 37px;
+  color: #03363E;
+  margin-top: 20px;
+}
+.headerPantallaQuienes .menu .itemsDesplegables .menuLabel .reciclaje {
+  font-size: 50px;
+  color: #7abf7f;
+  display: none;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.headerPantallaQuienes .items {
+  background-color: #7abf7f;
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 44px;
+  right: 0;
+  padding: 10px 0px 0px;
+  margin-top: 90px;
+  z-index: 2;
+}
+.headerPantallaQuienes .items .links {
+  color: #000;
+  font-family: "Ropa Sans", sans-serif;
+  display: block;
+  padding: 10px;
+  text-align: right;
+  border-bottom: solid #000;
+  border-bottom-width: 1px;
+}
+.headerPantallaQuienes .items .links:last-child {
+  color: #fff;
+  background: #03363E;
+}
+.headerPantallaQuienes .menuDesplegable:checked ~ .menuLabel .bars {
+  display: none;
+}
+.headerPantallaQuienes .menuDesplegable:checked ~ .menuLabel .reciclaje {
+  display: block;
+}
+.headerPantallaQuienes .menuDesplegable:checked ~ .items {
+  display: block;
+}
+.headerPantallaQuienes .links:hover {
+  color: #fff;
+}
+.headerPantallaQuienes .links:active {
+  text-decoration: line-through;
+}
+
+.descripcionMain {
+  padding: 16px;
+}
+.descripcionMain .titulo {
+  margin-top: 50px;
+  text-align: center;
+}
+.descripcionMain .subTitulo {
+  padding: 50px 0px;
+}
+
+.footerPantaQuienes {
+  background: #03363E;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #49BEC2;
+}
+.footerPantaQuienes .descripcionP {
+  padding: 0px 20px 20px;
+}
+.footerPantaQuienes .subtitulo {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.footerPantaQuienes .ciudadAño {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  border: 0;
+}
+
+@media (min-width: 1400px) {
+  .headerPantallaQuienes {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .headerPantallaQuienes .titulo {
+    padding-left: 60px;
+  }
+  .headerPantallaQuienes .menu .itemsDesplegables .menuLabel .bars {
+    display: none;
+  }
+  .headerPantallaQuienes .menu .itemsDesplegables .menuLabel .reciclaje {
+    display: none;
+  }
+  .headerPantallaQuienes .items {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    margin-top: 70px;
+    z-index: 2;
+  }
+  .headerPantallaQuienes .items .links {
+    display: block;
+    padding: 0px 20px;
+    border-bottom: none;
+    border-right: solid black;
+    border-right-width: 1px;
+    justify-items: right;
+  }
+  .headerPantallaQuienes .items .links:last-child {
+    color: #fff;
+    background: #03363E;
+    border-radius: 30px;
+    padding: 10px 30px;
+  }
+
+  .descripcionMain {
+    margin-top: 100px;
   }
 }
 
