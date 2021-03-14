@@ -331,15 +331,12 @@ ul, li {
   .headerPantallaInicio .items .links {
     display: block;
     padding: 0px 20px;
-    font-weight: 400;
     border-bottom: none;
-    border-right: solid black;
+    border-right: solid #000;
     border-right-width: 1px;
     justify-items: right;
   }
   .headerPantallaInicio .items .links:last-child {
-    color: white;
-    background: #065537;
     border-radius: 30px;
     padding: 10px 30px;
   }

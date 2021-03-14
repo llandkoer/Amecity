@@ -341,15 +341,13 @@
             .links{
                 display: block;
                 padding: 0px 20px;
-                font-weight: 400;
+                //font-weight: 400;
                 border-bottom:none;
-                border-right: solid black;
+                border-right: solid $black;
                 border-right-width: 1px;
                 justify-items: right;
             }
             .links:last-child{
-                color: white;
-                background: rgb(6, 85, 55);
                 border-radius: 30px;
                 padding: 10px 30px;
             }
