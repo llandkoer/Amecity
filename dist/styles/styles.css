@@ -503,5 +503,107 @@ ul, li {
     margin-top: 100px;
   }
 }
+.headerBotonVinculaMa {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 16px 0px;
+}
+.headerBotonVinculaMa .titulo {
+  color: #000;
+  font-family: "Ropa Sans", sans-serif;
+}
+.headerBotonVinculaMa .logoArbol .im-Arbol {
+  width: 98px;
+  height: 94px;
+}
+
+.descripcionPag {
+  padding: 0px 120px 0px 16px;
+}
+.descripcionPag .descripcion {
+  font-family: "Ropa Sans", sans-serif;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.formularioProYAli {
+  padding: 0px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formularioProYAli .selectParticipacion {
+  display: flex;
+}
+.formularioProYAli .selectParticipacion .select {
+  margin-top: 25px;
+}
+.formularioProYAli .selectParticipacion .descripcion {
+  font-family: "Ropa Sans", sans-serif;
+}
+.formularioProYAli .cajaFormularioP {
+  padding: 10px;
+  height: 41px;
+  width: 270px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-family: "Ropa Sans", sans-serif;
+  background: #C4C4C4;
+  border: none;
+}
+.formularioProYAli .cajaFormularioG {
+  padding: 10px;
+  height: 116px;
+  width: 270px;
+  font-size: 12px;
+  font-family: "Ropa Sans", sans-serif;
+  background: #C4C4C4;
+  border: none;
+}
+.formularioProYAli ::placeholder {
+  color: #000;
+}
+.formularioProYAli .checkbox {
+  padding: 20px 0px;
+}
+.formularioProYAli .checkbox .terminosCondiciones {
+  font-size: 12px;
+  font-family: "Ropa Sans", sans-serif;
+}
+.formularioProYAli .enviarFormulario {
+  width: 270px;
+  height: 41px;
+  color: #000;
+  font-size: 18px;
+  font-family: "Ropa Sans", sans-serif;
+  font-weight: 400;
+  background: #49BEC2;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.footerBotonVinculaMa {
+  background: #03363E;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #49BEC2;
+  font-family: "Ropa Sans", sans-serif;
+}
+.footerBotonVinculaMa .descripcionP {
+  padding: 0px 20px 20px;
+}
+.footerBotonVinculaMa .subtitulo {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.footerBotonVinculaMa .ciudadAño {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  border: 0;
+}
 
 /*# sourceMappingURL=styles.css.map */

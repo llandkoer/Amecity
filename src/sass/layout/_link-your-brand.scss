@@ -1,0 +1,122 @@
+//Header
+.headerBotonVinculaMa{
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 16px 0px;
+    .titulo{
+        //font-weight: 400;
+        //font-size: 48px;
+        color: $black;
+        font-family: $primary-font;
+    }
+    .logoArbol{
+        .im-Arbol{
+            width: 98px;
+            height: 94px;
+        }
+    }
+}
+//Fin Header
+//Descripcion Pagina
+.descripcionPag{
+    padding: 0px 120px 0px 16px;
+    .descripcion{
+        //font-size: 24px;
+        //font-weight: 400;
+        font-family: $primary-font;
+        color: $black;
+        margin-bottom: 20px;
+    }
+}
+//Fin Descripcion Pagina
+//Formulario Proveedores y Aliados
+.formularioProYAli{
+     padding: 0px 30px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+    .selectParticipacion{
+        display: flex;
+        .select{
+            margin-top: 25px;
+        }
+        .descripcion{
+            //font-size: 24px;
+            font-family: $primary-font;
+        }
+        
+    }
+    .cajaFormularioP{
+        padding: 10px;
+        height: 41px;
+        width: 270px;
+        margin-bottom: 10px;
+        font-size: 12px;
+        font-family: $primary-font;
+        background: $gray;
+        border: none;
+    }
+    .cajaFormularioG{
+        padding: 10px;
+        height: 116px;
+        width: 270px;
+        font-size: 12px;
+        font-family: $primary-font;
+        background: $gray;
+        border: none;
+    }
+    ::placeholder{
+        color: $black;
+        }
+    .checkbox{
+        padding: 20px 0px;
+        .terminosCondiciones{
+            font-size: 12px;
+            font-family: $primary-font;
+        }  
+    }
+    .enviarFormulario{
+        width: 270px;
+        height: 41px;
+        color: $black;
+        font-size: 18px;
+        font-family: $primary-font;
+        font-weight: 400;
+        background: $neon-blue;
+        border-radius: 20px;
+        border: none;
+        margin-bottom: 20px;
+
+    }
+}
+//Fin Formulario Proveedores y Aliados
+//Footer
+.footerBotonVinculaMa{
+    background: $black-blue;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: $neon-blue;
+    font-family: $primary-font;
+    .titulo{
+        //font-size: 48px;
+    }
+    .descripcionP{
+        //font-size: 18px;
+        padding:0px 20px 20px ;
+    }
+    .subtitulo{
+        //font-size: 24px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    .ciudadAño{
+        margin: 0;
+        padding: 0;
+        padding-bottom: 5px;
+        border:0;
+        //font-size: 14px;
+    }
+}
+//Fin Footer
