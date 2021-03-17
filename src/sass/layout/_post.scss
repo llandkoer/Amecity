@@ -1,0 +1,44 @@
+.post {
+  .post__cover {
+    width: 100%;
+    height: 50vh;
+
+    position: relative;
+
+    padding-top: 150px;
+    padding-right: 5%;
+    padding-left: 5%;
+
+    background-color: $light-green;
+
+    .post__title {
+      font-size: 3rem;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .post__text {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+
+      p {
+        font-size: 1.2rem;
+
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .post__information {
+    padding-top: 30px;
+    padding-right: 5%;
+    padding-left: 5%;
+
+    p {
+      font-size: 1.4rem;
+
+      margin-bottom: 15px;
+    }
+  }
+}
