@@ -68,22 +68,21 @@
 
         display: inline-block;
 
-        //vertical-align: top;
       }
     }
   }
 
-  .challenges__suggest{
+  .challenges__suggest {
     margin-top: 25px;
 
-    .challenges__paragraph{
+    .challenges__paragraph {
       font-size: 1.2rem;
       text-align: center;
 
       margin-bottom: 5px;
     }
 
-    .challenges__button{
+    .challenges__button {
       width: 270px;
       height: 41px;
 
@@ -101,17 +100,16 @@
   }
 }
 
-@media screen and (min-width: 1024px){
-  .challenges{
-
-    .challenges__items{
-      .challenges__items-container{
+@media screen and (min-width: 1024px) {
+  .challenges {
+    .challenges__items {
+      .challenges__items-container {
         height: auto;
         width: 90%;
 
         margin: 0 auto;
 
-        @include flex (row, space-evenly, center);
+        @include flex(row, space-evenly, center);
         flex-wrap: wrap;
 
         overflow-x: unset;
