@@ -1,0 +1,51 @@
+.vendors {
+    display:flex;
+    flex-direction:column;
+    width:200px;
+    height:300px;
+    background-color:#AEDAE4;
+    border-radius:15px;
+}
+
+.vendors button {
+    height: 100%;
+    border-radius:15px;
+    border-style: none;
+    background-color:#03363E;
+    color: #49BEC2;
+}
+
+.vendors img {
+    margin:20px;
+}
+
+.vendors p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ally {
+    display:flex;
+    flex-direction:column;
+    width:200px;
+    height:300px;
+    background-color:#DBF5C6;
+    border-radius:15px;
+}
+
+.ally button {
+    height: 100%;
+    border-radius:15px;
+    border-style: none;
+    background-color:#2E5903;
+    color: #7ABE80;
+}
+
+.ally img {
+    margin:20px;
+}
+
+.ally p {
+    text-align: center;
+    margin-top: 20px;
+}
