@@ -1,2 +1,6 @@
 *.jpg
 *.png
+
+## NODE
+
+node_modules/
