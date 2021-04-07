@@ -1,0 +1,31 @@
+@media (min-width: 1024px){
+.mainNews{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.desktopNews{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Blog Pantalla */
+.introBlog{
+    p{
+        width: 50%;
+    }
+}
+.containDrop{
+    width: 50%;
+    display: flex;
+    justify-content: end;
+}
+.containerNews{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 3%;
+    grid-row-gap: 8%;
+
+}
+}

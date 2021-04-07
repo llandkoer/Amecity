@@ -1,0 +1,23 @@
+.introBlog{
+    width: 50%;
+    margin: 5%;
+}
+.dropdown{
+    margin-left: 5%;
+    margin-bottom: 2%;
+    .btn{
+        margin-left: 75%;
+    }
+}
+.containerNews{
+    margin: 5%;
+
+    .news{
+        display: flex;
+        margin-bottom: 5%;
+
+        .imageNews{
+            padding-right: 2%;
+        }
+    }
+}
