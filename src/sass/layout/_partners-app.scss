@@ -22,15 +22,16 @@
       width: 100px;
       height: 33px;
 
-      padding: 3px 7px;
+      padding: 3px 10px;
       font-size: 1.8rem;
 
       color: $neon-blue;
 
+      @include flex(row, space-between, center);
+
       box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.25);
       border-radius: 20px;
-
-      
+      border: none;
     }
   }
 
@@ -141,56 +142,51 @@
 
 @media screen and (min-width: 1024px) {
   .partners-app {
-
-    .partners-app__title{
+    .partners-app__title {
       font-size: 4.8rem;
     }
 
-    .partners-app__location-container{
+    .partners-app__location-container {
       width: 375px;
 
       margin-bottom: 19px;
-      .partners-app__location-paragraph{
-        font-size: 3.6rem;;
+      .partners-app__location-paragraph {
+        font-size: 3.6rem;
       }
     }
 
-    .partners-app__filters-container{
+    .partners-app__filters-container {
       width: 450px;
 
       flex-direction: row;
       align-items: flex-start;
 
-      .partners-app__organize{
-
-        .partners-app__organize-container{
+      .partners-app__organize {
+        .partners-app__organize-container {
           justify-content: center;
-          .partners-app__organize-text{
+          .partners-app__organize-text {
             font-size: 2.5rem;
           }
         }
       }
 
-      .partners-app__filter{
-
-        .partners-app__filter-container{
+      .partners-app__filter {
+        .partners-app__filter-container {
           justify-content: center;
-          .partners-app__filter-text{
+          .partners-app__filter-text {
             font-size: 2.5rem;
           }
         }
       }
     }
 
-    .partners-app__partners-container{
-
-      .partners-app__partner{
-
-        .partners-app__partner-label{
+    .partners-app__partners-container {
+      .partners-app__partner {
+        .partners-app__partner-label {
           font-size: 3.6rem;
         }
 
-        .partners-app__partner-photo{
+        .partners-app__partner-photo {
           width: 200px;
           height: 200px;
         }
