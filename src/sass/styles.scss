@@ -1,9 +1,5 @@
 @import "./baserules/reset";
-@import "";
-@import "";
-@import "";
-@import "";
-@import "";
-@import "";
-@import "";
-@import "";
+@import "./baserules/typography";
+@import "./lib/variables";
+@import "./lib/extends";
+@import "./lib/mixins";
