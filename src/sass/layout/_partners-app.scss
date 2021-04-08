@@ -22,29 +22,15 @@
       width: 100px;
       height: 33px;
 
-      @include flex(row, space-between, center);
-
       padding: 3px 7px;
+      font-size: 1.8rem;
+
+      color: $neon-blue;
 
       box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.25);
       border-radius: 20px;
 
-      .partners-app__city {
-        font-size: 2rem;
-        color: $neon-blue;
-      }
-
-      .partners-app__location-sort {
-        width: 20px;
-        height: 25px;
-
-        margin-bottom: 15px;
-
-        background-image: url("https://svgur.com/i/Uqq.svg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
+      
     }
   }
 
