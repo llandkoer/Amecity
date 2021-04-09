@@ -1,0 +1,150 @@
+.challenge {
+  width: 380px;
+  height: 420px;
+
+  padding: 10px 15px;
+
+  background-color: rgba(174, 218, 228, 0.5);
+
+  border-radius: 20px;
+  &__header {
+    width: 100%;
+
+    margin-bottom: 21px;
+
+    @include flex(row, space-between, center);
+
+    .challenge__meet-challenge {
+      font-size: 3.6rem;
+    }
+
+    .challenge__close-container {
+      width: 35px;
+      height: 35px;
+
+      background-color: $gray;
+
+      @include flex(row, center, center);
+
+      border-radius: 50%;
+
+      .challenge__close {
+        font-size: 2.4rem;
+      }
+    }
+  }
+  &__body {
+    width: 100%;
+
+    margin-bottom: 44px;
+
+    @include flex(row, space-between, center);
+
+    .challenge__image {
+      width: 170px;
+      height: 170px;
+
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .challenge__information {
+      @include flex(column, flex-start, center);
+
+      .challenge__title {
+        font-size: 2.4rem;
+
+        margin-bottom: 16px;
+      }
+
+      .challenge__description {
+        font-size: 1.4rem;
+        text-align: center;
+
+        margin-bottom: 18px;
+        margin-left: 15px;
+      }
+
+      .challenge__points-container {
+        width: 80%;
+
+        @include flex(row, space-between, center);
+
+        .challenge__points {
+          font-size: 2.4rem;
+        }
+
+        .challenge__focus-container {
+          width: 35px;
+          height: 35px;
+
+          background-color: $gray;
+
+          @include flex(row, center, center);
+
+          border-radius: 50%;
+
+          .challenge__focus {
+            width: 25px;
+            height: 23px;
+
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  &__footer {
+    width: 95%;
+
+    margin: 0 auto;
+    margin-bottom: 35px;
+
+    @include flex(row, space-evenly, center);
+
+    .challenge__requirements {
+      font-size: 1.4rem;
+
+      align-self: flex-start;
+    }
+
+    .challenge__requirements-list {
+      .challenge__requirement {
+        font-size: 1.4rem;
+      }
+    }
+
+    .challenge__share-container {
+      width: 35px;
+      height: 35px;
+
+      background-color: $gray;
+
+      @include flex(row, center, center);
+
+      border-radius: 50%;
+      .challenge__share {
+        width: 33px;
+        height: 27px;
+
+        display: block;
+      }
+    }
+  }
+
+  .challenge__button {
+    width: 270px;
+    height: 40px;
+
+    display: block;
+
+    margin: 0 auto;
+
+    font-size: 1.8rem;
+
+    background-color: $neon-blue;
+
+    border-radius: 40px;
+    border: none;
+  }
+}
