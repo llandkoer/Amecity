@@ -1,0 +1,28 @@
+@import "../lib/variables";
+.Cerrar-PopUp {
+    display: flex;
+    justify-content: flex-end;
+}
+.selected {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: #DBF5C6;
+    .content {
+        text-align: justify;
+        display: flex;
+        flex-direction: row; 
+        img {
+            border-radius: 50%;
+        }
+        div {
+            margin: 0px 0px 10px 15px;
+            div {
+                align-items: flex-end;
+                margin: 10px 0px 0px 0px;
+                text-align: center;
+            }
+        }
+    }
+}
