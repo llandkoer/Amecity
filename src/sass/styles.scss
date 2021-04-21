@@ -1,6 +1,7 @@
 @import "./lib/variables";
 @import "./lib/extends";
 @import "./baserules/reset";
+@import "./lib/mixins";
 @import "./baserules/typography";
 @import "./layout/header-app";
 @import "./layout/header-statics";
@@ -8,3 +9,4 @@
 @import "./layout/page-Home-app";
 @import "./layout/page-Who-static";
 @import "./layout/pop-link-your-brand";
+
