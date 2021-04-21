@@ -1,0 +1,23 @@
+@media (min-width: 1024px) {
+    .card-containers {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .card-containers__news--none {
+        display: flex;
+    }
+
+    /* Blog-static */
+    .blog__news{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 3%;
+        grid-row-gap: 8%;
+    }
+
+    .blog__dropdowns{
+        display: flex;
+        margin-left: 3%;
+    }
+}

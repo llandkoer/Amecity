@@ -1,0 +1,38 @@
+.blog {
+    .blog__dropdowns {
+        text-align: end;
+        margin-right: 6%;
+
+        .blog__dropdown-containers {
+            margin: 2%;
+
+            .btn{
+                width: 90px;
+                height: 37px;
+            }
+        }
+    
+    }
+
+
+    .blog__news {
+        margin: 5%;
+
+        .blog__news-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5%;
+
+            .blog__news-text{
+                font-size: 1.2rem;
+                font-family: $primary-font;
+                color: $black;
+            }
+
+            .blog__news-img {
+                margin-right: 5%;
+            }
+        }
+    }
+    
+}
