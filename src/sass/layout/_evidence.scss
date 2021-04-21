@@ -1,0 +1,72 @@
+.main {
+    position: relative;
+    top: 40px;
+    margin-top: 10px;
+    padding: 20px;
+    &__title {
+        @extend %h2;
+    }
+    &__subtitle {
+        @extend %h3;
+    }
+    &__button:hover {
+        background-color: $main-green;
+        & > .main__button-text::before {
+            content: 'Subir imagen';
+        }
+    }  
+    &__button-text::before {
+        content: 'Capturar Imagen';
+    }
+    &__details {
+        i {
+            margin: 5px;
+        }
+    }
+    &--evidence {
+        background-color: $light-blue;
+        border-radius: 20px;
+    }
+    &__details-button {
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background-color: $gray;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        margin: 5px;
+    }
+}
+.button--repeat {
+    visibility: hidden;
+}
+.figure {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    &__image {
+        width: 100%;
+    }
+    &__details {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        &:hover > .figure__img-button.button--repeat {
+            visibility: visible;
+        }
+    }
+    &__img-button {
+        background-color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 30px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        margin: 5px;
+    }
+}
+i {
+    font-size: 2.0rem;
+}
