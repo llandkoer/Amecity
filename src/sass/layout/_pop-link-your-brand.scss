@@ -1,16 +1,16 @@
 //Header
-.headerBotonVinculaMa{
+.header-button-link-your-brand{
     display: flex;
     justify-content: space-between;
     padding: 16px 16px 0px;
-    .titulo{
-        //font-weight: 400;
-        //font-size: 48px;
+    .title{
+        font-weight: 400;
+        font-size: 3rem;
         color: $black;
-        font-family: $primary-font;
+        //font-family: $primary-font;
     }
-    .logoArbol{
-        .im-Arbol{
+    .logo-tree{
+        .im-tree{
             width: 98px;
             height: 94px;
         }
@@ -18,11 +18,11 @@
 }
 //Fin Header
 //Descripcion Pagina
-.descripcionPag{
+.description-pag{
     padding: 0px 120px 0px 16px;
-    .descripcion{
-        //font-size: 24px;
-        //font-weight: 400;
+    .description{
+        font-size: 1.5rem;
+        font-weight: 400;
         font-family: $primary-font;
         color: $black;
         margin-bottom: 20px;
@@ -30,23 +30,23 @@
 }
 //Fin Descripcion Pagina
 //Formulario Proveedores y Aliados
-.formularioProYAli{
+.form-supplier-ally{
      padding: 0px 30px;
      display: flex;
      flex-direction: column;
      align-items: center;
-    .selectParticipacion{
+    .select-participation{
         display: flex;
         .select{
             margin-top: 25px;
         }
-        .descripcion{
-            //font-size: 24px;
-            font-family: $primary-font;
+        .description{
+            font-size: 1.5rem;
+            //font-family: $primary-font;
         }
         
     }
-    .cajaFormularioP{
+    .form-box-supplier{
         padding: 10px;
         height: 41px;
         width: 270px;
@@ -56,12 +56,12 @@
         background: $gray;
         border: none;
     }
-    .cajaFormularioG{
+    .form-box-G{
         padding: 10px;
         height: 116px;
         width: 270px;
-        font-size: 12px;
-        font-family: $primary-font;
+        font-size: 0.75rem;
+        //font-family: $primary-font;
         background: $gray;
         border: none;
     }
@@ -70,17 +70,17 @@
         }
     .checkbox{
         padding: 20px 0px;
-        .terminosCondiciones{
-            font-size: 12px;
-            font-family: $primary-font;
+        .terms-conditions{
+            font-size: 0.75rem;
+            //font-family: $primary-font;
         }  
     }
-    .enviarFormulario{
+    .send-form{
         width: 270px;
         height: 41px;
         color: $black;
-        font-size: 18px;
-        font-family: $primary-font;
+        font-size: 1.125rem;
+        //font-family: $primary-font;
         font-weight: 400;
         background: $neon-blue;
         border-radius: 20px;
@@ -91,32 +91,32 @@
 }
 //Fin Formulario Proveedores y Aliados
 //Footer
-.footerBotonVinculaMa{
+.footer-button-link-your-brand{
     background: $black-blue;
     display: flex;
     flex-direction: column;
     text-align: center;
     color: $neon-blue;
-    font-family: $primary-font;
-    .titulo{
-        //font-size: 48px;
+    //font-family: $primary-font;
+    .title{
+        font-size: 3rem;
     }
-    .descripcionP{
-        //font-size: 18px;
+    .description-P{
+        font-size: 1.125rem;
         padding:0px 20px 20px ;
     }
-    .subtitulo{
-        //font-size: 24px;
+    .subtitle{
+        font-size: 1.5rem;
         margin: 0;
         padding: 0;
         border: 0;
     }
-    .ciudadAño{
+    .city-year{
         margin: 0;
         padding: 0;
         padding-bottom: 5px;
         border:0;
-        //font-size: 14px;
+        font-size: 0.875rem;
     }
 }
 //Fin Footer

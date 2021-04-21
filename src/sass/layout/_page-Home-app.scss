@@ -1,33 +1,33 @@
 //inicio Header
-.headerPantallaInicio{
+.header-home-screen-app{
     display: flex;
     justify-content: space-between;
     padding:16px;
     .logo{
-        .im-Arbol{
+        .im-tree{
          width: 75px;
          height: 74px;
         }
      }
-     .titulo{
-         //font-size: 48px;
+     .title{
+         font-size: 3rem;
          font-family: $primary-font;
      }
     .menu{
-         .itemsDesplegables{
-             .menuDesplegable{
+         .drop-down-items{
+             .drop-down-menu{
                  opacity: 0;
                  position: absolute;
                  visibility: hidden;
                 }
-              .menuLabel{
+              .menu-label{
                  .bars{
-                     font-size: 37px;
+                     font-size: 2.313rem;
                      color: $neon-blue;
                      margin-top: 20px;
                  }
                  .reciclaje{
-                     font-size: 50px;
+                     font-size: 3.125rem;
                      color: $main-green;
                      display: none;
                      margin-top: 10px;
@@ -48,11 +48,11 @@
          z-index: 2;
         .links{
             color: $black;
-            font-family: $primary-font;
+            //font-family: $primary-font;
             display: block;
             padding: 10px;
-            //font-size: 24px;
-            //font-weight: 400;
+            font-size: 1.5rem;
+            font-weight: 400;
             text-align: right;
             border-bottom:solid $black;
             border-bottom-width: 1px;
@@ -62,8 +62,8 @@
             background: $black-blue;
         }
     }    
-     .menuDesplegable:checked {  
-          &~.menuLabel{ 
+     .drop-down-menu:checked {  
+          &~.menu-label{ 
                 .bars{
                     display: none;
                 }  
@@ -84,38 +84,38 @@
 }
 //Fin Header
 //Contenedor Slider
-.contenedorSlider{
+.container-slider-app{
     .slider{  
         position: relative;
-        .quienesSomos,.verProveedores,.verAliados,.verBlog{
+        .about-us,.see-prov,.see-ali,.see-blog{
             width: 100%;
             height: 267px;
             position: absolute;
             opacity: 0;
             transition: opacity .5s;
-            .descripcion{
+            .description{
                 text-align: left;
                 padding: 70px 20px;
-                //font-size: 18px;
+                font-size: 1.125rem;
             }
-            .descripcionB{
+            .description-B{
                 text-align: right;
                 padding: 0px 20px;
-                font-family: $primary-font;
-                //font-size: 24px;
+                //font-family: $primary-font;
+                font-size: 1.5rem;
             }
         }
-        .quienesSomos{
+        .about-us{
             background: $secondary-green;
             opacity: 1;
         }
-        .verProveedores{
+        .see-prov{
             background: $light-green;
         }
-        .verAliados{
+        .see-ali{
             background: $dark-blue;
         }
-        .verBlog{
+        .see-blog{
             background: $light-blue;
         }
     }
@@ -125,9 +125,9 @@
     .menu{
         position:absolute;
         margin-left: 40%;;
-        .contenedor{
+        .container{
             display: inline-block;
-            .contenedorQ,.contenedorP,.contenedorA,.contenedorB{
+            .container-Q,.container-P,.container-A,.container-B{
                 display: inline-block;
                 background: white;
                 padding: 10px;
@@ -141,44 +141,44 @@
 }
 // Fin Contenedor Slider 
 // Haz Parte
-.hazParte{
+.join-app{
     margin-top: 300px;
-    font-family: $primary-font;
-    .titulo{
+    //font-family: $primary-font;
+    .title{
         text-align: center;
         padding: 20px;
-        //font-size: 36px;
+        font-size: 2.25rem;
     }
-    .contenedor{
+    .container{
         display: flex;        
         justify-content: center;
-        .carta{
+        .card{
              width: 284px;
              height: 287px;
              position: relative;
              transform-style: preserve-3d;
-            .frente{
+            .front{
                 position: absolute;
                 background: $light-blue;
                 border-radius: 10%;
                 width: 100%;
                 height: 100%;
                 backface-visibility: hidden;
-                .subTitulo{
+                .subtitle{
                     text-align: center;
                     padding: 30px;
-                    //font-size: 24px;
+                    font-size: 1.5rem;
                 }
-                .mano{
+                .hand{
                     color: rgb(7, 7, 97);
-                    font-size: 100px;
+                    font-size: 6.25rem;
                     padding-left: 80px;
                 }
-                .botonCrear{
+                .create-button{
                     background: rgb(7, 7, 97);
                     color: $neon-blue;
-                    //font-size: 24px;
-                    //font-weight: 400;
+                    font-size: 1.5rem;
+                    font-weight: 400;
                     padding: 15px 25px;
                     display: block;
                     width: 100%;
@@ -187,7 +187,7 @@
                     margin-top: 40px;
                 }
             }
-            .atras{
+            .behind{
                 position: absolute;
                 width: 100%;
                 height: 100%;
@@ -195,51 +195,51 @@
                 background: $light-blue;
                 backface-visibility: hidden;
                 transform: rotateY(180deg);
-                .descripcion{
+                .description{
                     padding: 20px;
-                    //font-size: 24px;
+                    font-size: 1.5rem;
                 }
             }
         }
-        .carta:hover{
+        .card:hover{
             transform: rotateY(180deg);
         }
     }
-    .aliadoCarta{
+    .ally-card{
         margin-top: 150px;
-        .carta{
-            .frente{
+        .card{
+            .front{
                 background: $gray;
-                .mano{
+                .hand{
                     color: green;
                 }
-                .botonCrear{
+                .create-button{
                     background: rgb(5, 53, 5);
                     color: $main-green;
-                    //font-size: 22px;
+                    font-size: 1.375rem;
                 }
             }
-            .atras{
+            .behind{
                 background: $gray; 
             }
         }
     }
-    .proveedorCarta{
+    .supplier-card{
         margin-top: 150px;
-        .carta{
-            .frente{
+        .card{
+            .front{
                 background: rgb(164, 203, 221);
-                .subTitulo{
+                .subtitle{
                     padding: 30px 10px;
                 }
                 
-                .botonCrear{
+                .create-button{
                     background: rgb(16, 106, 112);
                     color: rgb(134, 195, 206);
-                    //font-size: 22px;
+                    font-size: 1.375rem;
                 }
             }
-            .atras{
+            .behind{
                 background: rgb(164, 203, 221); 
             }
         }
@@ -247,48 +247,48 @@
 }
 //Fin Haz Parte 
 // ¿por que hacer parte?
-.pHacerParte{
+.p-join{
     margin-top: 100px;
-    .titulo{
-        //font-size: 36px;
+    .title{
+        font-size: 2.25rem;
         text-align: center;
         padding: 20px;
     }
     .slider{  
         margin-top: 40px;
         position: relative;
-        .impactoAm,.impactoSo,.impactoMe,.impactoGlo{
+        .impact-Am,.impact-So,.impact-Me,.impact-Glo{
             width: 100%;
             height: 267px;
             position: absolute;
             opacity: 0;
             transition: opacity .5s;
-            .descripcion{
+            .description{
                 margin-top: 20px;
                 text-align: left;
-                font-family: $primary-font;
-                //font-size: 24px;
-                // font-weight: 400;
+                //font-family: $primary-font;
+                font-size: 1.5rem;
+                font-weight: 400;
                 padding-left: 20px;
             }
-            .descripcionB{
+            .description-B{
                 margin-top: 20px;
                 text-align: center;
-                font-family: $primary-font;
-                //font-size: 36px;
+                //font-family: $primary-font;
+                font-size: 2.25rem;
             }
         }
-        .impactoAm{
+        .impact-Am{
             background: $neon-blue;
             opacity: 1;
         }
-        .impactoSo{
+        .impact-So{
             background: $dark-blue;
         }
-        .impactoMe{
+        .impact-Me{
             background: $light-blue;
         }
-        .impactoGlo{
+        .impact-Glo{
             background: $secondary-green;
         }
     }
@@ -298,9 +298,9 @@
     .menu{
         position:absolute;
         margin-left: 40%;;
-        .contenedor{
+        .container{
             display: inline-block;
-            .contenedorAm,.contenedorSo,.contenedorMe,.contenedorGlo{
+            .container-Am,.container-So,.container-Me,.container-Glo{
                 display: inline-block;
                 background: white;
                 padding: 10px;
@@ -313,16 +313,16 @@
     }
 }
 //Fin ¿por que hacer parte?
-@media(min-width:1400px){
-    .headerPantallaInicio{
+@media(min-width:1024px){
+    .header-home-screen-app{
         display: flex;
         justify-content: flex-start;
-         .titulo{
+         .title{
              padding-left: 60px;           
          }
         .menu{
-             .itemsDesplegables{
-                  .menuLabel{
+             .drop-down-items{
+                  .menu-label{
                      .bars{
                          display: none;
                      }
@@ -341,7 +341,7 @@
             .links{
                 display: block;
                 padding: 0px 20px;
-                //font-weight: 400;
+                font-weight: 400;
                 border-bottom:none;
                 border-right: solid $black;
                 border-right-width: 1px;
@@ -353,16 +353,16 @@
             }
         }    
     }
-    .contenedorSlider{
+    .container-slider-app{
         margin-top: 150px;
     }
-    .hazParte{
+    .join-app{
         margin-top: 450px;
-        .cartasHazP{
+        .cards-join{
             display: flex;
             justify-content: space-between;
             padding: 0px 100px;
-            .cartaJugador{
+            .card-player{
                 margin-top: 150px;
             }
         }

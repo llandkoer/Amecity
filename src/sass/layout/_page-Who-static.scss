@@ -1,34 +1,34 @@
 //Header
-.headerPantallaQuienes{
+.header-screen-who{
     display: flex;
     justify-content: space-between;
     padding:16px;
     .logo{
-        .im-Arbol{
+        .im-tree{
          width: 98px;
          height: 94px;
         }
      }
-     .titulo{
-         //font-size: 48px;
-         font-family: $primary-font;
+     .title{
+         font-size: 3rem;
+         //font-family: $primary-font;
      }
     .menu{
         padding-left: 16px;
-         .itemsDesplegables{
-             .menuDesplegable{
+         .drop-down-items{
+             .drop-down-menu{
                  opacity: 0;
                  position: absolute;
                  visibility: hidden;
                 }
-              .menuLabel{
+              .menu-label{
                  .bars{
-                     font-size: 37px;
+                     font-size: 2.313rem;
                      color: $black-blue;
                      margin-top: 20px;
                  }
                  .reciclaje{
-                     font-size: 50px;
+                     font-size: 3.125rem;
                      color: $main-green;
                      display: none;
                      margin-top: 10px;
@@ -49,11 +49,11 @@
          z-index: 2;
         .links{
             color: $black;
-            font-family: $primary-font;
+            //font-family: $primary-font;
             display: block;
             padding: 10px;
-            //font-size: 24px;
-            //font-weight: 400;
+            font-size: 1.5rem;
+            font-weight: 400;
             text-align: right;
             border-bottom:solid $black;
             border-bottom-width: 1px;
@@ -63,8 +63,8 @@
             background: $black-blue;
         }
     }    
-     .menuDesplegable:checked {  
-          &~.menuLabel{ 
+     .drop-down-menu:checked {  
+          &~.menu-label{ 
                 .bars{
                     display: none;
                 }  
@@ -85,59 +85,59 @@
 }
 //Fin Header
 // Descripcion Main
-.descripcionMain{
+.description-main{
     padding: 16px;
-    .titulo{
+    .title{
         margin-top: 50px;
-        //font-size: 48px;
+        font-size: 3rem;
         text-align: center;
     }
-    .subTitulo{
+    .subtitle{
         padding: 50px 0px;
-        //font-size: 24px;
+        font-size: 1.5rem;
     }
 }
 //Fin Descripcion Main
 //Footer
-.footerPantaQuienes{
+.footer-screen-who{
     background: $black-blue;
     display: flex;
     flex-direction: column;
     text-align: center;
     color: $neon-blue;
-    .titulo{
-        //font-size: 48px;
+    .title{
+        font-size: 3rem;
     }
-    .descripcionP{
-        //font-size: 18px;
+    .description-P{
+        font-size: 1.125rem;
         padding:0px 20px 20px ;
     }
-    .subtitulo{
-        //font-size: 24px;
+    .subtitle{
+        font-size: 1.5rem;
         margin: 0;
         padding: 0;
         border: 0;
     }
-    .ciudadAño{
+    .city-year{
         margin: 0;
         padding: 0;
         padding-bottom: 5px;
         border:0;
-        //font-size: 14px;
+        font-size: 0.875rem;
     }
 }
 //Fin Footer
 
-@media(min-width:1400px){
-    .headerPantallaQuienes{
+@media(min-width:1024px){
+    .header-screen-who{
         display: flex;
         justify-content: space-evenly;
-         .titulo{
+         .title{
              padding-left: 60px;           
          }
         .menu{
-             .itemsDesplegables{
-                  .menuLabel{
+             .drop-down-items{
+                  .menu-label{
                      .bars{
                          display: none;
                      }
@@ -156,7 +156,7 @@
             .links{
                 display: block;
                 padding: 0px 20px;
-                //font-weight: 400;
+                font-weight: 400;
                 border-bottom:none;
                 border-right: solid black;
                 border-right-width: 1px;
@@ -170,7 +170,7 @@
             }
         }    
     }
-    .descripcionMain{
+    .description-main{
         margin-top: 100px;
     }
 }

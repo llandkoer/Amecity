@@ -1,6 +1,10 @@
 @import "./lib/variables";
 @import "./lib/extends";
 @import "./baserules/reset";
-@import "./layout/page-Home";
-@import "./layout/page-Who";
-@import "./layout/link-your-brand";
+@import "./baserules/typography";
+@import "./layout/header-app";
+@import "./layout/header-statics";
+@import "./layout/hero-static";
+@import "./layout/page-Home-app";
+@import "./layout/page-Who-static";
+@import "./layout/pop-link-your-brand";
