@@ -1,8 +1,8 @@
-body {
+.form-body {
     @extend %margin;
     max-width: 320px;
 }
-.header {
+.form-header {
     @include flex (row, space-between, center);
     margin-top: 10px;
     &__title {
@@ -13,7 +13,7 @@ body {
         flex: none;
     }
 }
-.main {
+.form-main {
     &__text {
         @extend %p;
         &--centered {
@@ -57,6 +57,6 @@ body {
         height: 30px;
     }
 }
-.main__form-label input:checked ~ .main__form-checkmark {
+.form-main__form-label input:checked ~ .form-main__form-checkmark {
     background-color: $neon-blue;
 }
