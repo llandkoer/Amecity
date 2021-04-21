@@ -1,0 +1,49 @@
+.pro-header{
+    &__title{
+        font-size: 3.6rem;
+        color: $black;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: $primary-font;
+    }
+
+    &__text{
+        font-size: 2.0rem;
+        color: $black;
+        text-align: justify;
+        font-family: $primary-font;
+    }
+}
+
+.pro-supplies{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.7rem;
+    color: $black;
+    font-family: $primary-font;
+
+    &__dropdown{
+        .btn{
+            width: 90px;
+            height: 37px;
+        }
+    }
+}
+
+.pro-maps{
+    text-align: center;
+
+    &__title{
+        font-size: 2.4rem;
+        color: $black;
+        text-align: center;
+        margin-left: 6%;
+    }
+
+    &__img{
+        width: 75%;
+    }
+}
+
+
+

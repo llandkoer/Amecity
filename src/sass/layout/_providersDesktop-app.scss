@@ -1,0 +1,15 @@
+@media (min-width: 1024px){
+    .pro-supplies{
+        display: block;
+
+        ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 15%;
+        }
+
+        &__dropdown{
+            margin-left: 1%;
+        }
+    }
+}
