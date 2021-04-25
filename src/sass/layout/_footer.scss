@@ -1,0 +1,43 @@
+@import "../lib/variables";
+
+footer{
+    font-family: $primary-font;
+    background: $black-blue;
+    color:$neon-blue;
+    padding:20px;
+    @include flex (column, center, center);
+    text-align: center;
+    h3 {
+        font-size: 48px;
+    }
+    p {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    .Ame-footer {
+        margin-top:20px;
+        font-size: 24px;
+    }
+    span{
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    footer{
+        .head-footer-content{
+            @include flex (row-reverse, space-between, center);
+            width:100%;
+            p{
+                font-size:24px;
+                width:30%;
+            }
+        }
+        .Ame-footer {
+            font-size: 48px;
+        }
+        span{
+            font-size: 36px;
+        }
+    }
+}
