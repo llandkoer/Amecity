@@ -1,5 +1,3 @@
-@import "../lib/variables";
-
 footer{
     font-family: $primary-font;
     background: $black-blue;
@@ -8,18 +6,18 @@ footer{
     @include flex (column, center, center);
     text-align: center;
     h3 {
-        font-size: 48px;
+        font-size: 3rem;
     }
     p {
         margin-top: 10px;
-        font-size: 18px;
+        font-size: 1.125rem;
     }
     .Ame-footer {
         margin-top:20px;
-        font-size: 24px;
+        font-size: 1.5rem;
     }
     span{
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 }
 
@@ -29,15 +27,15 @@ footer{
             @include flex (row-reverse, space-between, center);
             width:100%;
             p{
-                font-size:24px;
+                font-size:1.5rem;
                 width:30%;
             }
         }
         .Ame-footer {
-            font-size: 48px;
+            font-size: 3rem;
         }
         span{
-            font-size: 36px;
+            font-size: 2.25rem;
         }
     }
 }
