@@ -1,0 +1,26 @@
+@import "../lib/variables";
+.Cerrar-PopUp {
+    display: flex;
+    justify-content: flex-end;
+}
+.selected {
+    padding: 10px;
+    @include flex (column, center, 0);
+    width: 500px;
+    background-color: $light-green;
+    .content {
+        @include flex (column, center, justify);
+        flex-direction: row; 
+        img {
+            border-radius: 50%;
+        }
+        div {
+            margin: 0px 0px 10px 15px;
+            div {
+                align-items: flex-end;
+                margin: 10px 0px 0px 0px;
+                text-align: center;
+            }
+        }
+    }
+}
