@@ -1,0 +1,59 @@
+.blogspot-title {
+    text-align: center;
+    color: $black;
+    font-family: $primary-font;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    padding-bottom: 5%;
+}
+
+.card-containers__news {
+    position: relative;
+    margin: auto;
+    background-color: $white;
+    width: 254px;
+    height: 267px;
+    box-shadow: 1px 2px 25px -1px #888888;
+    border-radius: 5%;
+
+    .card-containers__title {
+        text-align: center;
+        color: $black;
+        font-family: $primary-font;
+        font-size: 2.4rem;
+        padding-top: 10%;
+    }
+
+    .card-containers__read-more {
+        position: absolute;
+        bottom: 7%;
+        right: 7%;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-family: $primary-font;
+
+    }
+
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+
+    button {
+        width: 254px;
+        height: 50px;
+        border: none;
+        background-color: #0a2702;
+        font-family: $primary-font;
+        font-size: 1.8rem;
+        color: $light-green;
+        border-radius: 40px;
+    }
+}
+
+.card-containers__news--none {
+    display: none;
+}
