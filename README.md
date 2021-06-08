@@ -1,8 +1,8 @@
-# Amecity 🍃🌳
+# Amécity 🍃🌳
 
-![Logo](https://i.imgur.com/tbTGqWo.png)
+![Logo](https://i.imgur.com/4f84Cyp.png)
 
-Last year, air pollution in Bogotá cost the city more than four billion pesos and this same phenomenon was responsible for the loss of an estimated 3,900 lives in the capital.
+Last year, air pollution in Bogotá cost the city more than four billion COP and this same phenomenon was responsible for the loss of an estimated 3,900 lives in the capital.
 
 The situation was not much different in several of the country's most populated cities.
 
@@ -25,7 +25,8 @@ In addition, we have a network of suppliers so that, regardless of the city wher
 * JavaScript - Programming language
 * [Sass](https://sass-lang.com/) - CSS preprocessor
 * [React](https://reactjs.org/) - JavaScript library for building user interfaces
-* [MondoDB](https://www.mongodb.com/) - No-SQL database engine
+* [MongoDB](https://www.mongodb.com/) - No-SQL database engine
+* [Node.js](https://nodejs.org/) - JavaScript runtime
 * [Express](https://expressjs.com/) - Web framework for Node.js
 
 
@@ -42,3 +43,5 @@ In addition, we have a network of suppliers so that, regardless of the city wher
 ## Acknowledgments
 
 * Thanks to [ProTalento](https://protalento.org/) for bringing us together and give us all the tools we need to make a positive impact through technology.
+
+> “La única forma, si vamos a mejorar la calidad del medio ambiente, es involucrar a todo el mundo" - Richard Rogers
