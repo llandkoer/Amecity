@@ -18,13 +18,16 @@ exports.signupValidations = () => [
     .withMessage("Username is required")
     .isLength({ min: 4, max: 50 })
     .withMessage("Username must be between 4 and 50 characters long"),
+  check("is_admin")
+    .notEmpty()
+    .withMessage("Value is required")
+    .isBoolean()
+    .withMessage("Value must be boolean"),
   check("password")
     .notEmpty()
     .withMessage("Password is required")
-    .isStrongPassword({ minLength: 10, minLowercase: 1, minUppercase: 1, minNumbers: 1 })
-    .withMessage("Password must be at least 10 characters long and must contain at least 1 uppercase character, 1 lowercase character and 1 number")
-    .isLength({ max: 100 })
-    .withMessage("Password cannot be longer than 100 characters"),
+    .isLength({ min: 10, max: 100 })
+    .withMessage("Password must be between 10 and 100 characters long"),
 ];
 
 exports.loginValidations = () => {};
