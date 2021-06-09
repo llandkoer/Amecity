@@ -1,4 +1,4 @@
-const low = require('lowdb');
+const low = require("lowdb");
 const FileAsync = require("lowdb/adapters/FileAsync");
 
 let db;
