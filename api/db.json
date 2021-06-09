@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "user_id": "4T93VcpBm9d0I7TsHqb7n",
+      "name": "Luis Vásquez",
+      "email": "lvasquez@gmail.com",
+      "username": "lvasquez",
+      "is_admin": false,
+      "password": "$2a$10$YP.JM3EyJp9hHed/as1AOukkO/LsyjG/HC2GjdwhfjZAG03cM.vwm"
+    },
+    {
+      "user_id": "cKkAhWRkGc4Ye7YYb4uQ1",
+      "name": "Admin Morales",
+      "email": "morales@admin.com",
+      "username": "adminm",
+      "is_admin": true,
+      "password": "$2a$10$cju3BE4Q1JSFimABgmUFweCx3wD1oEWBB6dBDrTJBFlu55s4w01wy"
+    }
+  ],
+  "challenges": [],
+  "partners": []
+}
