@@ -18,7 +18,9 @@ const createUser = async (req, res) => {
 
     const user = getConnection().get("users").find({ email, username }).value();
     if (user) {
-      return res.status(409).json({ message: "Email or username already exist on our database" });
+      return res
+        .status(409)
+        .json({ message: "Email or username already exist on our database" });
     }
 
     const user_id = nanoid();
