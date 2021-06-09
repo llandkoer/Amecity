@@ -7,6 +7,6 @@ const authMiddlewares = require("../middlewares/authMiddlewares");
 
 router.post("/signup", authMiddlewares.signupValidations(), authController.createUser);
 
-router.post("/login", authMiddlewares.loginValidations(), authController.loginUser);
+// router.post("/login", authMiddlewares.loginValidations(), authController.loginUser);
 
 module.exports = router;
