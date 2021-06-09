@@ -31,10 +31,6 @@ exports.signupValidations = () => [
 ];
 
 exports.loginValidations = () => [
-  check("password")
-    .notEmpty()
-    .withMessage("Password is required"),
-  check("username")
-    .notEmpty()
-    .withMessage("Username is required"),
+  check("password").notEmpty().withMessage("Password is required"),
+  check("username").notEmpty().withMessage("Username is required"),
 ];
