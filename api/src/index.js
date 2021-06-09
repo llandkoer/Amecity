@@ -1,6 +1,6 @@
 const app = require("./app");
 
-const { createConnection } = require("./database");
+const {createConnection} = require("./database");
 
 const PORT = 3000;
 
