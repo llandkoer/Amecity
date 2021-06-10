@@ -1,10 +1,9 @@
-// const jwt = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const { nanoid } = require("nanoid");
 
-// const { config } = require("../config/config");
-
+const { config } = require("../config/config");
 const { getConnection } = require("../database");
 
 const createUser = async (req, res) => {
@@ -44,7 +43,41 @@ const createUser = async (req, res) => {
   }
 };
 
-// const loginUser = async (req, res) => {};
+const loginUser = async (req, res) => {
+  try {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(422).json({ errors: errors.array() });
+    }
+
+    const { username, password } = req.body;
+
+    const user = getConnection().get("users").find({ username }).value();
+
+    if (!user) {
+      return res
+        .status(404)
+        .json({ token: null, message: "Username does not exist" });
+    }
+
+    const passwordIsValid = await bcrypt.compare(password, user.password);
+    if (!passwordIsValid) {
+      return res.status(401).json({ token: null, message: "Wrong password" });
+    }
+
+    const token = jwt.sign(
+      { id: user.user_id, admin: user.is_admin },
+      config.jwt.secretKey,
+      {
+        expiresIn: 60 * 60 * 24,
+      }
+    );
+
+    res.status(200).json({ token });
+  } catch (error) {
+    res.status(500).json({ error, message: "There was a server error" });
+  }
+};
 
 exports.createUser = createUser;
-// exports.loginUser = loginUser;
+exports.loginUser = loginUser;

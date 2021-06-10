@@ -30,4 +30,7 @@ exports.signupValidations = () => [
     .withMessage("Password must be between 10 and 100 characters long"),
 ];
 
-exports.loginValidations = () => {};
+exports.loginValidations = () => [
+  check("password").notEmpty().withMessage("Password is required"),
+  check("username").notEmpty().withMessage("Username is required"),
+];
