@@ -15,6 +15,15 @@
       "username": "adminm",
       "is_admin": true,
       "password": "$2a$10$cju3BE4Q1JSFimABgmUFweCx3wD1oEWBB6dBDrTJBFlu55s4w01wy"
+    },
+    {
+      "user_id": "KQlN28sD8NzSt-usFrUaE",
+      "name": "Duvan",
+      "email": "duvan.skar4@gmail.com",
+      "username": "Skar",
+      "points": 20,
+      "is_admin": false,
+      "password": "$2a$10$.8WlooWijYjaGTam5nGCFOL3xX1sHiZ9jHMqgcLgL6mYmehhDASLW"
     }
   ],
   "challenges": [],

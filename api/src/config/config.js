@@ -2,7 +2,7 @@ require("dotenv").config();
 
 const config = {
   jwt: {
-    secretKey: process.env.JWT_KEY,
+    secretKey: process.env.JWT_KEY || "test",
     player: {
       admin: false,
       label: "player",
@@ -13,5 +13,6 @@ const config = {
     },
   },
 };
+console.log(config.jwt)
 
 module.exports = { config };
