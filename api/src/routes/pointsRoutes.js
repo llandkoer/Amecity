@@ -12,7 +12,8 @@ router.get("/get",
 )
 
 router.put("/update",
-
+    verifyToken.verifyToken(config.jwt.player.admin,config.jwt.player.label),
+    pointController.redimePoints
 )
 
 module.exports = router;
