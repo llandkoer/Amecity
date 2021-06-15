@@ -5,7 +5,7 @@
     padding: 16px 16px 0px;
     .title{
         font-weight: 400;
-        font-size: 48rem;//3rem
+        font-size: 4.8rem;//3rem
         color: $black;
         //font-family: $primary-font;
     }
@@ -21,7 +21,7 @@
 .description-pag{
     padding: 0px 120px 0px 16px;
     .description{
-        font-size: 24rem;//1.5rem
+        font-size: 2.4rem;//1.5rem
         font-weight: 400;
         font-family: $primary-font;
         color: $black;
@@ -41,7 +41,7 @@
             margin-top: 25px;
         }
         .description{
-            font-size: 24rem;//1.5
+            font-size: 2.4rem;//1.5
             //font-family: $primary-font;
         }
 
@@ -51,7 +51,7 @@
         height: 41px;
         width: 270px;
         margin-bottom: 10px;
-        font-size: 12rem;
+        font-size: 1.2rem;
         font-family: $primary-font;
         background: $gray;
         border: none;
@@ -60,7 +60,7 @@
         padding: 10px;
         height: 116px;
         width: 270px;
-        font-size: 12rem;//0.75rem
+        font-size: 1.2rem;//0.75rem
         //font-family: $primary-font;
         background: $gray;
         border: none;
@@ -71,7 +71,7 @@
     .checkbox{
         padding: 20px 0px;
         .terms-conditions{
-            font-size: 12rem;
+            font-size: 1.2rem;
             //font-family: $primary-font;
         }
     }
@@ -79,7 +79,7 @@
         width: 270px;
         height: 41px;
         color: $black;
-        font-size: 18rem;
+        font-size: 1.8rem;
         //font-family: $primary-font;
         font-weight: 400;
         background: $neon-blue;
