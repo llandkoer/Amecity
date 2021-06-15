@@ -62,26 +62,26 @@
             color: $white;
             background: $black-blue;
         }
-    }    
-     .drop-down__menu:checked {  
-          &~.menu-label{ 
+    }
+     .drop-down__menu:checked {
+          &~.menu-label{
                 .bars{
                     display: none;
-                }  
+                }
                 .reciclaje{
                     display: block;
-                }   
-          }  
+                }
+          }
           &~.items{
               display: block;
           }
-    } 
+    }
     .links:hover{
         color: $white ;
-    } 
+    }
     .links:active{
         text-decoration: line-through;
-    }  
+    }
 }
 //End  Header page who
 // Description Main
@@ -133,7 +133,7 @@
         display: flex;
         justify-content: space-evenly;
          .title{
-             padding-left: 60px;           
+             padding-left: 60px;
          }
         .menu{
              .drop-down__items{
@@ -168,7 +168,7 @@
                 border-radius: 30px;
                 padding: 10px 30px;
             }
-        }    
+        }
     }
     .description-main{
         margin-top: 100px;
