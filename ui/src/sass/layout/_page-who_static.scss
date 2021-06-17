@@ -1,0 +1,176 @@
+//Header page who
+.header-screen__who{
+    display: flex;
+    justify-content: space-between;
+    padding:16px;
+    .logo{
+        .im-tree{
+         width: 98px;
+         height: 94px;
+        }
+     }
+     .title{
+         font-size: 4.8rem;
+         //font-family: $primary-font;
+     }
+    .menu{
+        padding-left: 16px;
+         .drop-down__items{
+             .drop-down__menu{
+                 opacity: 0;
+                 position: absolute;
+                 visibility: hidden;
+                }
+              .menu-label{
+                 .bars{
+                     font-size: 3.7rem;
+                     color: $black-blue;
+                     margin-top: 20px;
+                 }
+                 .reciclaje{
+                     font-size: 5rem;
+                     color: $main-green;
+                     display: none;
+                     margin-top: 10px;
+                     margin-left: 10px;
+                 }
+             }
+         }
+    }
+    .items{
+        background-color: $main-green;
+         display: none;
+         position: absolute;
+         width: 100%;
+         top: 44px;
+         right: 0;
+         padding: 10px 0px 0px;
+         margin-top: 90px;
+         z-index: 2;
+        .links{
+            color: $black;
+            //font-family: $primary-font;
+            display: block;
+            padding: 10px;
+            font-size: 1.9rem;
+            font-weight: 400;
+            text-align: right;
+            border-bottom:solid $black;
+            border-bottom-width: 1px;
+        }
+        .links:last-child{
+            color: $white;
+            background: $black-blue;
+        }
+    }
+     .drop-down__menu:checked {
+          &~.menu-label{
+                .bars{
+                    display: none;
+                }
+                .reciclaje{
+                    display: block;
+                }
+          }
+          &~.items{
+              display: block;
+          }
+    }
+    .links:hover{
+        color: $white ;
+    }
+    .links:active{
+        text-decoration: line-through;
+    }
+}
+//End  Header page who
+// Description Main
+.description-main{
+    padding: 16px;
+    .title{
+        margin-top: 50px;
+        font-size: 4.8rem;
+        text-align: center;
+    }
+    .subtitle{
+        padding: 30px 0px;
+        font-size: 2.4rem;
+    }
+}
+//End Description Main
+//Footer
+.footer-screen__who{
+    background: $black-blue;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: $neon-blue;
+    .title{
+        font-size: 4.8rem;
+    }
+    .description-footer{
+        font-size: 1.8rem;
+        padding:0px 20px 20px ;
+    }
+    .subtitle{
+        font-size: 2.4rem;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    .city-year{
+        margin: 0;
+        padding: 0;
+        padding-bottom: 5px;
+        border:0;
+        font-size: 1.4rem;
+    }
+}
+//End Footer
+
+@media(min-width:1024px){
+    .header-screen__who{
+        display: flex;
+        justify-content: space-evenly;
+         .title{
+             padding-left: 60px;
+         }
+        .menu{
+             .drop-down__items{
+                  .menu-label{
+                     .bars{
+                         display: none;
+                     }
+                     .reciclaje{
+                         display: none;
+                     }
+                 }
+             }
+        }
+        .items{
+             display: flex;
+             justify-content: flex-end;
+             padding: 20px;
+             margin-top: 70px;
+             z-index: 2;
+            .links{
+                display: block;
+                padding: 0px 20px;
+                font-weight: 400;
+                border-bottom:none;
+                border-right: solid black;
+                border-right-width: 1px;
+                justify-items: right;
+            }
+            .links:last-child{
+                color: $white;
+                background: $black-blue;
+                border-radius: 30px;
+                padding: 10px 30px;
+            }
+        }
+    }
+    .description-main{
+        margin-top: 100px;
+    }
+}
