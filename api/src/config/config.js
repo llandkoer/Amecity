@@ -13,6 +13,6 @@ const config = {
     },
   },
 };
-console.log(config.jwt)
+console.log(config.jwt);
 
 module.exports = { config };

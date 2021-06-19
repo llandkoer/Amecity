@@ -25,6 +25,6 @@ app.use(limiter);
 
 // Routes
 app.use("/api/auth/", authRoute);
-app.use("/api/points/", pointsRoutes)
+app.use("/api/points/", pointsRoutes);
 
 module.exports = app;
