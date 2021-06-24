@@ -23,6 +23,6 @@ app.use(helmet());
 app.use(limiter);
 
 // Routes
-app.use("/api/v1.0/users", authRoute);
+app.use("/api/auth/", authRoute);
 
 module.exports = app;
