@@ -1,29 +1,22 @@
-import {join} from 'path';
-import {Low, JSONFile} from 'lowdb';
-const express = require("express");
-const router = express.Router();
+const { Router } = require("express");
+const { config } = require("../config/config");
 
-const file = join("../models", 'db.json');
-const adapter = new JSONFile(file);
-const db = new Low(adapter);
+const Challenges = require("../controllers/challenges");
+const verifyToken = require("../middlewares/verifyToken");
 
-// No sé cómo se llama la db que quiero llamar
-// No sé en dónde veo la DB
+const router = Router();
 
-// Como se llama la db usuarios
+router.get(
+    "/getAll", 
+    verifyToken.verifyToken(config.jwt.player.label),
+    Challenges.getAllChallenges 
+);
 
-router.get("/getAll", async (req, res) => {
-    // Verificar que el usuario esté loggeado
-    const challenges = Challengesdb.get('challenges');   
-});
-
-router.post("/takeChallenge", async (req, res) => {
-    // Verificar que el usuario esté loggeado
-    // Traer id usuario
-    // Traer id reto
-    // Asignar id reto al usuario
-    // Asignar status reto = 0 ( en curso)
-});
+router.post(
+    "/takeChallenge", 
+    verifyToken.verifyToken(config.jwt.player.label),
+    Challenges.takeChallenge
+);
 
 // US4 
 router.put("/achieveChallenge", async (req, res) => {

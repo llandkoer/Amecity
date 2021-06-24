@@ -17,6 +17,33 @@
       "password": "$2a$10$cju3BE4Q1JSFimABgmUFweCx3wD1oEWBB6dBDrTJBFlu55s4w01wy"
     }
   ],
-  "challenges": [],
+  "challenges": [
+    {
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ1",
+      "name": "Reto 1",
+      "description": "ODS 1",
+      "points": 5,
+      "category": "ODS"
+    },
+    {
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ2",
+      "name": "Reto 2",
+      "description": "ODS 2",
+      "points": 10,
+      "category": "ODS"
+    }
+  ],
+  "detailChallenges": [
+    {
+      "user_id": "4T93VcpBm9d0I7TsHqb7n",
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ1",
+      "status": "doing"
+    },
+    {
+      "user_id": "4T93VcpBm9d0I7TsHqb7n",
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ2",
+      "status": "doing"
+    }
+  ],
   "partners": []
 }
