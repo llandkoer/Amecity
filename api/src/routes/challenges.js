@@ -19,18 +19,19 @@ router.post(
 );
 
 // US4 
-router.put("/achieveChallenge", async (req, res) => {
-    // Verificar que el usuario esté loggeado
-    // Traer id usuario
-    // Traer id reto seleccionado
-    // Asignar status reto = 1
+router.put(
+    "/achieveChallenge", 
+    verifyToken.verifyToken(config.jwt.player.label),
+    Challenges.achieveChallenge
+);
 
-});
-
-router.get("/getAchieved", async (req, res) => {
+router.get(
+    "/getAchieved",
+    // verifyToken.verifyToken(config.jwt.player.label),
+    Challenges.getAchieved
     // Verificar que el usuario esté loggeado
     // Traer id usuario
     // Traer retos where id = 1
-})
+)
 
 module.exports = router;

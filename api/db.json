@@ -37,11 +37,16 @@
     {
       "user_id": "4T93VcpBm9d0I7TsHqb7n",
       "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ1",
-      "status": "doing"
+      "status": "done"
     },
     {
       "user_id": "4T93VcpBm9d0I7TsHqb7n",
       "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ2",
+      "status": "done"
+    },
+    {
+      "user_id": "4T93VcpBm9d0I7TsHqb7n",
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ3",
       "status": "doing"
     }
   ],
