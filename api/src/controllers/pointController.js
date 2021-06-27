@@ -25,10 +25,10 @@ const redimePoints = async (req, res) => {
         .json({ message: "Insufficient points", points: user.points });
     }
     getConnection()
-     .get("users")
-     .find({ user_id: id })
-     .assign({ points: updatePoints })
-     .write();
+      .get("users")
+      .find({ user_id: id })
+      .assign({ points: updatePoints })
+      .write();
     return res
       .status(200)
       .json({ message: "Points has update", points: updatePoints });
