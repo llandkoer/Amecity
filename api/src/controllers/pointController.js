@@ -15,19 +15,20 @@ const redimePoints = async (req, res) => {
   try {
     const { id } = req.body;
     const user = getConnection().get("users").find({ user_id: id }).value();
+    if (!user) return res.status(400).json({ message: "Token no valid" });
     if (!req.headers.points || req.headers.points <= 0)
       return res.status(400).json({ message: "Imcomplete Data" });
     const updatePoints = parseInt(user.points) - parseInt(req.headers.points);
-    if (updatePoints < 0)
+    if (updatePoints < 0) {
       return res
         .status(400)
         .json({ message: "Insufficient points", points: user.points });
+    }
     getConnection()
-      .get("users")
-      .find({ user_id: id })
-      .assign({ points: updatePoints })
-      .write();
-    if (!user) return res.status(400).json({ message: "Token no valid" });
+     .get("users")
+     .find({ user_id: id })
+     .assign({ points: updatePoints })
+     .write();
     return res
       .status(200)
       .json({ message: "Points has update", points: updatePoints });
