@@ -14,6 +14,7 @@ const limiter = rateLimit({
 const app = express();
 
 const authRoute = require("./routes/authRoutes");
+const partnersRoute = require("./routes/partnersRoutes");
 
 // Middlewares
 app.use(express.json());
@@ -24,5 +25,6 @@ app.use(limiter);
 
 // Routes
 app.use("/api/auth/", authRoute);
+app.use("/api/partners", partnersRoute);
 
 module.exports = app;
