@@ -23,10 +23,7 @@
       "partner_id": "lLBgjNrVi2QjDfQMAKzvY",
       "name": "Burger King",
       "photo_url": "https://s1.eestatic.com/2021/01/07/actualidad/549456514_169047221_1706x1562.jpg",
-      "rewards": [
-        "50% en hamburguesas",
-        "Dos papitas y dos gaseosas"
-      ]
+      "rewards": ["50% en hamburguesas", "Dos papitas y dos gaseosas"]
     }
   ],
   "posts": [],
