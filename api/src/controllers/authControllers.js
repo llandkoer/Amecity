@@ -14,12 +14,11 @@ const createUser = async (req, res) => {
     }
 
     let { name, email, username, is_admin, password } = req.body;
+    const points = 20;
 
     const user = getConnection().get("users").find({ email, username }).value();
     if (user) {
-      return res
-        .status(409)
-        .json({ message: "Email or username already exist on our database" });
+      return res.status(409).json({ message: "Email or username already exist on our database" });
     }
 
     const user_id = nanoid();
@@ -32,6 +31,7 @@ const createUser = async (req, res) => {
       name,
       email,
       username,
+      points,
       is_admin,
       password,
     };
@@ -55,9 +55,7 @@ const loginUser = async (req, res) => {
     const user = getConnection().get("users").find({ username }).value();
 
     if (!user) {
-      return res
-        .status(404)
-        .json({ token: null, message: "Username does not exist" });
+      return res.status(404).json({ token: null, message: "Username does not exist" });
     }
 
     const passwordIsValid = await bcrypt.compare(password, user.password);
@@ -65,13 +63,9 @@ const loginUser = async (req, res) => {
       return res.status(401).json({ token: null, message: "Wrong password" });
     }
 
-    const token = jwt.sign(
-      { id: user.user_id, admin: user.is_admin },
-      config.jwt.secretKey,
-      {
-        expiresIn: 60 * 60 * 24,
-      }
-    );
+    const token = jwt.sign({ id: user.user_id, admin: user.is_admin }, config.jwt.secretKey, {
+      expiresIn: 60 * 60 * 24,
+    });
 
     res.status(200).json({ token });
   } catch (error) {
