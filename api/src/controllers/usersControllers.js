@@ -18,7 +18,9 @@ const givePoints = async (req, res) => {
 
     const user = getConnection().get("users").find({ user_id }).value();
     if (!user) {
-      return res.status(409).json({ message: "This user does not exist on our database" });
+      return res
+        .status(409)
+        .json({ message: "This user does not exist on our database" });
     }
 
     user.points += points;
