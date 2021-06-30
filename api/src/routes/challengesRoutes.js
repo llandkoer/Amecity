@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const { config } = require("../config/config");
 
-const Challenges = require("../controllers/challenges");
+const Challenges = require("../controllers/challengesControllers");
 const verifyToken = require("../middlewares/verifyToken");
 
 const router = Router();
@@ -18,7 +18,6 @@ router.post(
     Challenges.takeChallenge
 );
 
-// US4 
 router.put(
     "/achieveChallenge", 
     verifyToken.verifyToken(config.jwt.player.label),
@@ -27,11 +26,14 @@ router.put(
 
 router.get(
     "/getAchieved",
-    // verifyToken.verifyToken(config.jwt.player.label),
+    verifyToken.verifyToken(config.jwt.player.label),
     Challenges.getAchieved
-    // Verificar que el usuario esté loggeado
-    // Traer id usuario
-    // Traer retos where id = 1
+)
+
+router.get(
+    "/getCurrent",
+    verifyToken.verifyToken(config.jwt.player.label),
+    Challenges.getCurrent
 )
 
 module.exports = router;

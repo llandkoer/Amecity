@@ -23,14 +23,16 @@
       "name": "Reto 1",
       "description": "ODS 1",
       "points": 5,
-      "category": "ODS"
+      "category": "ODS",
+      "you_will_need": []
     },
     {
       "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ2",
       "name": "Reto 2",
       "description": "ODS 2",
       "points": 10,
-      "category": "ODS"
+      "category": "ODS",
+      "you_will_need": ["Plant", "Soil"]
     }
   ],
   "detailChallenges": [
