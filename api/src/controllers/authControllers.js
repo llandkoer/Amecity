@@ -14,7 +14,7 @@ const createUser = async (req, res) => {
     }
 
     let { name, email, username, is_admin, password } = req.body;
-    let points = 20;
+    const points = 20;
 
     const user = getConnection().get("users").find({ email, username }).value();
     if (user) {
