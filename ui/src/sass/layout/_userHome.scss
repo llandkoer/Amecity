@@ -196,7 +196,7 @@
             width: 115px;
             height: 110px;
             border-radius: 8%;
-    
+
             .title-challenges {
                 color: $black;
                 text-align: center;
@@ -205,22 +205,22 @@
                 font-weight: 700;
                 margin-top: 5%
             }
-    
+
             .icons {
                 display: flex;
                 justify-content: space-evenly;
                 font-size: 2rem;
                 margin-top: 21%;
-    
+
                 .fa-tint {
                     color: #000057;
                 }
-    
+
                 .fa-share-alt {
                     color: #2e5903;
                 }
             }
-    
+
             .btnEvidence--2nd {
                 @extend %btn;
                 background-color: $main-green;
@@ -230,7 +230,7 @@
         }
     }
 
-    
+
 }
 
 
