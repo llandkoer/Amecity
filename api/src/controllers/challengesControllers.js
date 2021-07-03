@@ -61,33 +61,10 @@ const achieveChallenge = async(req, res) => {
     }
 }
 
-const getAchieved = async(req, res) => {
-    try {
-        const { user_id} = req.body;
-
-        const user = await getConnection().get("users").find({ user_id: user_id }).value();
-        if (!user) return res.status(400).json({ message: "This user does not exist on our databas" });
-
-        const challenges = await getConnection().get("detailChallenges").filter({ status: "done" }).value();
-        console.log(challenges)
-        if (!challenges) return res.status(400).json({message: "No Challenges to show"});
-
-        res.status(200).json({ challenges: challenges });
-    } catch (error) {
-        res.status(500).json({ error, message: "There was a server error" });
-    }
-}
-
-const getCurrent = async(req, res) => {
-    try {
-        const { user_id} = req.body;
-
-        const user = await getConnection().get("users").find({ user_id: user_id }).value();
-        if (!user) return res.status(400).json({ message: "This user does not exist on our databas" });
-
 const getAchieved = async (req, res) => {
   try {
-    const { user_id } = req.body;
+    const { id } = req.body;
+    const user_id = id;
 
     const user = await getConnection()
       .get("users")
@@ -111,7 +88,8 @@ const getAchieved = async (req, res) => {
 
 const getCurrent = async (req, res) => {
   try {
-    const { user_id } = req.body;
+    const { id } = req.body;
+    const user_id = id;
 
     const user = await getConnection()
       .get("users")
@@ -138,3 +116,5 @@ exports.takeChallenge = takeChallenge;
 exports.achieveChallenge = achieveChallenge;
 exports.getAchieved = getAchieved;
 exports.getCurrent = getCurrent;
+
+
