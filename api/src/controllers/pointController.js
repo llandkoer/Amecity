@@ -3,8 +3,14 @@ const { getConnection } = require("../database");
 const getPoints = async (req, res) => {
   try {
     const { user_id } = req.body;
-    const user = getConnection().get("users").find({ user_id: user_id }).value();
-    if (!user) return res.status(400).json({ message: "This user doest not exist on our database" });
+    const user = getConnection()
+      .get("users")
+      .find({ user_id: user_id })
+      .value();
+    if (!user)
+      return res
+        .status(400)
+        .json({ message: "This user doest not exist on our database" });
     res.status(200).json({ points: user.points });
   } catch (error) {
     res.status(500).json({ error, message: "There was a server error" });
@@ -14,7 +20,10 @@ const getPoints = async (req, res) => {
 const redimePoints = async (req, res) => {
   try {
     const { user_id } = req.body;
-    const user = getConnection().get("users").find({ user_id: user_id }).value();
+    const user = getConnection()
+      .get("users")
+      .find({ user_id: user_id })
+      .value();
     if (!user) return res.status(400).json({ message: "Token no valid" });
     if (!req.body.points || req.body.points <= 0)
       return res.status(400).json({ message: "Imcomplete Data" });
