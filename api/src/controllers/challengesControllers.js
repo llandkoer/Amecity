@@ -11,10 +11,11 @@ const getAllChallenges = async(req, res) => {
 
 const takeChallenge = async(req, res) => {
     try {
-        const { user_id, challenge_id } = req.body;
+        const { id, challenge_id } = req.body;
+        const user_id = id;
 
         const user = getConnection().get("users").find({ user_id: user_id }).value();
-        if (!user) return res.status(400).json({ message: "Token no valid" });
+        if (!user) return res.status(400).json({ message: "This user does not exist on our databas" });
 
         const challenge = getConnection().get("challenges").find({ challenge_id: challenge_id }).value();
         if (!challenge) return res.status(400).json({message: "Challenge no valid"});
@@ -22,8 +23,10 @@ const takeChallenge = async(req, res) => {
         const isMyChallenge = getConnection().get("detailChallenges").find({ challenge_id: challenge_id }).value();
         if (isMyChallenge) return res.status(400).send({message: "Challenge already taken"});
 
+        const detail_id = nanoid();
         const takeChallenge = {
-            user_id: user.user_id,
+            detail_id,
+            user_id,
             challenge_id: challenge.challenge_id,
             status: "doing"
           };
@@ -38,10 +41,11 @@ const takeChallenge = async(req, res) => {
 
 const achieveChallenge = async(req, res) => {
     try {
-        const { user_id, challenge_id } = req.body;
+        const { id, challenge_id } = req.body;
+        const user_id = id;
 
         const user = await getConnection().get("users").find({ user_id: user_id }).value();
-        if (!user) return res.status(400).json({ message: "Token no valid" });
+        if (!user) return res.status(400).json({ message: "This user does not exist on our databas" });
 
         const challenge = await getConnection().get("challenges").find({ challenge_id: challenge_id }).value();
         if (!challenge) return res.status(400).json({message: "Challenge no valid"});
@@ -62,7 +66,7 @@ const getAchieved = async(req, res) => {
         const { user_id} = req.body;
 
         const user = await getConnection().get("users").find({ user_id: user_id }).value();
-        if (!user) return res.status(400).json({ message: "Token no valid" });
+        if (!user) return res.status(400).json({ message: "This user does not exist on our databas" });
 
         const challenges = await getConnection().get("detailChallenges").filter({ status: "done" }).value();
         console.log(challenges)
@@ -79,7 +83,7 @@ const getCurrent = async(req, res) => {
         const { user_id} = req.body;
 
         const user = await getConnection().get("users").find({ user_id: user_id }).value();
-        if (!user) return res.status(400).json({ message: "Token no valid" });
+        if (!user) return res.status(400).json({ message: "This user does not exist on our databas" });
 
         const challenges = await getConnection().get("detailChallenges").filter({ status: "doing" }).value();
         console.log(challenges)
