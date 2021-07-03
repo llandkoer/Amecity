@@ -1,21 +1,29 @@
 const { Router } = require("express");
-const { config } = require("../config/config");
-
-const pointController = require("../controllers/usersControllers");
-const verifyToken = require("../middlewares/verifyToken");
-
 const router = Router();
 
+const usersController = require("../controllers/usersControllers");
+const usersMiddlewares = require("../middlewares/usersMiddlewares");
+const verifyToken = require("../middlewares/verifyToken");
+
+const { config } = require("../config/config");
+
 router.get(
-  "/get",
+  "/getPoints",
   verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label),
-  pointController.getPoints
+  usersController.getPoints
 );
 
 router.put(
-  "/update",
+  "/redeemPoints",
   verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label),
-  pointController.redimePoints
+  usersController.redimePoints
+)
+
+router.put(
+  "/givePoints",
+  verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label),
+  usersMiddlewares.givePointsValidations(),
+  usersController.givePoints
 );
 
 module.exports = router;
