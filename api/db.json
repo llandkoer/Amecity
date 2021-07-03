@@ -37,16 +37,19 @@
   ],
   "detailChallenges": [
     {
+      "detail_id": "cpB3VcpBm9d0I7TsHqb7n",
       "user_id": "4T93VcpBm9d0I7TsHqb7n",
       "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ1",
       "status": "done"
     },
     {
+      "detail_id": "cpB3VcpBm9d0I7TsHqb7m",
       "user_id": "4T93VcpBm9d0I7TsHqb7n",
       "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ2",
       "status": "done"
     },
     {
+      "detail_id": "cpB3VcpBm9d0I7TsHqb7o",
       "user_id": "4T93VcpBm9d0I7TsHqb7n",
       "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ3",
       "status": "doing"
