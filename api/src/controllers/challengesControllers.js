@@ -9,57 +9,89 @@ const getAllChallenges = async (req, res) => {
   }
 };
 
-const takeChallenge = async(req, res) => {
-    try {
-        const { id, challenge_id } = req.body;
-        const user_id = id;
+const takeChallenge = async (req, res) => {
+  try {
+    const { id, challenge_id } = req.body;
+    const user_id = id;
 
-        const user = getConnection().get("users").find({ user_id: user_id }).value();
-        if (!user) return res.status(400).json({ message: "This user does not exist on our databas" });
+    const user = getConnection()
+      .get("users")
+      .find({ user_id: user_id })
+      .value();
+    if (!user)
+      return res
+        .status(400)
+        .json({ message: "This user does not exist on our databas" });
 
-        const challenge = getConnection().get("challenges").find({ challenge_id: challenge_id }).value();
-        if (!challenge) return res.status(400).json({message: "Challenge no valid"});
+    const challenge = getConnection()
+      .get("challenges")
+      .find({ challenge_id: challenge_id })
+      .value();
+    if (!challenge)
+      return res.status(400).json({ message: "Challenge no valid" });
 
-        const isMyChallenge = getConnection().get("detailChallenges").find({ challenge_id: challenge_id }).value();
-        if (isMyChallenge) return res.status(400).send({message: "Challenge already taken"});
+    const isMyChallenge = getConnection()
+      .get("detailChallenges")
+      .find({ challenge_id: challenge_id })
+      .value();
+    if (isMyChallenge)
+      return res.status(400).send({ message: "Challenge already taken" });
 
-        const detail_id = nanoid();
-        const takeChallenge = {
-            detail_id,
-            user_id,
-            challenge_id: challenge.challenge_id,
-            status: "doing"
-          };
+    const detail_id = nanoid();
+    const takeChallenge = {
+      detail_id,
+      user_id,
+      challenge_id: challenge.challenge_id,
+      status: "doing",
+    };
 
-        getConnection().get("detailChallenges").push(takeChallenge).write();
-        
-        res.status(200).json({ message: "Good luck!" })
-    } catch (error) {
-        res.status(500).json({ error, message: "There was a server error" });
-    }
-}
+    getConnection().get("detailChallenges").push(takeChallenge).write();
 
-const achieveChallenge = async(req, res) => {
-    try {
-        const { id, challenge_id } = req.body;
-        const user_id = id;
+    res.status(200).json({ message: "Good luck!" });
+  } catch (error) {
+    res.status(500).json({ error, message: "There was a server error" });
+  }
+};
 
-        const user = await getConnection().get("users").find({ user_id: user_id }).value();
-        if (!user) return res.status(400).json({ message: "This user does not exist on our databas" });
+const achieveChallenge = async (req, res) => {
+  try {
+    const { id, challenge_id } = req.body;
+    const user_id = id;
 
-        const challenge = await getConnection().get("challenges").find({ challenge_id: challenge_id }).value();
-        if (!challenge) return res.status(400).json({message: "Challenge no valid"});
+    const user = await getConnection()
+      .get("users")
+      .find({ user_id: user_id })
+      .value();
+    if (!user)
+      return res
+        .status(400)
+        .json({ message: "This user does not exist on our databas" });
 
-        const isMyChallenge = await getConnection().get("detailChallenges").find({ challenge_id: challenge_id }).value();
-        if (!isMyChallenge) return res.status(400).send({message: "Challenge hasn't been taken"});
+    const challenge = await getConnection()
+      .get("challenges")
+      .find({ challenge_id: challenge_id })
+      .value();
+    if (!challenge)
+      return res.status(400).json({ message: "Challenge no valid" });
 
-        await getConnection().get("detailChallenges").find({ challenge_id: challenge_id }).assign({status: "done"}).write();
-        
-        res.status(200).json({ message: "Well done!" })
-    } catch (error) {
-        res.status(500).json({ error, message: "There was a server error" });
-    }
-}
+    const isMyChallenge = await getConnection()
+      .get("detailChallenges")
+      .find({ challenge_id: challenge_id })
+      .value();
+    if (!isMyChallenge)
+      return res.status(400).send({ message: "Challenge hasn't been taken" });
+
+    await getConnection()
+      .get("detailChallenges")
+      .find({ challenge_id: challenge_id })
+      .assign({ status: "done" })
+      .write();
+
+    res.status(200).json({ message: "Well done!" });
+  } catch (error) {
+    res.status(500).json({ error, message: "There was a server error" });
+  }
+};
 
 const getAchieved = async (req, res) => {
   try {
@@ -116,5 +148,3 @@ exports.takeChallenge = takeChallenge;
 exports.achieveChallenge = achieveChallenge;
 exports.getAchieved = getAchieved;
 exports.getCurrent = getCurrent;
-
-
