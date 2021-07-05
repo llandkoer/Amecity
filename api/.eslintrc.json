@@ -12,6 +12,8 @@
     },
     "rules": {
         "quotes": "off",
-        "camelcase": "off"
+        "camelcase": "off",
+        "max-len": "off",
+        "no-plusplus": "off"
     }
 }
