@@ -18,15 +18,15 @@ const createUser = async (req, res) => {
 
     const user = getConnection().get("users").find({ email, username }).value();
     if (user) {
-      return res
-        .status(409)
-        .json({ message: "Email or username already exist on our database" });
+      return res.status(409).json({ message: "Email or username already exist on our database" });
     }
 
     const user_id = nanoid();
 
     const salt = await bcrypt.genSalt(10);
     password = await bcrypt.hash(password, salt);
+
+    const photo_url = "https://i.imgur.com/0U1bbu2.jpeg";
 
     const newUser = {
       user_id,
@@ -36,6 +36,7 @@ const createUser = async (req, res) => {
       points,
       is_admin,
       password,
+      photo_url,
     };
     getConnection().get("users").push(newUser).write();
 
@@ -57,9 +58,7 @@ const loginUser = async (req, res) => {
     const user = getConnection().get("users").find({ username }).value();
 
     if (!user) {
-      return res
-        .status(404)
-        .json({ token: null, message: "Username does not exist" });
+      return res.status(404).json({ token: null, message: "Username does not exist" });
     }
 
     const passwordIsValid = await bcrypt.compare(password, user.password);
@@ -67,13 +66,9 @@ const loginUser = async (req, res) => {
       return res.status(401).json({ token: null, message: "Wrong password" });
     }
 
-    const token = jwt.sign(
-      { id: user.user_id, admin: user.is_admin },
-      config.jwt.secretKey,
-      {
-        expiresIn: 60 * 60 * 24,
-      }
-    );
+    const token = jwt.sign({ id: user.user_id, admin: user.is_admin }, config.jwt.secretKey, {
+      expiresIn: 60 * 60 * 24,
+    });
 
     res.status(200).json({ token });
   } catch (error) {
