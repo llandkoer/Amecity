@@ -19,7 +19,9 @@ const givePoints = async (req, res) => {
 
     const user = getConnection().get("users").find({ user_id }).value();
     if (!user) {
-      return res.status(409).json({ message: "This user does not exist on our database" });
+      return res
+        .status(409)
+        .json({ message: "This user does not exist on our database" });
     }
 
     user.points += points;
@@ -84,7 +86,9 @@ const updateUsername = async (req, res) => {
 
     const user = getConnection().get("users").find({ user_id }).value();
     if (!user) {
-      return res.status(409).json({ message: "This user does not exist on our database" });
+      return res
+        .status(409)
+        .json({ message: "This user does not exist on our database" });
     }
 
     user.username = username;
@@ -109,7 +113,9 @@ const updateName = async (req, res) => {
 
     const user = getConnection().get("users").find({ user_id }).value();
     if (!user) {
-      return res.status(409).json({ message: "This user does not exist on our database" });
+      return res
+        .status(409)
+        .json({ message: "This user does not exist on our database" });
     }
 
     user.name = name;
@@ -134,7 +140,9 @@ const updateEmail = async (req, res) => {
 
     const user = getConnection().get("users").find({ user_id }).value();
     if (!user) {
-      return res.status(409).json({ message: "This user does not exist on our database" });
+      return res
+        .status(409)
+        .json({ message: "This user does not exist on our database" });
     }
 
     user.email = email;
@@ -154,7 +162,9 @@ const deleteAccount = async (req, res) => {
 
     const user = getConnection().get("users").find({ user_id }).value();
     if (!user) {
-      return res.status(409).json({ message: "This user does not exist on our database" });
+      return res
+        .status(409)
+        .json({ message: "This user does not exist on our database" });
     }
 
     const passwordIsValid = await bcrypt.compare(password, user.password);
@@ -164,7 +174,9 @@ const deleteAccount = async (req, res) => {
 
     getConnection().get("users").remove({ user_id }).write();
 
-    res.status(200).json({ message: "Your account has been successfully deleted" });
+    res
+      .status(200)
+      .json({ message: "Your account has been successfully deleted" });
   } catch (error) {
     res.status(500).json({ error, message: "There was a server error" });
   }
@@ -182,7 +194,9 @@ const updatePassword = async (req, res) => {
 
     const user = getConnection().get("users").find({ user_id }).value();
     if (!user) {
-      return res.status(409).json({ message: "This user does not exist on our database" });
+      return res
+        .status(409)
+        .json({ message: "This user does not exist on our database" });
     }
 
     const passwordIsValid = await bcrypt.compare(old_password, user.password);
