@@ -26,8 +26,6 @@
       "password": "$2a$10$cdxaN.V2ko40bB0aQsZz9OTBfyvvPALZGaV/Mjhk/z0TXI.lKnBUu"
     }
   ],
-  "challenges": [],
-  "partners": [],
   "posts": [
     {
       "post_id": "jWw09S29OptS75gH_Hlw2",
@@ -37,5 +35,44 @@
       "photo_url": "https://i.imgur.com/mznbsYo.jpeg",
       "information": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc,"
     }
-  ]
+  ],
+  "challenges": [
+    {
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ1",
+      "name": "Reto 1",
+      "description": "ODS 1",
+      "points": 5,
+      "category": "ODS",
+      "you_will_need": []
+    },
+    {
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ2",
+      "name": "Reto 2",
+      "description": "ODS 2",
+      "points": 10,
+      "category": "ODS",
+      "you_will_need": ["Plant", "Soil"]
+    }
+  ],
+  "detailChallenges": [
+    {
+      "detail_id": "cpB3VcpBm9d0I7TsHqb7n",
+      "user_id": "4T93VcpBm9d0I7TsHqb7n",
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ1",
+      "status": "done"
+    },
+    {
+      "detail_id": "cpB3VcpBm9d0I7TsHqb7m",
+      "user_id": "4T93VcpBm9d0I7TsHqb7n",
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ2",
+      "status": "done"
+    },
+    {
+      "detail_id": "cpB3VcpBm9d0I7TsHqb7o",
+      "user_id": "4T93VcpBm9d0I7TsHqb7n",
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ3",
+      "status": "doing"
+    }
+  ],
+  "partners": []
 }
