@@ -17,7 +17,6 @@ const authRoute = require("./routes/authRoutes");
 const partnersRoute = require("./routes/partnersRoutes");
 const usersRoute = require("./routes/usersRoutes");
 
-
 // Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
