@@ -14,6 +14,7 @@ const createUser = async (req, res) => {
     }
 
     let { name, email, username, is_admin, password } = req.body;
+    const points = 20;
 
     const user = getConnection().get("users").find({ email, username }).value();
     if (user) {
@@ -32,6 +33,7 @@ const createUser = async (req, res) => {
       name,
       email,
       username,
+      points,
       is_admin,
       password,
     };
