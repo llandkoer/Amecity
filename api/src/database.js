@@ -8,12 +8,12 @@ async function createConnection() {
   db = await low(adapter);
 
   db.defaults({
-      users : [],
-      challenges : [],
-      detailChallenges : [],
-      partners : [],
-      posts : [],
-    }).write();
+    users: [],
+    challenges: [],
+    detailChallenges: [],
+    partners: [],
+    posts: [],
+  }).write();
 }
 
 const getConnection = () => db;

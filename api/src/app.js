@@ -7,8 +7,8 @@ const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
 
 const limiter = rateLimit({
-  windowMs : 15 * 60 * 1000,
-  max : 100,
+  windowMs: 15 * 60 * 1000,
+  max: 100,
 });
 
 const app = express();
@@ -20,7 +20,7 @@ const blogRoute = require("./routes/blogRoutes");
 
 // Middlewares
 app.use(express.json());
-app.use(express.urlencoded({extended : false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(morgan("dev"));
 app.use(helmet());
 app.use(limiter);
