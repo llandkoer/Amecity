@@ -17,6 +17,43 @@
       "password": "$2a$10$cju3BE4Q1JSFimABgmUFweCx3wD1oEWBB6dBDrTJBFlu55s4w01wy"
     }
   ],
-  "challenges": [],
+  "challenges": [
+    {
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ1",
+      "name": "Reto 1",
+      "description": "ODS 1",
+      "points": 5,
+      "category": "ODS",
+      "you_will_need": []
+    },
+    {
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ2",
+      "name": "Reto 2",
+      "description": "ODS 2",
+      "points": 10,
+      "category": "ODS",
+      "you_will_need": ["Plant", "Soil"]
+    }
+  ],
+  "detailChallenges": [
+    {
+      "detail_id": "cpB3VcpBm9d0I7TsHqb7n",
+      "user_id": "4T93VcpBm9d0I7TsHqb7n",
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ1",
+      "status": "done"
+    },
+    {
+      "detail_id": "cpB3VcpBm9d0I7TsHqb7m",
+      "user_id": "4T93VcpBm9d0I7TsHqb7n",
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ2",
+      "status": "done"
+    },
+    {
+      "detail_id": "cpB3VcpBm9d0I7TsHqb7o",
+      "user_id": "4T93VcpBm9d0I7TsHqb7n",
+      "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ3",
+      "status": "doing"
+    }
+  ],
   "partners": []
 }
