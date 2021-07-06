@@ -15,6 +15,7 @@ const app = express();
 
 const authRoute = require("./routes/authRoutes");
 const usersRoute = require("./routes/usersRoutes");
+const blogRoute = require("./routes/blogRoutes");
 
 // Middlewares
 app.use(express.json());
@@ -26,5 +27,6 @@ app.use(limiter);
 // Routes
 app.use("/api/auth/", authRoute);
 app.use("/api/user/", usersRoute);
+app.use("/api/blog", blogRoute);
 
 module.exports = app;
