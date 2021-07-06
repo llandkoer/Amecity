@@ -51,10 +51,7 @@
       "description": "ODS 2",
       "points": 10,
       "category": "ODS",
-      "you_will_need": [
-        "Plant",
-        "Soil"
-      ]
+      "you_will_need": ["Plant", "Soil"]
     }
   ],
   "detailChallenges": [
