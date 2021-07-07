@@ -14,7 +14,6 @@ async function createConnection() {
     partners: [],
     posts: [],
   }).write();
-
 }
 
 const getConnection = () => db;
