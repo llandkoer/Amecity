@@ -16,7 +16,8 @@ router.get(
 router.put(
   "/redeemPoints",
   verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label),
-  usersController.redimePoints
+  usersMiddlewares.givePointsValidations(),
+  usersController.redimePoints,
 )
 
 router.put(

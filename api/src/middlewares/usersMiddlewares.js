@@ -5,5 +5,6 @@ exports.givePointsValidations = () => [
     .notEmpty()
     .withMessage("Points are required")
     .isInt()
-    .withMessage("Points must be an integer number"),
+    .withMessage("Points must be an integer number")
+    .isNegative()
 ];
