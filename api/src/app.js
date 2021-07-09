@@ -15,6 +15,8 @@ const app = express();
 
 const authRoute = require("./routes/authRoutes");
 const challengesRoute = require("./routes/challengesRoutes");
+const usersRoute = require("./routes/usersRoutes");
+
 // Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -25,4 +27,7 @@ app.use(limiter);
 // Routes
 app.use("/api/auth/", authRoute);
 app.use("/api/challenges/", challengesRoute);
+
+app.use("/api/user/", usersRoute);
+
 module.exports = app;

@@ -2,7 +2,6 @@ const { Router } = require("express");
 
 const router = Router();
 
-const challengeController = require("../controllers/challengesControllers");
 const challengeMiddlewares = require("../middlewares/challengesMiddlewares");
 const verifyToken = require("../middlewares/verifyToken");
 
