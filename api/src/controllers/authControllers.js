@@ -28,6 +28,8 @@ const createUser = async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     password = await bcrypt.hash(password, salt);
 
+    const photo_url = "https://i.imgur.com/0U1bbu2.jpeg";
+
     const newUser = {
       user_id,
       name,
@@ -36,6 +38,7 @@ const createUser = async (req, res) => {
       points,
       is_admin,
       password,
+      photo_url,
     };
     getConnection().get("users").push(newUser).write();
 
@@ -70,7 +73,7 @@ const loginUser = async (req, res) => {
     const token = jwt.sign(
       { id: user.user_id, admin: user.is_admin },
       config.jwt.secretKey,
-      { 
+      {
         expiresIn: 60 * 60 * 24,
       }
     );

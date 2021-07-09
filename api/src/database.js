@@ -9,8 +9,10 @@ async function createConnection() {
   db.defaults({
     users: [],
     challenges: [],
-    detailChallenges: [],
+    detail_challenges: [],
     partners: [],
+    posts: [],
+    providers: [],
   }).write();
 }
 

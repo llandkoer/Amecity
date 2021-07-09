@@ -1,0 +1,16 @@
+{
+  "users": [
+    {
+      "user_id": "wEVOo65Ktf3oIac6QnwiK",
+      "name": "Luis Landkoer",
+      "email": "luis.landkoer@hotmail.com",
+      "username": "luis.landkoer",
+      "points": 20,
+      "is_admin": false,
+      "password": "$2a$10$RzPQcHAWhfVodP./zH8lUOTIB0vCeqhL92XW4rLwIDLkLOjFr1dwW",
+      "photo_url": "https://i.imgur.com/0U1bbu2.jpeg"
+    }
+  ],
+  "challenges": [],
+  "partners": []
+}
