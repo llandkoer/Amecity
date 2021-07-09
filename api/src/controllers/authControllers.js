@@ -14,6 +14,7 @@ const createUser = async (req, res) => {
     }
 
     let { name, email, username, is_admin, password } = req.body;
+    const points = 20;
 
     const user = getConnection().get("users").find({ email, username }).value();
     if (user) {
@@ -27,13 +28,17 @@ const createUser = async (req, res) => {
     const salt = await bcrypt.genSalt(10);
     password = await bcrypt.hash(password, salt);
 
+    const photo_url = "https://i.imgur.com/0U1bbu2.jpeg";
+
     const newUser = {
       user_id,
       name,
       email,
       username,
+      points,
       is_admin,
       password,
+      photo_url,
     };
     getConnection().get("users").push(newUser).write();
 
