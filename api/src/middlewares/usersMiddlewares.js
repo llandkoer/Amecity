@@ -1,7 +1,11 @@
 const { check } = require("express-validator");
 
 exports.givePointsValidations = () => [
-  check("points").notEmpty().withMessage("Points are required").isInt().withMessage("Points must be an integer number"),
+  check("points")
+    .notEmpty()
+    .withMessage("Points are required")
+    .isInt()
+    .withMessage("Points must be an integer number"),
 ];
 
 exports.updateUsernameValidations = () => [
@@ -13,11 +17,19 @@ exports.updateUsernameValidations = () => [
 ];
 
 exports.updateNameValidations = () => [
-  check("name").notEmpty().withMessage("Name is required").isLength({ min: 3, max: 50 }).withMessage("Name must be between 4 and 50 characters long"),
+  check("name")
+    .notEmpty()
+    .withMessage("Name is required")
+    .isLength({ min: 3, max: 50 })
+    .withMessage("Name must be between 4 and 50 characters long"),
 ];
 
 exports.updateEmailValidations = () => [
-  check("email").notEmpty().withMessage("Email is required").isEmail().withMessage("This field must be an email"),
+  check("email")
+    .notEmpty()
+    .withMessage("Email is required")
+    .isEmail()
+    .withMessage("This field must be an email"),
 ];
 
 exports.updatePasswordValidations = () => [
