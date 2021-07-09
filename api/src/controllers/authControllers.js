@@ -47,7 +47,6 @@ const createUser = async (req, res) => {
 
 const loginUser = async (req, res) => {
   try {
-    console.log(config)
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(422).json({ errors: errors.array() });
@@ -78,7 +77,6 @@ const loginUser = async (req, res) => {
 
     res.status(200).json({ token });
   } catch (error) {
-    console.log(error)
     res.status(500).json({ error, message: "There was a server error" });
   }
 };
