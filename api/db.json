@@ -1,10 +1,11 @@
 {
   "users": [
     {
-      "user_id": "4T93VcpBm9d0I7TsHqb7n",
-      "name": "Luis Vásquez",
-      "email": "lvasquez@gmail.com",
-      "username": "lvasquez",
+      "user_id": "wEVOo65Ktf3oIac6QnwiK",
+      "name": "Luis Landkoer",
+      "email": "luis.landkoer@hotmail.com",
+      "username": "luis.landkoer",
+      "points": 20,
       "is_admin": false,
       "password": "$2a$10$YP.JM3EyJp9hHed/as1AOukkO/LsyjG/HC2GjdwhfjZAG03cM.vwm"
     },
@@ -72,6 +73,8 @@
       "user_id": "4T93VcpBm9d0I7TsHqb7n",
       "challenge_id": "kKkAhWRkGc4Ye7YYb4uQ3",
       "status": "doing"
+      "password": "$2a$10$RzPQcHAWhfVodP./zH8lUOTIB0vCeqhL92XW4rLwIDLkLOjFr1dwW",
+      "photo_url": "https://i.imgur.com/0U1bbu2.jpeg"
     }
   ],
   "partners": []
