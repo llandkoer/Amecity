@@ -12,7 +12,7 @@ const createUser = async (req, res) => {
     if (!errors.isEmpty()) {
       return res.status(422).json({ errors: errors.array() });
     }
-
+    
     let { name, email, username, is_admin, password } = req.body;
     const points = 20;
 
