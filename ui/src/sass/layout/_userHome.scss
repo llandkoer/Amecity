@@ -1,0 +1,261 @@
+.profile {
+    margin-top: 3%;
+    display: flex;
+    justify-content: space-evenly;
+
+    .first-column {
+        width: 30%;
+
+        .profile-start {
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+
+            &__title {
+                margin-top: 3%;
+                margin-bottom: 2%;
+                text-align: center;
+                color: $black;
+                font-size: 2.4rem;
+            }
+        }
+
+        .profile-icons {
+            text-align: center;
+
+            &__p {
+                @extend %p;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-weight: 900;
+            }
+
+            .fas {
+                font-size: 2rem;
+            }
+
+            .fa-tint {
+                color: aqua;
+            }
+
+            .fa-seedling {
+                color: lawngreen;
+            }
+        }
+    }
+
+    .second-column {
+        width: 30%;
+
+        .summary {
+            background-color: $light-blue;
+            height: 50%;
+            border-radius: 15px;
+            margin-bottom: 20%;
+
+            &__title {
+                @extend %h3;
+                padding-top: 5%;
+                text-align: center;
+                font-family: $primary-font;
+            }
+
+            &__ul {
+                margin-left: 15%;
+                font-size: 1.5rem;
+                font-family: $primary-font;
+            }
+        }
+
+        .claim-points {
+            background-color: $light-green;
+            height: 30%;
+            border-radius: 15px;
+            text-align: center;
+
+            &__btn {
+                background-color: #3C80B9;
+                border-radius: 8px;
+                border: white solid 2px;
+                height: 3rem;
+                width: 80%;
+                font-family: $primary-font;
+                font-weight: 700;
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    .third-column {
+        width: 30%;
+
+        .friends {
+            background-color: $secondary-green;
+            height: 50%;
+            margin-bottom: 5%;
+            border-radius: 15px;
+
+            &__title {
+                @extend %h3;
+                padding-top: 5%;
+                text-align: center;
+                font-family: $primary-font;
+            }
+
+            &__ul {
+                font-size: 2rem;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-gap: 50% 15%;
+                margin-left: 10%;
+                margin-top: 5%;
+            }
+        }
+
+        .ranking {
+            background-color: $secondary-green;
+            height: 43%;
+            border-radius: 15px;
+
+            &__title {
+                @extend %h3;
+                padding-top: 5%;
+                text-align: center;
+                font-family: $primary-font;
+            }
+
+            &__ol {
+                margin-left: 15%;
+                font-size: 1.5rem;
+                font-family: $primary-font;
+            }
+        }
+    }
+}
+
+.challenges-progress {
+    &__title {
+        @extend %h2;
+        text-align: center;
+        margin-bottom: 2%;
+    }
+
+    .challenges-containers {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10% 0%;
+
+        .challenges {
+            margin-left: auto;
+            margin-right: auto;
+            background-color: $gray;
+            width: 115px;
+            height: 110px;
+            border-radius: 8%;
+
+            .title-challenges {
+                color: $black;
+                text-align: center;
+                font-size: 2.0rem;
+                font-family: $primary-font;
+                font-weight: 700;
+                margin-top: 5%
+            }
+
+            .btnEvidence {
+                @extend %btn;
+                background-color: $main-green;
+                color: #2e5903;
+                margin-top: 53%;
+            }
+        }
+    }
+}
+
+
+
+.challenges-completed{
+    &__title {
+        @extend %h2;
+        text-align: center;
+        margin-top: 26%;
+        margin-bottom: 2%;
+    }
+
+    .challenges-containers{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 13% 0%;
+
+        .challenges-second {
+            margin-left: auto;
+            margin-right: auto;
+            background-color: $gray;
+            width: 115px;
+            height: 110px;
+            border-radius: 8%;
+
+            .title-challenges {
+                color: $black;
+                text-align: center;
+                font-size: 2.0rem;
+                font-family: $primary-font;
+                font-weight: 700;
+                margin-top: 5%
+            }
+
+            .icons {
+                display: flex;
+                justify-content: space-evenly;
+                font-size: 2rem;
+                margin-top: 21%;
+
+                .fa-tint {
+                    color: #000057;
+                }
+
+                .fa-share-alt {
+                    color: #2e5903;
+                }
+            }
+
+            .btnEvidence--2nd {
+                @extend %btn;
+                background-color: $main-green;
+                color: #2e5903;
+                margin-top: 11%;
+            }
+        }
+    }
+
+
+}
+
+
+//Desktop
+@media (min-width: 1024px){
+    .challenges-progress{
+        .challenges-containers {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20% 0%;
+        }
+    }
+
+    .challenges-completed{
+
+        &__title {
+            margin-top: 10%;
+            margin-bottom: 2%;
+        }
+
+        .challenges-containers{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 20% 0%;
+        }
+    }
+
+}
