@@ -7,13 +7,17 @@ const verifyToken = require("../middlewares/verifyToken");
 
 const { config } = require("../config/config");
 
-router.get("/getPoints", verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label), usersController.getPoints);
+router.get(
+  "/getPoints",
+  verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label),
+  usersController.getPoints
+);
 
 router.put(
   "/redeemPoints",
   verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label),
   usersMiddlewares.givePointsValidations(),
-  usersController.redimePoints,
+  usersController.redimePoints
 );
 
 router.put(
