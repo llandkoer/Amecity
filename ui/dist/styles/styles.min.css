@@ -1434,6 +1434,28 @@ footer span {
     margin-top: 150px;
   }
 }
+.description-main {
+  padding: 16px;
+}
+.description-main .title {
+  margin-top: 50px;
+  font-size: 4.8rem;
+  text-align: center;
+}
+.description-main .subtitle {
+  padding: 30px 0px;
+  font-size: 2.4rem;
+}
+
+.description {
+  font-size: 2.4rem;
+}
+
+@media (min-width: 1024px) {
+  .description-main {
+    margin-top: 100px;
+  }
+}
 .partners-app {
   padding: 40px 5%;
 }
