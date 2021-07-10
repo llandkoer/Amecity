@@ -1222,7 +1222,7 @@ footer span {
 }
 
 .join-app {
-  margin-top: 300px;
+  margin-top: 30px;
 }
 .join-app .title {
   text-align: center;
@@ -1288,7 +1288,7 @@ footer span {
   transform: rotateY(180deg);
 }
 .join-app .ally-card {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 .join-app .ally-card .card .front {
   background: #C4C4C4;
@@ -1305,7 +1305,7 @@ footer span {
   background: #C4C4C4;
 }
 .join-app .supplier-card {
-  margin-top: 150px;
+  margin-top: 50px;
 }
 .join-app .supplier-card .card .front {
   background: #a4cbdd;
@@ -1426,7 +1426,7 @@ footer span {
   }
 
   .join-app {
-    margin-top: 450px;
+    margin-top: 45px;
   }
   .join-app .cards-join {
     display: flex;
@@ -1434,7 +1434,7 @@ footer span {
     margin: 0px 100px;
   }
   .join-app .cards-join .card-player {
-    margin-top: 150px;
+    margin-top: 50px;
   }
 
   .description-who {
