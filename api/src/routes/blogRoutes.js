@@ -12,9 +12,13 @@ router.post(
   "/createPost",
   verifyToken.verifyToken(config.jwt.admin.admin, config.jwt.admin.label),
   blogMiddleware.createPostValidations(),
-  blogController.createPost,
+  blogController.createPost
 );
 
-router.get("/getAll", verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label), blogController.getAll);
+router.get(
+  "/getAll",
+  verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label),
+  blogController.getAll
+);
 
 module.exports = router;
