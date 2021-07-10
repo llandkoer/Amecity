@@ -1202,8 +1202,9 @@ footer span {
   opacity: 1;
 }
 .container-slider__app .menu {
-  position: absolute;
-  margin-left: 40%;
+  display: flex;
+  place-content: center;
+  position: relative;
 }
 .container-slider__app .menu .container {
   display: inline-block;
@@ -1216,6 +1217,8 @@ footer span {
   height: 10px;
   border-radius: 100%;
   margin-top: 240px;
+  margin-right: 3px;
+  margin-left: 3px;
 }
 
 .join-app {
@@ -1348,7 +1351,7 @@ footer span {
 .because-join .slider .impact-environmental .description-who, .because-join .slider .impact-social .description-who, .because-join .slider .impact-half .description-who, .because-join .slider .impact-global .description-who {
   margin-top: 20px;
   text-align: center;
-  font-size: 3.6rem;
+  font-size: 2.4rem;
 }
 .because-join .slider .impact-environmental {
   background: #49BEC2;
@@ -1428,10 +1431,16 @@ footer span {
   .join-app .cards-join {
     display: flex;
     justify-content: space-between;
-    padding: 0px 100px;
+    margin: 0px 100px;
   }
   .join-app .cards-join .card-player {
     margin-top: 150px;
+  }
+
+  .description-who {
+    text-align: right;
+    padding: 0px 20px;
+    font-size: 3.6rem;
   }
 }
 .description-main {
@@ -1683,6 +1692,7 @@ footer span {
   height: 41px;
   color: #000;
   font-size: 1.8rem;
+  font-family: "Ropa Sans", sans-serif;
   font-weight: 400;
   background: #49BEC2;
   border-radius: 20px;
