@@ -61,31 +61,31 @@
             color: $white;
             background: $black-blue;
         }
-    }    
-     .drop-down__menu:checked {  
-          &~.menu-label{ 
+    }
+     .drop-down__menu:checked {
+          &~.menu-label{
                 .bars{
                     display: none;
-                }  
+                }
                 .reciclaje{
                     display: block;
-                }   
-          }  
+                }
+          }
           &~.items{
               display: block;
           }
-    } 
+    }
     .links:hover{
         color: $white;
-    } 
+    }
     .links:active{
         text-decoration: line-through;
-    }  
+    }
 }
 //End Header
 //Container Slider
 .container-slider__app{
-    .slider{  
+    .slider{
         position: relative;
         .about-us,.see-supplier,.see-ally,.see-blog{
             width: 100%;
@@ -139,7 +139,7 @@
         }
     }
 }
-// End Container Slider 
+// End Container Slider
 // Join
 .join-app{
     margin-top: 300px;
@@ -150,7 +150,7 @@
         font-size: 3.6rem;
     }
     .container{
-        display: flex;        
+        display: flex;
         justify-content: center;
         .card{
              width: 284px;
@@ -219,7 +219,7 @@
                 }
             }
             .behind{
-                background: $gray; 
+                background: $gray;
             }
         }
         .create-button{
@@ -247,7 +247,7 @@
                 }
             }
             .behind{
-                background: rgb(164, 203, 221); 
+                background: rgb(164, 203, 221);
             }
         }
         .create-button{
@@ -275,7 +275,7 @@
         text-align: center;
         padding: 20px;
     }
-    .slider{  
+    .slider{
         margin-top: 40px;
         position: relative;
         .impact-environmental,.impact-social,.impact-half,.impact-global{
@@ -339,7 +339,7 @@
         display: flex;
         justify-content: flex-start;
          .title{
-             padding-left: 60px;           
+             padding-left: 60px;
          }
         .menu{
              .drop-down__items{
@@ -372,7 +372,7 @@
                 border-radius: 30px;
                 padding: 10px 30px;
             }
-        }    
+        }
     }
     .container-slider__app{
         margin-top: 150px;
