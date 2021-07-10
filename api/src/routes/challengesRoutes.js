@@ -12,7 +12,7 @@ router.post(
   "/create",
   verifyToken.verifyToken(config.jwt.admin.admin, config.jwt.admin.label),
   challengeMiddlewares.createChallengeValidation(),
-  challengesController.createChallenge,
+  challengesController.createChallenge
 );
 
 module.exports = router;

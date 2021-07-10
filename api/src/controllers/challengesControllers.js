@@ -10,20 +10,25 @@ const createChallenge = async (req, res) => {
       return res.status(422).json({ errors: errors.array() });
     }
 
-    let { title, photo_url, description, points, focus, requirements } = req.body;
+    let { title, photo_url, description, points, focus, requirements } =
+      req.body;
 
     if (!Array.isArray(requirements)) {
       return res.status(400).json({ message: "Requirements must be an array" });
     }
 
     if (requirements.length < 1) {
-      return res.status(400).json({ message: "Requirements must not be empty" });
+      return res
+        .status(400)
+        .json({ message: "Requirements must not be empty" });
     }
 
     for (let i = 0; i < requirements.length; i++) {
       const element = requirements[i];
       if (typeof element !== "string") {
-        return res.status(400).json({ message: `Requirements on index ${i} is not a string` });
+        return res
+          .status(400)
+          .json({ message: `Requirements on index ${i} is not a string` });
       }
     }
 
@@ -33,7 +38,9 @@ const createChallenge = async (req, res) => {
 
     const challenge = getConnection().get("challenges").find({ title }).value();
     if (challenge) {
-      return res.status(409).json({ message: "Challenge already exist on our database" });
+      return res
+        .status(409)
+        .json({ message: "Challenge already exist on our database" });
     }
 
     const challenge_id = nanoid();
@@ -49,7 +56,9 @@ const createChallenge = async (req, res) => {
     };
     getConnection().get("challenges").push(newChallenge).write();
 
-    res.status(201).json({ message: "Challenge has been created successfully" });
+    res
+      .status(201)
+      .json({ message: "Challenge has been created successfully" });
   } catch (error) {
     res.status(500).json({ error, message: "There was a server error" });
   }
