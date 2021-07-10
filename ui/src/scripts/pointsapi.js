@@ -1,8 +1,7 @@
 const url = "http://localhost:3000/api/user/"
 
-
 async function getPoints(id) {
-    const token = localStorage.getItem("userToken")
+    // const token = localStorage.getItem("userToken")
     fetch (url+"getPoints", {
         method: "GET",
         headers: {
@@ -17,4 +16,4 @@ async function getPoints(id) {
     .then(res => {res})
 }
 
-<button onclick="getPoints()"></button>
+getPoints("wEVOo65Ktf3oIac6QnwiK",)
