@@ -1,0 +1,35 @@
+.footer-app{
+    width: 360px;
+    height: 96px;
+}
+.footer-app__content{
+    .container-icons{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        .link-footer__icon{
+            padding: 10px;
+            .icon-footer{
+                font-size: 45px;
+                color: rgb(192, 181, 181);   
+            }
+            .icon-footer:active{
+                color: rgba(68, 68, 255, 0.938);
+            }
+            .description-footer__app{
+                opacity: 0;
+                font-size: 12px;
+                font-weight: bold;
+                color: black;
+            }
+        }
+        .link-footer__icon:active{
+            &~.fas,.icon-footer:active{
+                &~.description-footer__app{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+}
