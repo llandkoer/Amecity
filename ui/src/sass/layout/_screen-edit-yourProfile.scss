@@ -4,7 +4,7 @@
     height: 816px;
 }
 .user-name{
-    font-size: 36px;
+    font-size: 3.6rem;
     font-weight: bold;
 }
 .container-img__pencil-edit{
@@ -16,7 +16,7 @@
         height: 158px;
         border-radius: 100%;
         .img-user{
-            font-size: 120px;
+            font-size: 12rem;
             padding: 20px 30px;
             color: rgb(84, 84, 255);
         }
@@ -28,7 +28,7 @@
         background: white;
         border: none;
         .fa-pencil-alt{
-            font-size: 20px;
+            font-size: 2rem;
         }
     }
 }
@@ -36,7 +36,7 @@
     .container-info__profile,.container-setting__profile{
         display: flex;
         .sub-title__info-profile,.sub-title__setting-profile{
-            font-size: 24px;
+            font-size: 2.4rem;
             font-weight: bold;
         }
         .edit-profile__button,.edit-setting__button{
@@ -47,19 +47,19 @@
         background: white;
         border: none;
             .fa-pencil-alt{
-                font-size: 20px;
+                font-size: 2rem;
             }
         }
     }
     .content-profile,.content-profile__setting{
-        font-size: 18px;
+        font-size: 1.8rem;
     }
 }
 .save-changes__button,.delete-account__button{
     width: 270px;
     height: 41px;
     display: block;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: bold;
     border-radius: 20px;
     border:none;
