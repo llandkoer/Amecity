@@ -12,9 +12,13 @@ router.post(
   "/create",
   verifyToken.verifyToken(config.jwt.admin.admin, config.jwt.admin.label),
   providersMiddlewares.createProviderValidations(),
-  providersControllers.createProvider,
+  providersControllers.createProvider
 );
 
-router.get("/getAll", verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label), providersControllers.getAll);
+router.get(
+  "/getAll",
+  verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label),
+  providersControllers.getAll
+);
 
 module.exports = router;

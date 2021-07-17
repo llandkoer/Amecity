@@ -16,14 +16,20 @@ const createProvider = async (req, res) => {
       return res.status(400).json({ message: "Provides must be an array." });
     }
 
-    const providesValid = provides.every((element) => typeof element === "string");
+    const providesValid = provides.every(
+      (element) => typeof element === "string"
+    );
     if (!providesValid) {
-      return res.status(400).json({ message: "Provides must be an array of strings." });
+      return res
+        .status(400)
+        .json({ message: "Provides must be an array of strings." });
     }
 
     const provider = getConnection().get("providers").find({ name }).value();
     if (provider) {
-      return res.status(409).json({ message: "Your provider already exist on our database" });
+      return res
+        .status(409)
+        .json({ message: "Your provider already exist on our database" });
     }
 
     const newProvider = {
