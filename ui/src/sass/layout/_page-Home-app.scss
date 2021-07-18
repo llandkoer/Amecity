@@ -175,19 +175,6 @@
                     padding-left: 90px;
                     margin-top: 20px;
                 }
-                .create-button{
-                    background: rgb(7, 7, 97);
-                    color: $neon-blue;
-                    font-size: 2.4rem;
-                    font-weight: 400;
-                    padding: 15px 25px;
-                    display: block;
-                    width: 100%;
-                    border: none;
-                    border-radius: 20px;
-                    margin-top: 70px;
-                    text-align: center;
-                }
             }
             .behind{
                 position: absolute;
@@ -206,6 +193,21 @@
         .card:hover{
             transform: rotateY(180deg);
         }
+        .create-button{
+            position: absolute;
+            background: rgb(7, 7, 97);
+            color: $neon-blue;
+            font-size: 2.4rem;
+            font-weight: 400;
+            padding: 15px 25px;
+            display: block;
+            width: 290px;
+            border: none;
+            border-radius: 20px;
+            margin-top: 250px;
+            text-align: center;
+        }
+
     }
     .ally-card{
         margin-top: 150px;
@@ -215,15 +217,24 @@
                 .hand{
                     color: green;
                 }
-                .create-button{
-                    background: rgb(5, 53, 5);
-                    color: $main-green;
-                    font-size: 2.2rem;
-                }
             }
             .behind{
                 background: $gray;
             }
+        }
+        .create-button{
+            background: rgb(5, 53, 5);
+            color: $main-green;
+            position: absolute;
+            font-size: 2.4rem;
+            font-weight: 400;
+            padding: 15px 25px;
+            display: block;
+            width: 290px;
+            border: none;
+            border-radius: 20px;
+            margin-top: 250px;
+            text-align: center;
         }
     }
     .supplier-card{
@@ -234,16 +245,24 @@
                 .subtitle{
                     padding: 30px 10px;
                 }
-
-                .create-button{
-                    background: rgb(16, 106, 112);
-                    color: rgb(134, 195, 206);
-                    font-size: 2.2rem;
-                }
             }
             .behind{
                 background: rgb(164, 203, 221);
             }
+        }
+        .create-button{
+            background: rgb(16, 106, 112);
+            color: rgb(134, 195, 206);
+            position: absolute;
+            font-size: 2.4rem;
+            font-weight: 400;
+            padding: 15px 25px;
+            display: block;
+            width: 290px;
+            border: none;
+            border-radius: 20px;
+            margin-top: 250px;
+            text-align: center;
         }
     }
 }
