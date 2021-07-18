@@ -18,6 +18,7 @@ const usersRoute = require("./routes/usersRoutes");
 const partnersRoute = require("./routes/partnersRoutes");
 const blogRoute = require("./routes/blogRoutes");
 const providersRoute = require("./routes/providersRoutes");
+const challengesRoute = require("./routes/challengesRoutes");
 
 // Middlewares
 app.use(express.json());
@@ -32,5 +33,6 @@ app.use("/api/user/", usersRoute);
 app.use("/api/partners", partnersRoute);
 app.use("/api/blog", blogRoute);
 app.use("/api/providers", providersRoute);
+app.use("/api/challenges/", challengesRoute);
 
 module.exports = app;
