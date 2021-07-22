@@ -34,5 +34,3 @@ router.get("/getAchieved", verifyToken.verifyToken(config.jwt.player.admin, conf
 router.get("/getCurrent", verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label), challengesController.getCurrent);
 
 module.exports = router;
-
-module.exports = router;
