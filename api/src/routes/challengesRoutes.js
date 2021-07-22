@@ -12,25 +12,37 @@ router.post(
   "/create",
   verifyToken.verifyToken(config.jwt.admin.admin, config.jwt.admin.label),
   challengeMiddlewares.createChallengeValidation(),
-  challengesController.createChallenge,
+  challengesController.createChallenge
 );
 
-router.get("/getAll", verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label), challengesController.getAllChallenges);
+router.get(
+  "/getAll",
+  verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label),
+  challengesController.getAllChallenges
+);
 
 router.post(
   "/takeChallenge/:challenge_id",
   verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label),
-  challengesController.takeChallenge,
+  challengesController.takeChallenge
 );
 
 router.put(
   "/achieveChallenge/:challenge_id",
   verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label),
-  challengesController.achieveChallenge,
+  challengesController.achieveChallenge
 );
 
-router.get("/getAchieved", verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label), challengesController.getAchieved);
+router.get(
+  "/getAchieved",
+  verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label),
+  challengesController.getAchieved
+);
 
-router.get("/getCurrent", verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label), challengesController.getCurrent);
+router.get(
+  "/getCurrent",
+  verifyToken.verifyToken(config.jwt.player.admin, config.jwt.player.label),
+  challengesController.getCurrent
+);
 
 module.exports = router;
