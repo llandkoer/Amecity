@@ -1,392 +1,400 @@
 // Header
-.header-home__screen-app{
-    display: flex;
-    justify-content: space-between;
-    padding:16px;
-    .logo{
-        .im-tree{
-         width: 75px;
-         height: 74px;
+.header-home__screen-app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  .logo {
+    .im-tree {
+      width: 75px;
+      height: 74px;
+    }
+  }
+  .title {
+    font-size: 4.8rem;
+    font-family: $primary-font;
+    text-align: center;
+  }
+  .menu {
+    .drop-down__items {
+      .drop-down__menu {
+        opacity: 0;
+        position: absolute;
+        visibility: hidden;
+      }
+      .menu-label {
+        .bars {
+          font-size: 3.8rem;
+          color: $neon-blue;
+          margin-top: 20px;
         }
-     }
-     .title{
-         font-size: 4.8rem;
-         font-family: $primary-font;
-     }
-    .menu{
-         .drop-down__items{
-             .drop-down__menu{
-                 opacity: 0;
-                 position: absolute;
-                 visibility: hidden;
-                }
-              .menu-label{
-                 .bars{
-                     font-size: 3.8rem;
-                     color: $neon-blue;
-                     margin-top: 20px;
-                 }
-                 .reciclaje{
-                     font-size: 5rem;
-                     color: $main-green;
-                     display: none;
-                     margin-top: 10px;
-                     margin-left: 10px;
-                 }
-             }
-         }
-    }
-    .items{
-         background-color: $main-green;
-         display: none;
-         position: absolute;
-         width: 100%;
-         top: 44px;
-         right: 0;
-         padding: 10px 0px 0px;
-         margin-top: 50px;
-         z-index: 2;
-        .links{
-            color: $black;
-            //font-family: $primary-font;
-            display: block;
-            padding: 10px;
-            font-size: 2.4rem;
-            font-weight: 400;
-            text-align: right;
-            border-bottom:solid $black;
-            border-bottom-width: 1px;
+        .reciclaje {
+          font-size: 5rem;
+          color: $main-green;
+          display: none;
+          margin-top: 10px;
+          margin-left: 10px;
         }
-        .links:last-child{
-            color: $white;
-            background: $black-blue;
-        }
+      }
     }
-     .drop-down__menu:checked {
-          &~.menu-label{
-                .bars{
-                    display: none;
-                }
-                .reciclaje{
-                    display: block;
-                }
-          }
-          &~.items{
-              display: block;
-          }
+  }
+  .items {
+    background-color: $main-green;
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 44px;
+    right: 0;
+    padding: 10px 0px 0px;
+    margin-top: 50px;
+    z-index: 2;
+    .links {
+      color: $black;
+      display: block;
+      padding: 10px;
+      font-size: 2.4rem;
+      font-weight: 400;
+      text-align: right;
+      border-bottom: solid $black;
+      border-bottom-width: 1px;
     }
-    .links:hover{
-        color: $white;
+    .links:last-child {
+      color: $white;
+      background: $black-blue;
     }
-    .links:active{
-        text-decoration: line-through;
+  }
+  .drop-down__menu:checked {
+    & ~ .menu-label {
+      .bars {
+        display: none;
+      }
+      .reciclaje {
+        display: block;
+      }
     }
+    & ~ .items {
+      display: block;
+    }
+  }
+  .links:hover {
+    color: $white;
+  }
+  .links:active {
+    text-decoration: line-through;
+  }
 }
 //End Header
 //Container Slider
-.container-slider__app{
-    .slider{
-        position: relative;
-        .about-us,.see-supplier,.see-ally,.see-blog{
-            width: 100%;
-            height: 267px;
-            position: absolute;
-            opacity: 0;
-            transition: opacity .5s;
-            .description{
-                text-align: left;
-                padding: 70px 20px;
-                font-size: 1.8rem;
-            }
-            .description-who{
-                text-align: right;
-                padding: 0px 20px;
-                //font-family: $primary-font;
-                font-size: 2.4rem;
-            }
-        }
-        .about-us{
-            background: $secondary-green;
-            opacity: 1;
-        }
-        .see-supplier{
-            background: $light-green;
-        }
-        .see-ally{
-            background: $dark-blue;
-        }
-        .see-blog{
-            background: $light-blue;
-        }
+.container-slider__app {
+  .slider {
+    position: relative;
+    .about-us,
+    .see-supplier,
+    .see-ally,
+    .see-blog {
+      width: 100%;
+      height: 267px;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.5s;
+      .description {
+        text-align: left;
+        padding: 70px 20px;
+        font-size: 1.8rem;
+      }
+      .description-who {
+        text-align: right;
+        padding: 0px 20px;
+        font-size: 2.4rem;
+      }
     }
-    ul.slider li:target{
-        opacity: 1;
+    .about-us {
+      background: $secondary-green;
+      opacity: 1;
     }
-    .menu{
-        position:absolute;
-        margin-left: 40%;;
-        .container{
-            display: inline-block;
-            .container-who,.container-supplier,.container-ally,.container-blog{
-                display: inline-block;
-                background: white;
-                padding: 10px;
-                width: 10px;
-                height: 10px;
-                border-radius: 100%;
-                margin-top: 240px;
-            }
-        }
+    .see-supplier {
+      background: $light-green;
     }
+    .see-ally {
+      background: $dark-blue;
+    }
+    .see-blog {
+      background: $light-blue;
+    }
+  }
+  ul.slider li:target {
+    opacity: 1;
+  }
+  .menu {
+    position: absolute;
+    margin-left: 40%;
+    .container {
+      display: inline-block;
+      .container-who,
+      .container-supplier,
+      .container-ally,
+      .container-blog {
+        display: inline-block;
+        background: white;
+        padding: 10px;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        margin-top: 240px;
+      }
+    }
+  }
 }
 // End Container Slider
 // Join
-.join-app{
-    margin-top: 300px;
-    //font-family: $primary-font;
-    .title{
-        text-align: center;
-        padding: 20px;
-        font-size: 3.6rem;
+.join-app {
+  margin-top: 300px;
+  .title {
+    text-align: center;
+    padding: 20px;
+    font-size: 3.6rem;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    .card {
+      width: 284px;
+      height: 287px;
+      position: relative;
+      transform-style: preserve-3d;
+      .front {
+        position: absolute;
+        background: $light-blue;
+        border-radius: 10%;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        .subtitle {
+          text-align: center;
+          padding: 30px;
+          font-size: 2.4rem;
+        }
+        .hand {
+          color: rgb(7, 7, 97);
+          font-size: 9rem;
+          padding-left: 90px;
+          margin-top: 20px;
+        }
+      }
+      .behind {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 10%;
+        background: $light-blue;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        .description {
+          padding: 20px;
+          font-size: 2.4rem;
+        }
+      }
     }
-    .container{
-        display: flex;
-        justify-content: center;
-        .card{
-             width: 284px;
-             height: 287px;
-             position: relative;
-             transform-style: preserve-3d;
-            .front{
-                position: absolute;
-                background: $light-blue;
-                border-radius: 10%;
-                width: 100%;
-                height: 100%;
-                backface-visibility: hidden;
-                .subtitle{
-                    text-align: center;
-                    padding: 30px;
-                    font-size: 2.4rem;
-                }
-                .hand{
-                    color: rgb(7, 7, 97);
-                    font-size: 9rem;
-                    padding-left: 90px;
-                    margin-top: 20px;
-                }
-            }
-            .behind{
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                border-radius: 10%;
-                background: $light-blue;
-                backface-visibility: hidden;
-                transform: rotateY(180deg);
-                .description{
-                    padding: 20px;
-                    font-size: 2.4rem;
-                }
-            }
-        }
-        .card:hover{
-            transform: rotateY(180deg);
-        }
-        .create-button{
-            position: absolute;
-            background: rgb(7, 7, 97);
-            color: $neon-blue;
-            font-size: 2.4rem;
-            font-weight: 400;
-            padding: 15px 25px;
-            display: block;
-            width: 290px;
-            border: none;
-            border-radius: 20px;
-            margin-top: 250px;
-            text-align: center;
-        }
-
+    .card:hover {
+      transform: rotateY(180deg);
     }
-    .ally-card{
-        margin-top: 150px;
-        .card{
-            .front{
-                background: $gray;
-                .hand{
-                    color: green;
-                }
-            }
-            .behind{
-                background: $gray;
-            }
-        }
-        .create-button{
-            background: rgb(5, 53, 5);
-            color: $main-green;
-            position: absolute;
-            font-size: 2.4rem;
-            font-weight: 400;
-            padding: 15px 25px;
-            display: block;
-            width: 290px;
-            border: none;
-            border-radius: 20px;
-            margin-top: 250px;
-            text-align: center;
-        }
+    .create-button {
+      position: absolute;
+      background: rgb(7, 7, 97);
+      color: $neon-blue;
+      font-size: 2.4rem;
+      font-weight: 400;
+      padding: 15px 25px;
+      display: block;
+      width: 290px;
+      border: none;
+      border-radius: 20px;
+      margin-top: 250px;
+      text-align: center;
+      text-decoration: none;
     }
-    .supplier-card{
-        margin-top: 150px;
-        .card{
-            .front{
-                background: rgb(164, 203, 221);
-                .subtitle{
-                    padding: 30px 10px;
-                }
-            }
-            .behind{
-                background: rgb(164, 203, 221);
-            }
+  }
+  .ally-card {
+    margin-top: 150px;
+    .card {
+      .front {
+        background: $gray;
+        .hand {
+          color: green;
         }
-        .create-button{
-            background: rgb(16, 106, 112);
-            color: rgb(134, 195, 206);
-            position: absolute;
-            font-size: 2.4rem;
-            font-weight: 400;
-            padding: 15px 25px;
-            display: block;
-            width: 290px;
-            border: none;
-            border-radius: 20px;
-            margin-top: 250px;
-            text-align: center;
-        }
+      }
+      .behind {
+        background: $gray;
+      }
     }
+    .create-button {
+      background: rgb(5, 53, 5);
+      color: $main-green;
+      position: absolute;
+      font-size: 2.4rem;
+      font-weight: 400;
+      padding: 15px 25px;
+      display: block;
+      width: 290px;
+      border: none;
+      border-radius: 20px;
+      margin-top: 250px;
+      text-align: center;
+    }
+  }
+  .supplier-card {
+    margin-top: 150px;
+    .card {
+      .front {
+        background: rgb(164, 203, 221);
+        .subtitle {
+          padding: 30px 10px;
+        }
+      }
+      .behind {
+        background: rgb(164, 203, 221);
+      }
+    }
+    .create-button {
+      background: rgb(16, 106, 112);
+      color: rgb(134, 195, 206);
+      position: absolute;
+      font-size: 2.4rem;
+      font-weight: 400;
+      padding: 15px 25px;
+      display: block;
+      width: 290px;
+      border: none;
+      border-radius: 20px;
+      margin-top: 250px;
+      text-align: center;
+    }
+  }
 }
 //End join
 // ¿why take part?
-.because-join{
-    margin-top: 100px;
-    .title{
-        font-size: 3.6rem;
+.because-join {
+  margin-top: 100px;
+  .title {
+    font-size: 3.6rem;
+    text-align: center;
+    padding: 20px;
+  }
+  .slider {
+    margin-top: 40px;
+    position: relative;
+    .impact-environmental,
+    .impact-social,
+    .impact-half,
+    .impact-global {
+      width: 100%;
+      height: 267px;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 0.5s;
+      .description {
+        margin-top: 20px;
+        text-align: left;
+        font-size: 2.4rem;
+        font-weight: 400;
+        padding-left: 20px;
+      }
+      .description-who {
+        margin-top: 20px;
         text-align: center;
-        padding: 20px;
+        font-size: 3.6rem;
+      }
     }
-    .slider{
-        margin-top: 40px;
-        position: relative;
-        .impact-environmental,.impact-social,.impact-half,.impact-global{
-            width: 100%;
-            height: 267px;
-            position: absolute;
-            opacity: 0;
-            transition: opacity .5s;
-            .description{
-                margin-top: 20px;
-                text-align: left;
-                //font-family: $primary-font;
-                font-size: 2.4rem;
-                font-weight: 400;
-                padding-left: 20px;
-            }
-            .description-who{
-                margin-top: 20px;
-                text-align: center;
-                //font-family: $primary-font;
-                font-size: 3.6rem;
-            }
-        }
-        .impact-environmental{
-            background: $neon-blue;
-            opacity: 1;
-        }
-        .impact-social{
-            background: $dark-blue;
-        }
-        .impact-half{
-            background: $light-blue;
-        }
-        .impact-global{
-            background: $secondary-green;
-        }
+    .impact-environmental {
+      background: $neon-blue;
+      opacity: 1;
     }
-    ul.slider li:target{
-        opacity: 1;
+    .impact-social {
+      background: $dark-blue;
     }
-    .menu{
-        position:absolute;
-        margin-left: 40%;;
-        .container{
-            display: inline-block;
-            .container-environmental,.container-social,.container-half,.container-global{
-                display: inline-block;
-                background: white;
-                padding: 10px;
-                width: 10px;
-                height: 10px;
-                border-radius: 100%;
-                margin-top: 240px;
-            }
-        }
+    .impact-half {
+      background: $light-blue;
     }
+    .impact-global {
+      background: $secondary-green;
+    }
+  }
+  ul.slider li:target {
+    opacity: 1;
+  }
+  .menu {
+    position: absolute;
+    margin-left: 40%;
+    .container {
+      display: inline-block;
+      .container-environmental,
+      .container-social,
+      .container-half,
+      .container-global {
+        display: inline-block;
+        background: white;
+        padding: 10px;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        margin-top: 240px;
+      }
+    }
+  }
 }
 //End ¿why take part?
-@media(min-width:1024px){
-    .header-home__screen-app{
-        display: flex;
-        justify-content: flex-start;
-         .title{
-             padding-left: 60px;
-         }
-        .menu{
-             .drop-down__items{
-                  .menu-label{
-                     .bars{
-                         display: none;
-                     }
-                     .reciclaje{
-                         display: none;
-                     }
-                 }
-             }
-        }
-        .items{
-             display: flex;
-             justify-content: flex-end;
-             padding: 20px;
-             margin-top: 70px;
-             z-index: 2;
-            .links{
-                display: block;
-                padding: 0px 20px;
-                font-weight: 400;
-                border-bottom:none;
-                border-right: solid $black;
-                border-right-width: 1px;
-                justify-items: right;
-            }
-            .links:last-child{
-                border-radius: 30px;
-                padding: 10px 30px;
-            }
-        }
+@media (min-width: 1024px) {
+  .header-home__screen-app {
+    display: flex;
+    justify-content: flex-start;
+    .title {
+      padding-left: 60px;
     }
-    .container-slider__app{
+    .menu {
+      .drop-down__items {
+        .menu-label {
+          .bars {
+            display: none;
+          }
+          .reciclaje {
+            display: none;
+          }
+        }
+      }
+    }
+    .items {
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      margin-top: 115px;
+      z-index: 2;
+      .links {
+        display: block;
+        padding: 0px 20px;
+        font-weight: 400;
+        border-bottom: none;
+        border-right: solid $black;
+        border-right-width: 1px;
+        justify-items: right;
+      }
+      .links:last-child {
+        border-radius: 30px;
+        padding: 10px 30px;
+      }
+    }
+  }
+  .container-slider__app {
+    margin-top: 150px;
+  }
+  .join-app {
+    margin-top: 450px;
+    .cards-join {
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 100px;
+      .card-player {
         margin-top: 150px;
+      }
     }
-    .join-app{
-        margin-top: 450px;
-        .cards-join{
-            display: flex;
-            justify-content: space-between;
-            padding: 0px 100px;
-            .card-player{
-                margin-top: 150px;
-            }
-        }
-    }
-
+  }
 }
