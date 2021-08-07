@@ -95,5 +95,16 @@ const updateRewards = async (req, res) => {
   }
 };
 
+const getAll = async (req, res) => {
+  try {
+    const partners = getConnection().get("partners").value();
+
+    res.status(200).json({ partners });
+  } catch (error) {
+    res.status(500).json({ error, message: "There was a server error" });
+  }
+};
+
 exports.createPartner = createPartner;
 exports.updateRewards = updateRewards;
+exports.getAll = getAll;
