@@ -1,6 +1,5 @@
 //lo que esta entre comillas es el Id que debe tener el elemento
-var PopUpContainer = document.getElementById("PopUpContainer");
-    CerrarPopUp = document.getElementById("Cerrar-PopUp"); //el boton para cerrarlo "X"
+const PopUpContainer = document.getElementById("PopUpContainer");
 
 /* NOTA: los elementos del popup tienen que estar dentro de un div con Id Pop-Up que este dentro un div con Id Overlay */
 /*
@@ -17,9 +16,9 @@ var PopUpContainer = document.getElementById("PopUpContainer");
 
 function LoginPopUp() {
   PopUpContainer.innerHTML = `
-        <div class="" id="Overlay">
-            <div class="" id="Pop-Up">
-                <a href="u" class="" id="Cerrar-PopUp"> x </a>
+        <div class="Overlay" id="Overlay">
+            <div class="Pop-Up" id="Pop-Up">
+                <a href="#" class="" onclick="CerrarPopUp()"> x </a>
                 <div class="form-header">
         <h1 class="form-header__title">Inicia sesión</h1>
         <div class="form-header__logo"></div>
@@ -37,7 +36,7 @@ function LoginPopUp() {
                 Mantener la sesión abierta
             </label>
         </form>
-        <button class="form-main__button" type="submit">Iniciar sesión</button>
+        <button class="form-main__button" onclick="LoginPost()"  type="submit">Iniciar sesión</button>
         <p class="form-main__text--centered">ó</p>
         <button class="form-main__button--white" type="submit">
             <img class="form-main__button-google-logo" src="https://img.icons8.com/fluent/48/000000/google-logo.png"/>
@@ -48,3 +47,7 @@ function LoginPopUp() {
         </div>
     `;
 };
+
+function CerrarPopUp() {
+    PopUpContainer.innerHTML = "";
+}

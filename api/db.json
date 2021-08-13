@@ -9,8 +9,21 @@
       "is_admin": false,
       "password": "$2a$10$RzPQcHAWhfVodP./zH8lUOTIB0vCeqhL92XW4rLwIDLkLOjFr1dwW",
       "photo_url": "https://i.imgur.com/0U1bbu2.jpeg"
+    },
+    {
+      "user_id": "uEiZfQjUf61BEiVU1MezP",
+      "name": "test",
+      "email": "ddd@gmail.com",
+      "username": "test",
+      "points": 20,
+      "is_admin": false,
+      "password": "$2a$10$vjWMqrel62b2PY.7VBfax.dw2MCiSHZjrgslELcioFcwlOYYCk6xu",
+      "photo_url": "https://i.imgur.com/0U1bbu2.jpeg"
     }
   ],
   "challenges": [],
-  "partners": []
+  "partners": [],
+  "detail_challenges": [],
+  "posts": [],
+  "providers": []
 }
