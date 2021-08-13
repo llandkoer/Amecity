@@ -1,4 +1,211 @@
-function App() {}
+const buildCarouselMenu = (type = "") => {
+  let categories = [];
+  let menu = "";
+  let newCategories = "";
+  switch (type) {
+    case "main":
+      categories = ["who", "supplier", "ally", "blog"];
+
+      categories.forEach(menuCategory => {
+        newCategories += `<li class="container">
+            <a class="container-${menuCategory} carouselDot" href="#slide-${menuCategory}" typeCarousel=${type}></a>
+        </li>`
+
+      });
+
+      menu = `<div class="carouselDots">
+        <ul class="menu">
+          ${newCategories}
+        </ul>
+      </div>`
+      //console.log(newCategories)
+
+      break;
+
+    case "becauseJoin":
+      categories = ["environmental", "social", "half", "global"];
+
+      categories.forEach(menuCategory => {
+        newCategories += `<li class="container">
+              <a class="container-${menuCategory} carouselDot" href="#slide-${menuCategory}" typeCarousel=${type}></a>
+          </li>`
+
+      });
+
+      menu = `<div class="carouselDots">
+          <ul class="menu">
+            ${newCategories}
+          </ul>
+        </div>`
+      break;
+
+  }
+  return menu;
+}
+let mainCarouselMenu = buildCarouselMenu("main");
+let joinCarouselMenu = buildCarouselMenu("becauseJoin");
+
+const buildCarousel = (type = "", slide = "", returnSlide = false) => {
+  let slideId = "";
+  let slideClass = "";
+  let slideDescription = "";
+  let slideTitle = "";
+  let slideContainer = "";
+  let menuCarousel = "";
+
+  switch (type) {
+    case "main":
+      menuCarousel = mainCarouselMenu;
+      slideContainer = "#mainCarouselContainer";
+      switch (slide) {
+        case "#slide-who":
+          slideClass = "about-us";
+          slideId = slide.replace("#", "");
+          slideDescription = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quia possimus
+            similique quis vel`;
+          slideTitle = "¿QUIÉNES SOMOS?";
+          break;
+
+        case "#slide-supplier":
+          slideClass = "see-supplier";
+          slideId = slide.replace("#", "");
+          slideDescription = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quia possimus
+            similique quis vel`;
+          slideTitle = "VER PROVEEDORES";
+          break;
+
+        case "#slide-ally":
+          slideClass = "see-ally";
+          slideId = slide.replace("#", "");
+          slideDescription = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quia possimus
+            similique quis vel`;
+          slideTitle = "VER ALIADOS";
+          break;
+
+        case "#slide-blog":
+          slideClass = "see-blog";
+          slideId = slide.replace("#", "");
+          slideDescription = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quia possimus
+            similique quis vel`;
+          slideTitle = "VER BLOG";
+          break;
+
+      }
+
+      break;
+
+    case "becauseJoin":
+      slideContainer = "#becauseJoinContainer";
+      menuCarousel = joinCarouselMenu;
+      switch (slide) {
+        case "#slide-environmental":
+          slideClass = "impact-environmental";
+          slideId = slide.replace("#", "");
+          slideDescription = `Reducción de emisiones contaminantes`;
+          slideTitle = "IMPACTO";
+          break;
+
+        case "#slide-social":
+          slideClass = "impact-social";
+          slideId = slide.replace("#", "");
+          slideDescription = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quia possimus
+              similique quis vel`;
+          slideTitle = "IMPACTO";
+          break;
+
+        case "#slide-half":
+          slideClass = "impact-half";
+          slideId = slide.replace("#", "");
+          slideDescription = `Reducción de emisiones contaminantes`;
+          slideTitle = "IMPACTO";
+          break;
+
+        case "#slide-global":
+          slideClass = "impact-global";
+          slideId = slide.replace("#", "");
+          slideDescription = `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi quia possimus
+                  similique quis vel`;
+          slideTitle = "IMPACTO";
+          break;
+
+        default:
+          return false;
+          break;
+      }
+      break;
+    default:
+      return false;
+      break;
+  }
+
+  //console.log("llega al if")
+  if (returnSlide == true) {
+    let divSlide = `
+          <ul class="slider">
+            <li id="${slideId}" class="${slideClass} list-unstyled carouselSlide" typeCarousel=${type}>
+              <p class="description descriptionCarousel ${type}" typeCarousel=${type}>${slideDescription}</p>
+              <p class="description-who titleCarousel ${type}" typeCarousel=${type}>${slideTitle}</p>
+              ${menuCarousel}
+            </li>
+          </ul>`;
+    $(slideContainer).html(divSlide);
+
+    //return divSlide;
+
+  }
+  else {
+    let carouselSlide = $(`.carouselSlide[typeCarousel="${type}"]`);
+    carouselSlide.attr("id", slideId);
+    carouselSlide.removeClass();
+    carouselSlide.addClass(`${slideClass} carouselSlide list-unstyled`);
+
+
+    //$(`p.descriptionCarousel[typeCarousel="${type}"]`).attr("typeCarousel", type);
+    let descriptionCarousel = $(`p.descriptionCarousel[typeCarousel="${type}"]`);
+
+    descriptionCarousel.html(slideDescription);
+    descriptionCarousel.removeClass();
+    descriptionCarousel.addClass(`description descriptionCarousel ${type}`);
+
+    let carouselTitle = $(`p.titleCarousel[typeCarousel="${type}"]`);
+    carouselTitle.html(slideTitle);
+    carouselTitle.removeClass();
+    carouselTitle.addClass(`titleCarousel description-who ${type}`);
+
+
+  }
+
+}
+$(document).ready(() => {
+  setTimeout(() => {
+    buildCarousel("main", "#slide-who", true);
+    buildCarousel("becauseJoin", "#slide-environmental", true);
+  }, 70);
+
+
+})
+
+
+$(document).off("click", ".carouselDot")
+$(document).on("click", ".carouselDot", (e) => {
+  e.preventDefault()
+  let element = window.document.activeElement;
+  let slide = element.getAttribute("href");
+  let type = element.getAttribute("typeCarousel");
+  console.log(window.document.activeElement);
+  console.log(element.getAttribute("href") + "\n" + element.getAttribute("typeCarousel"))
+
+  buildCarousel(type, slide);
+})
+
+/* $(document).on("click", ".links", (e) => {
+  e.preventDefault()
+  let slide = $(this).attr("href");
+
+
+  console.log(slide +"\n")
+}) */
+/* function App() {}
 
 window.onload = function (event) {
     var app = new App();
@@ -12,7 +219,7 @@ App.prototype.processingButton = function(event) {
     const slick = track.querySelectorAll('.slick');
 
     const slickWidth = slick[0].offsetWidth;
-    
+
     const trackWidth = track.offsetWidth;
     const listWidth = slickList.offsetWidth;
 
@@ -33,7 +240,7 @@ let nextAction = (leftPosition,trackWidth,listWidth,slickWidth,track) => {
         track.style.left = `${-1 * (leftPosition + slickWidth)}px`;
     }
 }
-
+ */
 /*  Solo es necesario copiar y pegar el codigo de abajo cuando senecesite un carrusel
     igual llamar a este codigo codigo para su funcionamiento las imagenes puede ser cambiadas sin problemas,
     las rutas de las imagenes solo son ejemplos, estoy trabajando para que el desplazamiento sea infinito

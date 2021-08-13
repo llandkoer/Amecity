@@ -9,8 +9,161 @@
       "is_admin": false,
       "password": "$2a$10$RzPQcHAWhfVodP./zH8lUOTIB0vCeqhL92XW4rLwIDLkLOjFr1dwW",
       "photo_url": "https://i.imgur.com/0U1bbu2.jpeg"
+    },
+    {
+      "user_id": "IvCl0dqI_8HTsKS7Up3ki",
+      "name": "efimero fernando tovar",
+      "email": "efimero@hotmail.com",
+      "username": "efimero",
+      "points": 20,
+      "is_admin": false,
+      "password": "$2a$10$IjJeJFMhGbJtoJCIDs/mNuonnHLHSXUwTuw6a2cOEK89ChqXI05Pe",
+      "photo_url": "https://i.imgur.com/0U1bbu2.jpeg"
+    },
+    {
+      "user_id": "WRnymet4DmKkGDqRrPyTu",
+      "name": "jefer fernando tovar",
+      "email": "fefehuefh@masteradminamecity.org",
+      "username": "testAdmin",
+      "points": 20,
+      "is_admin": true,
+      "password": "$2a$10$SZK14TNX5YRYb2xZMgG59unYOBgwyiNtyFk40yYYf7d7Kx/KOGEtK",
+      "photo_url": "https://i.imgur.com/0U1bbu2.jpeg"
+    },
+    {
+      "user_id": "SIV_5_EgELqCh_v7xA414",
+      "name": "jefferson G",
+      "email": "jefer@masteradminamecity.org",
+      "username": "jeferAdmin",
+      "points": 20,
+      "is_admin": true,
+      "password": "$2a$10$j/Qgegb1d/VU.YLrpBmOjulUzmjXJPuuocKkrD7M1.ofuS4wgMavO",
+      "photo_url": "https://i.imgur.com/0U1bbu2.jpeg"
+    },
+    {
+      "user_id": "v8WOr0O9FVllXLo2oGHSL",
+      "name": "fernando moreno",
+      "email": "fernando@yahoo.es",
+      "username": "fernando01",
+      "points": 20,
+      "is_admin": false,
+      "password": "$2a$10$Hq1wc2jlMv.SI4TwxYbtC.j0Ak7xEZlk9rG6WauMQHDg02.4UGq1e",
+      "photo_url": "https://i.imgur.com/0U1bbu2.jpeg"
+    },
+    {
+      "user_id": "f10hAZWKHTFloEjvX06Kh",
+      "name": "carlos",
+      "email": "carlos@outlook.com",
+      "username": "carliño",
+      "points": 20,
+      "is_admin": false,
+      "password": "$2a$10$6gGFbwFkGufJCW9tJwi2KuL9EF48lA9re69qMaMxSVh5w5lgngEr2",
+      "photo_url": "https://i.imgur.com/0U1bbu2.jpeg"
     }
   ],
-  "challenges": [],
-  "partners": []
+  "challenges": [
+    {
+      "challenge_id": "aiwPM1SuVbtb5i2jD9_SQ",
+      "title": "tempus sit amet",
+      "photo_url": "https://img.freepik.com/foto-gratis/odenwald-alemania-es-pura-naturaleza_181624-32381.jpg?size=626&ext=jpg&ga=GA1.2.959066255.1624579200",
+      "description": "vel est donec odio justo sollicitudin",
+      "points": 3,
+      "focus": "Rios",
+      "requirements": [
+        "test"
+      ]
+    },
+    {
+      "challenge_id": "VYM4CQxo-SWSykwmX8Dbz",
+      "title": "utha test",
+      "photo_url": "https://images.saymedia-content.com/.image/t_share/MTc0MTc0MzMwMzI0Nzg5MTE2/what-are-the-10-most-polluted-rivers-in-the-world.jpg",
+      "description": "nisl nunc rhoncus dui vel sem",
+      "points": 40,
+      "focus": "Mares",
+      "requirements": [
+        "elementum"
+      ]
+    },
+    {
+      "challenge_id": "ndAxuTU8-CMCwutamqhDm",
+      "title": "pede ac diam",
+      "photo_url": "https://www.unilever.com/Images/Recycling-GettyImages-150517191_tcm244-556158.jpg",
+      "description": "metus vitae ipsum aliquam non",
+      "points": 84,
+      "focus": "Mares",
+      "requirements": [
+        "justo"
+      ]
+    },
+    {
+      "challenge_id": "XnKX499a8Zwxu-JIaKQKv",
+      "title": "nulla justo aliquam",
+      "photo_url": "https://encolombia.com/wp-content/uploads/2020/06/1.-Compost.jpg",
+      "description": "quis augue luctus",
+      "points": 7,
+      "focus": "Ciudades",
+      "requirements": [
+        "luctus"
+      ]
+    },
+    {
+      "challenge_id": "_1KolJrNebBznkDvTZ71P",
+      "title": "sites",
+      "photo_url": "https://i.ytimg.com/vi/MqH8WtR5hWs/maxresdefault.jpg",
+      "description": "diam vitae quam suspendisse potenti nullam",
+      "points": 41,
+      "focus": "Rios",
+      "requirements": [
+        "porttitor"
+      ]
+    },
+    {
+      "challenge_id": "jsdpIg2Eqp7rwGlJMF7Uz",
+      "title": "pharetra magna",
+      "photo_url": "https://media.istockphoto.com/photos/garbage-in-the-forest-garbage-in-the-nature-pollution-of-the-picture-id913344128",
+      "description": "et magnis dis",
+      "points": 25,
+      "focus": "Rios",
+      "requirements": [
+        "amet"
+      ]
+    },
+    {
+      "challenge_id": "1HaG3Sj_pV-IE0SsVQk15",
+      "title": "curabitur",
+      "photo_url": "https://zizebikes.com/wp-content/uploads/2019/05/group5.jpg",
+      "description": "nisl venenatis lacinia aenean sit amet justo",
+      "points": 5,
+      "focus": "Rios",
+      "requirements": [
+        "dictumst"
+      ]
+    },
+    {
+      "challenge_id": "VCBVsj0TuHGvwRBR9TiuJ",
+      "title": "etera",
+      "photo_url": "https://www.greenandgrowing.org/wp-content/uploads/2017/11/Recycle.jpg",
+      "description": "posuere nonummy integer non velit donec",
+      "points": 64,
+      "focus": "Bosques",
+      "requirements": [
+        "sagittis"
+      ]
+    },
+    {
+      "challenge_id": "q3pkYfYzfOwI5l5SyQIBc",
+      "title": "libero non",
+      "photo_url": "https://previews.123rf.com/images/arkadijschell/arkadijschell2003/arkadijschell200300067/142980437-many-garbage-and-dirty-streets-after-holy-festival-hari-raya-aidilfitri-ramzan-ramadan-in-kuala-lump.jpg",
+      "description": "porta volutpat erat quisque erat eros viverra",
+      "points": 8,
+      "focus": "Bosques",
+      "requirements": [
+        "viverra"
+      ]
+    }
+  ],
+  "partners": [],
+  "detail_challenges": [],
+  "posts": [],
+  "providers": []
 }

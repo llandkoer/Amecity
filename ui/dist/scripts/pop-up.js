@@ -1,16 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicia sesión</title>
-    <!-- <link rel="stylesheet" href="/ui/dist/styles/styles.min.css"> -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans&display=swap" rel="stylesheet">
-</head>
-<body class="form-body">
-    <div class="form-header">
+/* //lo que esta entre comillas es el Id que debe tener el elemento
+const PopUpContainer = document.getElementById("PopUpContainer");
+
+NOTA: los elementos del popup tienen que estar dentro de un div con Id Pop-Up que este dentro un div con Id Overlay
+
+        <input type="button" class="" id="Abrir-PopUp">
+        
+        <div class="" id="Overlay">
+            <div class="" id="Pop-Up">
+                <a href="u" class="" id="Cerrar-PopUp"> x </a>
+                    CONTENIDO AQUI
+            </div>
+        </div>
+   
+
+function LoginPopUp() {
+  PopUpContainer.innerHTML = `
+        <div class="Overlay" id="Overlay">
+            <div class="Pop-Up" id="Pop-Up">
+                <a href="#" class="" onclick="CerrarPopUp()"> x </a>
+                <div class="form-header">
         <h1 class="form-header__title">Inicia sesión</h1>
         <div class="form-header__logo"></div>
     </div>
@@ -18,7 +26,7 @@
         <blockquote class="form-main__text">La única forma, si vamos a mejorar la calidad del medio ambiente, es involucrar a todo el mundo! <br> &mdash;
             <cite>Richard Rogers</cite> 
         </blockquote>
-        <form action="" class="form-main__form">
+        <form action="" id="loginForm" class="form-main__form">
             <input class="form-main__form-input" type="text" name="user" id="user" placeholder="Usuario">
             <input class="form-main__form-input" type="password" name="pwd" id="pwd" placeholder="Contraseña">
             <label class="form-main__form-label">
@@ -27,12 +35,18 @@
                 Mantener la sesión abierta
             </label>
         </form>
-        <button class="form-main__button" type="submit">Iniciar sesión</button>
+        <button class="form-main__button"  type="submit">Iniciar sesión</button>
         <p class="form-main__text--centered">ó</p>
         <button class="form-main__button--white" type="submit">
             <img class="form-main__button-google-logo" src="https://img.icons8.com/fluent/48/000000/google-logo.png"/>
             Acceder con Google
         </button>    
     </div>
-</body>
-</html>
+            </div>
+        </div>
+    `;
+};
+
+function CerrarPopUp() {
+    PopUpContainer.innerHTML = "";
+} */

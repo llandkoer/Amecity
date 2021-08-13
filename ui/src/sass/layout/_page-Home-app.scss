@@ -1,9 +1,19 @@
 // Header
+
+.carouselSlide{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .header-home__screen-app {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+  align-items: stretch;
+  width: 100%;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  background: white;
   .logo {
     .im-tree {
       width: 75px;
@@ -39,14 +49,12 @@
     }
   }
   .items {
+    position: absolute;
     background-color: $main-green;
     display: none;
-    position: absolute;
     width: 100%;
-    top: 44px;
     right: 0;
     padding: 10px 0px 0px;
-    margin-top: 50px;
     z-index: 2;
     .links {
       color: $black;
@@ -83,10 +91,16 @@
     text-decoration: line-through;
   }
 }
+
+#mainContent{
+  padding-top: 7rem;
+}
 //End Header
 //Container Slider
 .container-slider__app {
+
   .slider {
+    padding: 0;
     position: relative;
     .about-us,
     .see-supplier,
@@ -94,12 +108,10 @@
     .see-blog {
       width: 100%;
       height: 267px;
-      position: absolute;
-      opacity: 0;
       transition: opacity 0.5s;
       .description {
         text-align: left;
-        padding: 70px 20px;
+        padding: 30px 20px;
         font-size: 1.8rem;
       }
       .description-who {
@@ -125,9 +137,15 @@
   ul.slider li:target {
     opacity: 1;
   }
+
+  .carouselDots{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
   .menu {
-    position: absolute;
-    margin-left: 40%;
+    display: flex;
+    padding-bottom: 20px;
     .container {
       display: inline-block;
       .container-who,
@@ -140,7 +158,6 @@
         width: 10px;
         height: 10px;
         border-radius: 100%;
-        margin-top: 240px;
       }
     }
   }
@@ -148,7 +165,7 @@
 // End Container Slider
 // Join
 .join-app {
-  margin-top: 300px;
+  padding-bottom: 50px;
   .title {
     text-align: center;
     padding: 20px;
@@ -157,6 +174,8 @@
   .container {
     display: flex;
     justify-content: center;
+    padding-bottom: 50px;
+
     .card {
       width: 284px;
       height: 287px;
@@ -215,7 +234,6 @@
     }
   }
   .ally-card {
-    margin-top: 150px;
     .card {
       .front {
         background: $gray;
@@ -243,7 +261,6 @@
     }
   }
   .supplier-card {
-    margin-top: 150px;
     .card {
       .front {
         background: rgb(164, 203, 221);
@@ -274,14 +291,13 @@
 //End join
 // ¿why take part?
 .because-join {
-  margin-top: 100px;
   .title {
     font-size: 3.6rem;
     text-align: center;
     padding: 20px;
   }
   .slider {
-    margin-top: 40px;
+    padding: 0;
     position: relative;
     .impact-environmental,
     .impact-social,
@@ -289,20 +305,16 @@
     .impact-global {
       width: 100%;
       height: 267px;
-      position: absolute;
-      opacity: 0;
       transition: opacity 0.5s;
       .description {
-        margin-top: 20px;
         text-align: left;
-        font-size: 2.4rem;
-        font-weight: 400;
-        padding-left: 20px;
+        padding: 30px 20px;
+        font-size: 1.8rem;
       }
       .description-who {
-        margin-top: 20px;
-        text-align: center;
-        font-size: 3.6rem;
+        text-align: right;
+        padding: 0px 20px;
+        font-size: 2.4rem;
       }
     }
     .impact-environmental {
@@ -322,9 +334,17 @@
   ul.slider li:target {
     opacity: 1;
   }
+
+  
+  .carouselDots{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
   .menu {
-    position: absolute;
-    margin-left: 40%;
+    display: flex;
+    padding-bottom: 20px;
+
     .container {
       display: inline-block;
       .container-environmental,
@@ -337,18 +357,27 @@
         width: 10px;
         height: 10px;
         border-radius: 100%;
-        margin-top: 240px;
       }
     }
   }
 }
+
+
+
 //End ¿why take part?
 @media (min-width: 1024px) {
+
+  #mainContent{
+    padding-top: 9.6rem;
+  }
   .header-home__screen-app {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
+    position: static;
+    z-index: 0;
     .title {
-      padding-left: 60px;
+      padding-left: 10px;
     }
     .menu {
       .drop-down__items {
@@ -366,11 +395,9 @@
       display: flex;
       justify-content: flex-end;
       padding: 20px;
-      margin-top: 115px;
       z-index: 2;
       .links {
         display: block;
-        padding: 0px 20px;
         font-weight: 400;
         border-bottom: none;
         border-right: solid $black;
@@ -382,19 +409,15 @@
         padding: 10px 30px;
       }
     }
-  }
-  .container-slider__app {
-    margin-top: 150px;
-  }
+  } 
+ 
   .join-app {
-    margin-top: 450px;
     .cards-join {
       display: flex;
-      justify-content: space-between;
-      padding: 0px 100px;
-      .card-player {
-        margin-top: 150px;
-      }
+      justify-content: space-around;
     }
   }
+
+ 
+  
 }

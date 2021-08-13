@@ -1,6 +1,8 @@
 .footer-app {
   width: 100%;
   height: 96px;
+  position: fixed;
+  bottom: 0;
 }
 .footer-app__content {
   .container-icons {
@@ -31,5 +33,11 @@
         }
       }
     }
+  }
+}
+
+@media (min-width: 1024px){
+  .footer-app{
+    display: none;
   }
 }

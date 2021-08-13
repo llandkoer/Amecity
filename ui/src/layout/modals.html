@@ -1,0 +1,146 @@
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">
+    LogIn final
+</button> 
+ -->
+<!-- Modal Login -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content container py-3">
+            <div class="d-flex justify-content-between">
+                <h4 class="modal-title" id="exampleModalLabel">Inicia sesión</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="d-flex">
+                <img src="https://i.ibb.co/HKc47gf/4f84Cyp.png" alt="" class="rounded-circle ">
+                <p>"La única forma, si vamos a mejorar la calidad del medio ambiente, es involucrar a todo el
+                    mundo!" <br>
+                    <cite>-Richard Rogers</cite>
+                </p>
+            </div>
+            <div class="modal-body">
+                <form id="loginForm" name="loginForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control p-2 mb-2 alert-secondary" name="username"
+                            placeholder="Usuario">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control p-2 mb-2 alert-secondary" name="password"
+                            placeholder="Contraseña">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" checked class="form-check-input p-2 mb-2 bg-dark" id="keepSession"
+                            name="keepSession">
+                        <label class="form-check-label" for="keepSession">Mantener la sesión abierta</label>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-info">Iniciar seión</button>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-light border border-dark">Accede con Google</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+ <!-- Modal SignUp -->
+ <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModal"
+ aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered" role="document">
+     <div class="modal-content container py-3">
+         <div class="d-flex justify-content-between">
+             <h4 class="modal-title" id="exampleModalLabel">¡Haz parte!</h4>
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+             </button>
+         </div>
+         <div class="d-flex">
+             <img src="https://i.ibb.co/HKc47gf/4f84Cyp.png" alt="" class="rounded-circle ">
+             <p>Como jugador podras ...</p>
+         </div>
+         <div class="modal-body">
+             <form id="signupForm">
+                 <div class="form-group">
+                     <input type="text" class="form-control p-2 mb-2 alert-secondary" aria-describedby="emailHelp" placeholder="Nombre" name="name">
+                   </div>
+
+                   <div class="form-group">
+                     <input type="email" class="form-control p-2 mb-2 alert-secondary" aria-describedby="emailHelp" placeholder="Correo" name="email">
+                   </div>
+
+                   <div class="form-group">
+                     <input type="text" class="form-control p-2 mb-2 alert-secondary" aria-describedby="emailHelp" placeholder="Usuario" name="username">
+                   </div>
+
+                   <div class="form-group">
+                     <input type="password" class="form-control p-2 mb-2 alert-secondary" aria-describedby="emailHelp" placeholder="Contraseña" name="password">
+                   </div>
+
+                   <!-- <div class="form-check">
+                     <input type="checkbox" class="form-check-input p-2 mb-2 bg-dark" id="exampleCheck1">
+                     <label class="form-check-label" for="exampleCheck1">Mayoria edad/permiso adulto responsable</label>
+                   </div> -->
+                    <div class="form-check">
+                        <input type="checkbox" checked class="form-check-input p-2 mb-2 bg-dark" id="keepSessionSignup"
+                            name="keepSessionSignup">
+                        <label class="form-check-label" for="keepSessionSignup">Mantener la sesión abierta</label>
+                    </div>
+                   <div class="form-check">
+                     <input type="checkbox" class="form-check-input p-2 mb-2 bg-dark" id="exampleCheck1">
+                     <label class="form-check-label" for="exampleCheck1">Acepto los términos y condiciones</label>
+                   </div>
+                   <button type="submit" class="btn btn-info">Crear cuenta</button>
+             </form>
+         </div>
+             
+     </div>
+ </div>
+</div>
+
+<!-- Modal create challenge -->
+
+<div class="modal fade" id="loginModalChallenge" tabindex="-1" role="dialog" aria-labelledby="loginModal"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content container py-3">
+            <div class="d-flex justify-content-between">
+                <h4 class="modal-title" id="exampleModalLabel">Crea reto</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="d-flex">
+                <img src="https://i.ibb.co/HKc47gf/4f84Cyp.png" alt="" class="rounded-circle ">
+            </div>
+            <div class="modal-body">
+                <form id="loginForm">
+                    <div class="form-group">
+                        <input type="text" class="form-control p-2 mb-2 alert-secondary" aria-describedby="emailHelp" placeholder="Titulo" name="title">
+                      </div>
+
+                      <div class="form-group">
+                        <input type="url" class="form-control p-2 mb-2 alert-secondary" aria-describedby="emailHelp" placeholder="Foto" name="photo_url">
+                      </div>
+
+                      <div class="form-group">
+                        <input type="text" class="form-control p-2 mb-2 alert-secondary" aria-describedby="emailHelp" placeholder="Descripcion" name="description">
+                      </div>
+
+                      <div class="form-group">
+                        <input type="text" class="form-control p-2 mb-2 alert-secondary" aria-describedby="emailHelp" placeholder="Enfoque" name="focus">
+                      </div>
+
+                      <div class="form-group">
+                        <input type="text" class="form-control p-2 mb-2 alert-secondary" aria-describedby="emailHelp" placeholder="Requerimientos" name="requirements">
+                      </div>
+                </form>
+            </div>
+                <button type="button" class="btn btn-info" data-dismiss="modal">Crear reto</button>
+        </div>
+    </div>
+</div>

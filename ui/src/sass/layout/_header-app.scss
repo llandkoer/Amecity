@@ -1,6 +1,8 @@
 .header-app {
   width: 100%;
   height: auto;
+  position: fixed;
+  top: 0;
 
   padding: 15px 35px;
 
@@ -51,10 +53,12 @@
 
       .header-app-secondary-menu {
         display: none;
+        z-index: 10;
       }
     }
 
     .header-app__nav {
+      z-index: 0;
       .header-app__menu {
         .header-app__input {
           display: block;
@@ -183,6 +187,7 @@
     justify-content: flex-end;
 
     background-color: $main-green;
+    position: static;
 
     .header-app__logo-container {
       width: 100%;

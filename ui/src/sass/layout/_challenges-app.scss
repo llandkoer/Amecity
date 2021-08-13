@@ -1,7 +1,6 @@
 .challenges {
   width: 100%;
-
-  padding: 24px 5% 138px;
+  padding: 7rem 5% 138px;
   .challenges__title {
     font-size: 3rem;
     text-align: center;
@@ -48,8 +47,9 @@
     }
 
     .challenges__items-container {
-      height: 110px;
-
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       overflow-x: scroll;
 
       white-space: nowrap;
@@ -103,7 +103,7 @@
 
 @media screen and (min-width: 1024px){
   .challenges{
-
+    padding-top: 3rem;
     .challenges__items{
       .challenges__items-container{
         height: auto;
